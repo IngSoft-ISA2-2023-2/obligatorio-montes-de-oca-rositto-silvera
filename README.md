@@ -185,7 +185,7 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
 
 #### ISSUES
 
-### Issues 1 
+### Issue 1 
    
 a) Login de usuario no existente en la base de datos
 
@@ -218,21 +218,36 @@ El plan de acción podría incluir pasos específicos para abordar esta deuda t�
 - Prioridad: Baja
 - Severidad: Menor
 
-  ### Issues 2
+  ### Issue 2
    
-**Descripción:**
+**Descripción**
+La funcionalidad del Admin: Alta de Farmacia
+
+Con el Rol Admin, al ingresar a dar de Alta una farmacia se lanza un excepción no controlada, cuando el nombre de la farmacia tiene un largo > 50, que obliga a reiniciar el servidor del back-end.
 
 **Impacto:**
+Estando logueado como Admin y al intentar crear una farmacia con nombre de la misma con largo > 50 se lanza una excepción en el sistema que obliga a reiniciar el server.
+Esto genera a nivel de usuario, incomidad y pobre usabilidad ya que no permite continuar. No aparece ningún mensaje de aclaración de que se debe controlar el largo del nombre. 
+A nivel del usuario Admin que genera las farmacias el impacto es que no se puede generar ningún movimiento a nivel de ésta: Medicamentos, Stock, Solicitudes de Medicamentos, etc.
 
 **Excepción**
+Excepción: PharmaGo.Exceptions.InvalidResourceException: 'The Pharmacy is not correctly created.'
 
 **Solución ideal:**
+Una solución posible es controlar esta excepción y desde el Front emitir el mensaje correspondiente, discriminando en caso de error, sin necesidad que haya una excepción, permitiendo continuar el usuario con el resto de las funcionalidades
 
 **Plan de acción:**
+- Revisar a nivel de Back en qué módulo, método o clase se genera esta excepción.
+- Corregir la excepción ya sea con bloques try-catch o a través de filtros.
+- Se hizo análisis exploratorio a nivel de código y se utiliza una clase Filtros, revisar y si es necesario corregirla o capturar la excepción a nivel de bloques try-catch
+- Realizar pruebas unitarias y de integración.
+- Revisar, corregir, mantener y/o superar la cobertura de código.
+- Corregir desde el Front la visualización de este mensaje al usuario.
+- Actualizar la documentación correspondiente
 
 **Clasificación:**
-- Prioridad: Baja
-- Severidad: Menor
+- Prioridad: Alta
+- Severidad: Crítica
 
 ### Issues 1 
    
