@@ -302,4 +302,130 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 **Clasificación:**
 - Prioridad: Alta
 - Severidad: Critico
+
+### Issue 5
+**Excepción no controlada al dar de alta una farmacia con nombre > 50 caracteres:**
+
+**Descripción:**
+Al intentar dar de alta una nueva farmacia en la aplicación con un nombre que supere los 50 caracteres, se lanza una excepción no controlada en el sistema. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor del back-end para resolverla.
+
+**Impacto:**
+La excepción no controlada al dar de alta una farmacia con un nombre largo tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
+
+**Solución ideal:**
+La solución ideal sería manejar adecuadamente la excepción generada cuando se ingresa un nombre de farmacia mayor a 50 caracteres, proporcionando un mensaje de error claro al usuario y evitando que la excepción afecte la disponibilidad del servidor.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar el código o la lógica que causa la excepción al ingresar un nombre de farmacia largo.
+- Agregar un manejo adecuado de la excepción para proporcionar un mensaje de error al usuario sin requerir el reinicio del servidor.
+- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Baja
+
+
+### Issue 6
+**Excepción al dar de alta una farmacia con nombre duplicado en la funcionalidad del Administrador:**
+
+**Descripción:**
+En la funcionalidad de administrador, cuando se intenta dar de alta una farmacia con un nombre que ya existe en el sistema, se lanza una excepción no controlada en el servidor del back-end. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor para resolverla.
+
+**Impacto:**
+La excepción no controlada al dar de alta una farmacia con nombre duplicado tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
+
+**Solución ideal:**
+La solución ideal sería manejar adecuadamente la excepción generada cuando se intenta dar de alta una farmacia con un nombre duplicado. Esto debería incluir la gestión de errores en el servidor y proporcionar un mensaje de error claro al usuario.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar el código o la lógica que causa la excepción al intentar dar de alta una farmacia con un nombre duplicado.
+- Agregar un manejo adecuado de la excepción en el servidor para evitar interrupciones y proporcionar un mensaje de error al usuario.
+- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Crítica
+
+  ### Issue 7
+**Excepción al dar de alta una farmacia sin dirección en la funcionalidad del Administrador:**
+
+**Descripción:**
+En la funcionalidad de administrador, cuando se intenta dar de alta una farmacia sin proporcionar una dirección, se lanza una excepción no controlada en el servidor del back-end. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor para resolverla.
+
+**Impacto:**
+La excepción no controlada al dar de alta una farmacia sin dirección tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
+
+**Solución ideal:**
+La solución ideal sería manejar adecuadamente la excepción generada cuando se intenta dar de alta una farmacia sin dirección. Esto debería incluir el manejo de errores en el servidor y proporcionar un mensaje de error claro al usuario.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar el código o la lógica que causa la excepción al intentar dar de alta una farmacia sin dirección.
+- Agregar un manejo adecuado de la excepción en el servidor para evitar interrupciones y proporcionar un mensaje de error al usuario.
+- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Crítica
+
+
+  ### Issue 8
+**Excepción al crear una invitación para un usuario con el rol de Administrador:**
+
+**Descripción:**
+En la funcionalidad de administrador, al intentar crear una invitación para un usuario con el rol de Administrador y habiendo seleccionado una farmacia, se lanza una excepción no controlada con el mensaje "A pharmacy is not required." ("No se requiere una farmacia"). Esta excepción es inapropiada ya que la farmacia realmente fue seleccionada.
+
+**Impacto:**
+La excepción inapropiada al crear una invitación para un usuario con el rol de Administrador puede llevar a confusión y problemas en la administración de usuarios en el sistema. Puede resultar en la incapacidad de asignar el rol correcto y afectar la funcionalidad general de la aplicación.
+
+**Solución ideal:**
+La solución ideal sería corregir la lógica que causa la excepción inapropiada y asegurarse de que se pueda crear una invitación correctamente para un usuario con el rol de Administrador y una farmacia seleccionada.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar la parte del código responsable de lanzar la excepción incorrecta.
+- Ajustar la lógica para que permita crear invitaciones con el rol de Administrador y una farmacia seleccionada.
+- Realizar pruebas exhaustivas para verificar que la corrección funcione de manera adecuada.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Moderada
+
+### Issue 9
+**Excepción al iniciar sesión como invitado con las credenciales generadas:**
+
+**Descripción:**
+Después de que el administrador crea una invitación, se genera un usuario y un código de invitación, que se listan correctamente en la lista de invitados. Sin embargo, cuando el invitado intenta iniciar sesión con estas credenciales, se lanza una excepción no controlada con el mensaje "The user does not exist" ("El usuario no existe").
+
+**Impacto:**
+La excepción al intentar iniciar sesión como invitado con las credenciales generadas incorrectamente afecta la experiencia del usuario y puede causar frustración. Los usuarios no pueden acceder a la aplicación como invitados, lo que interrumpe el flujo esperado de uso.
+
+**Solución ideal:**
+La solución ideal sería identificar y corregir la lógica que causa la excepción al iniciar sesión como invitado con las credenciales generadas. Los usuarios deberían poder iniciar sesión exitosamente como invitados después de recibir una invitación.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar la parte del código responsable de lanzar la excepción incorrecta al iniciar sesión como invitado.
+- Ajustar la lógica para permitir que los invitados inicien sesión correctamente con las credenciales generadas.
+- Realizar pruebas exhaustivas para verificar que la corrección funcione de manera adecuada.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Moderada
+
+
+  
+  
         
