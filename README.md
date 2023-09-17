@@ -425,28 +425,31 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 - Severidad: Critico
 
 ### Issue 5
-**Excepción no controlada al dar de alta una farmacia con nombre > 50 caracteres:**
+**Funcionalidad del Admin:
+Al crear una invitación para un usuario ya creado que tenga un rol distinto al generado inicialmente, se lanza una excepción:
+Rol seleccionado: Admin
+throw new InvalidResourceException("A pharmacy is not required."); cuando la farmacia realmente fue seleccionada y además es requerida.
 
 **Descripción:**
-Al intentar dar de alta una nueva farmacia en la aplicación con un nombre que supere los 50 caracteres, se lanza una excepción no controlada en el sistema. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor del back-end para resolverla.
+Al crear una invitación para un usuario ya creado y con un rol distinto al generado inicialmente, se lanza la excepción: throw new InvalidResourceException("A pharmacy is not required.")
 
 **Impacto:**
-La excepción no controlada al dar de alta una farmacia con un nombre largo tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
+La excepción genera una excepción a nivel del server y requiere reiniciar el servidor.
 
 **Solución ideal:**
-La solución ideal sería manejar adecuadamente la excepción generada cuando se ingresa un nombre de farmacia mayor a 50 caracteres, proporcionando un mensaje de error claro al usuario y evitando que la excepción afecte la disponibilidad del servidor.
+La solución sería controlar que no se pueda inviar a un usuario que ya tiene 'usuario' en el sistema, desplegándole un mensaje de error al Admin de este escenario.
 
 **Plan de acción:**
 El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
 
 - Identificar el código o la lógica que causa la excepción al ingresar un nombre de farmacia largo.
-- Agregar un manejo adecuado de la excepción para proporcionar un mensaje de error al usuario sin requerir el reinicio del servidor.
-- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
+- Agregar un manejo adecuado de la excepción para proporcionar un mensaje de error al Admin sin requerir el reinicio del servidor.
+- Realizar pruebas testeando esta funcionalidad.
 - Actualizar la documentación para reflejar los cambios realizados.
 
 **Clasificación:**
-- Prioridad: Alta
-- Severidad: Baja
+- Prioridad: Media
+- Severidad: Menor
 
 
 ### Issue 6
