@@ -303,6 +303,30 @@ El plan de acción podría incluir pasos específicos para abordar esta deuda t�
 - Prioridad: Media
 - Severidad: Leve
 
+### Issue 5
+**Excepción al crear una invitación para un usuario con el rol de Administrador:**
+
+**Descripción:**
+En la funcionalidad de administrador, al intentar crear una invitación para un usuario con el rol de Administrador y habiendo seleccionado una farmacia, se lanza una excepción no controlada con el mensaje "A pharmacy is not required." ("No se requiere una farmacia"). Esta excepción es inapropiada ya que la farmacia realmente fue seleccionada.
+
+**Impacto:**
+La excepción inapropiada al crear una invitación para un usuario con el rol de Administrador puede llevar a confusión y problemas en la administración de usuarios en el sistema. Puede resultar en la incapacidad de asignar el rol correcto y afectar la funcionalidad general de la aplicación.
+
+**Solución ideal:**
+La solución ideal sería corregir la lógica que causa la excepción inapropiada y asegurarse de que se pueda crear una invitación correctamente para un usuario con el rol de Administrador y una farmacia seleccionada.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar la parte del código responsable de lanzar la excepción incorrecta.
+- Ajustar la lógica para que permita crear invitaciones con el rol de Administrador y una farmacia seleccionada.
+- Realizar pruebas exhaustivas para verificar que la corrección funcione de manera adecuada.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Moderada
+
 ### Issue 6
 **Excepción al iniciar sesión como invitado con las credenciales generadas:**
 
