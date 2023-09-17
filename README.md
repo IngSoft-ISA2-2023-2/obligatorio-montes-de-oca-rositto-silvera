@@ -6,13 +6,16 @@
 
 ### Equipo 5 - Mini proyecto
 
-### Estudiantes:  Sebastian Silveira
+### Estudiantes:  
 
+- Sebastian Silveira (242951)
+- Giuliano Rossito (256201)
+- Ana Laura Montes de Oca (146669)
 ---------------------------------------------------------------------------
 
 ### Herramienta para gestión del proyecto
 
-#### Azure Devops: 
+#### GITHUB: 
 
 ### Versionado
 
@@ -181,6 +184,55 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
 
 
 #### ISSUES
+
+### Issues 1 
+   
+a) Login de usuario no existente en la base de datos
+
+**Descripción:**
+Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excpeción. 
+
+**Impacto:**
+Los usuarios se crean por invitación del Admin. o son usuarios 'anónimos'. En este caso al intentar loguearse un usuario no registrado lanza una excepción no controlada:
+
+** Excepción **
+
+throw new InvalidResourceException("Invalid Password");
+Se trata de una exception no contolada, no se devuelve el código de error: 404, como menciona en la documentación
+Error 404 - Cuando no se encuentra en el sistema un usuario con el nombre de usuario enviado. ("The user does not exist")
+El usuario que está utilizando no puede continuar. Se debe reinciar 
+
+**Solución ideal:**
+La solución ideal sería revisar en qué porción del código se da esta excepción y controlarla. Luego devolver y controlar este error en el Front
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar la excepción de error que lanza esta excepción.
+- Analizar cada caso para determinar qué tipo de excepción específica debería usarse.
+- Analizar si se estan utilizando Filtros o bloques try-catch desde el back. Solucionarlo desde esta perspectiva.
+- Se inspeciona el código, hay una clase Filtros que no está funcionando correctamente. 
+- Actualizar la documentación y las pruebas correspondientes.
+
+**Clasificación:**
+- Prioridad: Baja
+- Severidad: Menor
+
+  ### Issues 2
+   
+**Descripción:**
+
+**Impacto:**
+
+**Excepción**
+
+**Solución ideal:**
+
+**Plan de acción:**
+
+**Clasificación:**
+- Prioridad: Baja
+- Severidad: Menor
 
 ### Issues 1 
    
