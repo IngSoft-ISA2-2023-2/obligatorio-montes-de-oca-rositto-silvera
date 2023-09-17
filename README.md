@@ -458,17 +458,21 @@ El plan de acción podría incluir pasos específicos para abordar esta excepci�
 - Severidad: Crítica
 
 ### Issue 11
-**  **
+**Busqueda de remedios filtra por titulo exacto**
 **Descripción:**
-
+Se tiene que escribir el nombre preciso del medicamento, espacios y numeros incluidos para encontrar el remedio elegido.
+No ocurren casos donde aparecen todos los remedios que tengan la palabra "parace" como paracetamol 200 o paracetamol 500.
+Se ignoran las Mayusculas por lo que el error no se extiende mas de esto.
 **Impacto:**
-
+Aquellos usuarios que sean poco familiares con el sistema, o no conozcan con exactitud el nombre completo del remedio pueden encontrar dificultades al momento de encontrar su objetivo, posiblemente causando abandono
 **Solución ideal:**
-
+Se implementa un filtro que devuelve resultados que coincidan parcialmente con la busqueda.
 **Plan de acción:**
-
+-Analizar la ubicacion en codigo del sistema de busqueda
+-Implementar una solicitud a base de datos menos estricta
 **Clasificación:**
-
+- Prioridad : Baja
+- Severidad : Menor
 ### Issue 12
 **  **
 **Descripción:**
