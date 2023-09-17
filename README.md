@@ -526,38 +526,41 @@ Se Cambia el componente de medicamento por uno que no posea imagenes
 - Severidad : Leve
 
 ### Issue 14
-**Falta de sistema de Imagenes**
+**Hora de Transaccion desfasada**
 
 **Descripción:**
-La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
+Cuando se realiza una compra en todo el sistema la hora se encuentra adelantada por 3 horas, incluso bajo la situacion en donde el cliente y el server se encuentran en el mismo dispositivo
 
 **Impacto:**
-Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
+El dasfasaje puede causar confusion o errores administrativos
 
 **Solución ideal:**
-Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
+Se define una hora estandar en funcion de los clientes esperados, esta hora sera la hora de nuestro servidor y debera ser usada al momento de indicar la hora de la realizacion en las transacciones
 
 **Plan de acción:**
-Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
+- Encontrar la ubicacion del error que causa el desfasaje
+- Garantizar que la hora coincide con el servidor al momento de la transaccion
+- Ajustar la hora del servidor como se considere adecuado
 
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Leve
 
 ### Issue 15
-** No se informa al Usuario cuando una farmacia no posee ningun medicamento que coincida con la busqueda **
+**Cuando el cliente llama a un servidor offline no se le informa de esto**
 
 **Descripción:**
-La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
+El llamado a un servidor offline es respondido con un undefined que no informa de la actual inactividad del servidor.
 
 **Impacto:**
-Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
+Un usuario puede continuar intentando utilizar los servicios a pesar de que el servidor se encuentra inactivo sin comprender la causa de los errores
 
 **Solución ideal:**
-Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
+Se implementa un mensaje dedicado a los errores causados por inactividad del servidor, informando adecuadamente que este esta inactivo
 
 **Plan de acción:**
-Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
+Implementar un sistema capaz de identificar la ausencia de un servidor
+Utilizar este mecanismo para alterar el mensaje de error para indicar dicha ausencia
 
 **Clasificación:**
 - Prioridad : Baja
