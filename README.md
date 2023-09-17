@@ -190,7 +190,7 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
 a) Login de usuario no existente en la base de datos
 
 **Descripción:**
-Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excpeción. 
+Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excepción. 
 
 **Impacto:**
 Los usuarios se crean por invitación del Admin. o son usuarios 'anónimos'. En este caso al intentar loguearse un usuario no registrado lanza una excepción no controlada:
@@ -248,6 +248,60 @@ Una solución posible es controlar esta excepción y desde el Front emitir el me
 **Clasificación:**
 - Prioridad: Alta
 - Severidad: Crítica
+
+  ### Issue 3
+Funcionalidad del Admin: Alta de Farmacia - Con Nombre Duplicado
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando el nombre está duplicado, lanza una excepción que obliga a reiniciar el servidor del back.
+throw new InvalidResourceException("The Pharmacy is not correctly created.");
+
+**Impacto:**
+Sería bastante frecuente en la carga inicial del Admin, al cargar todas las farmacias y hacer pausas entre las mismas que no retenga que farmacias ha ingresado o que quiera ingresar una ya existente.
+Ante esta repetición por nombre, el Admin recibe una excepción que obliga a reiniciar el servidor del back.
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar la lista de Farmacias ya creadas o que ante un nombre duplicado emita un mensaje amigable: 'Este nombre ya existe dentro de las Farmacias del Sistema' 
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar el módulo, método o clase donde se registra la excepción.
+- Darle el tratamiento correpsondiente ya sea a nivel de try catch o Filtros como en los casos anteriores.
+- En la invocación del Front al servicio controlar este mensaje de error.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar el porcentaje de cobertura de código, en lo posible mejorarlo.
+
+**Clasificación:**
+- Prioridad: Inmediata
+- Severidad: Crítica
+
+  ### Issue 4
+Funcionalidad del Admin: Alta de Farmacia - Sin Dirección
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando no tiene dirección.
+Mensaje genérico, poco explicativo.
+
+**Impacto:**
+Con Rol Admin, al querer ingresar una Farmacia sin dirección proporciona una mensaje bastante genérico sin explicación detallada de cuál es el error. 
+Esto ocaciona que el Admin no sepa donde está el error, aunque el Admin podría saberlo de antemano si se le dio un instructivo al respecto. 
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar un mensaje más detallado al crear la Farmacia sin dirección. 
+Esto se debería controlar a nivel de manejo de control de nulos. Si el back está devolviendo este error personalizado, que se pueda controlar en el Font para emitir un mensaje personalizado.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar si el método del back está devolviendo un mensaje personalizado o no.
+- Si el mensaje es correcto, entonces analizar en el Front donde se está devolviendo este mensaje para cambiarlo por un mensaje personalizado.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar en la docuemntaicón del Sistema e instructivo si los hubiera
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Leve
 
 ### Issues 1 
    
