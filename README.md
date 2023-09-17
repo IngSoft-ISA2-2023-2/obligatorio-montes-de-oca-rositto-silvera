@@ -473,18 +473,21 @@ Se implementa un filtro que devuelve resultados que coincidan parcialmente con l
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Menor
+
+
 ### Issue 12
-**  **
+** No se informa al Usuario cuando una farmacia no posee ningun medicamento que coincida con la busqueda **
 **Descripción:**
-
+La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
 **Impacto:**
-
+Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
 **Solución ideal:**
-
+Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
 **Plan de acción:**
-
+Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
 **Clasificación:**
-
+- Prioridad : Baja
+- Severidad : Leve
 
   
   
