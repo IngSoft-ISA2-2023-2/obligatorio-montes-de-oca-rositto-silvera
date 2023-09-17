@@ -566,6 +566,123 @@ Utilizar este mecanismo para alterar el mensaje de error para indicar dicha ause
 - Prioridad : Baja
 - Severidad : Leve
 
+### Issue 1 
+
+a) Login de usuario no existente en la base de datos
+
+**Descripción:**
+Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excepción. 
+
+**Impacto:**
+Los usuarios se crean por invitación del Admin. o son usuarios 'anónimos'. En este caso al intentar loguearse un usuario no registrado lanza una excepción no controlada:
+
+** Excepción **
+
+throw new InvalidResourceException("Invalid Password");
+Se trata de una exception no contolada, no se devuelve el código de error: 404, como menciona en la documentación
+Error 404 - Cuando no se encuentra en el sistema un usuario con el nombre de usuario enviado. ("The user does not exist")
+El usuario que está utilizando no puede continuar. Se debe reinciar 
+
+**Solución ideal:**
+La solución ideal sería revisar en qué porción del código se da esta excepción y controlarla. Luego devolver y controlar este error en el Front
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar la excepción de error que lanza esta excepción.
+- Analizar cada caso para determinar qué tipo de excepción específica debería usarse.
+- Analizar si se estan utilizando Filtros o bloques try-catch desde el back. Solucionarlo desde esta perspectiva.
+- Se inspeciona el código, hay una clase Filtros que no está funcionando correctamente. 
+- Actualizar la documentación y las pruebas correspondientes.
+
+**Clasificación:**
+- Prioridad: Baja
+- Severidad: Menor
+
+  ### Issue 2
+
+**Descripción**
+La funcionalidad del Admin: Alta de Farmacia
+
+Con el Rol Admin, al ingresar a dar de Alta una farmacia se lanza un excepción no controlada, cuando el nombre de la farmacia tiene un largo > 50, que obliga a reiniciar el servidor del back-end.
+
+**Impacto:**
+Estando logueado como Admin y al intentar crear una farmacia con nombre de la misma con largo > 50 se lanza una excepción en el sistema que obliga a reiniciar el server.
+Esto genera a nivel de usuario, incomidad y pobre usabilidad ya que no permite continuar. No aparece ningún mensaje de aclaración de que se debe controlar el largo del nombre. 
+A nivel del usuario Admin que genera las farmacias el impacto es que no se puede generar ningún movimiento a nivel de ésta: Medicamentos, Stock, Solicitudes de Medicamentos, etc.
+
+**Excepción**
+Excepción: PharmaGo.Exceptions.InvalidResourceException: 'The Pharmacy is not correctly created.'
+
+**Solución ideal:**
+Una solución posible es controlar esta excepción y desde el Front emitir el mensaje correspondiente, discriminando en caso de error, sin necesidad que haya una excepción, permitiendo continuar el usuario con el resto de las funcionalidades
+
+**Plan de acción:**
+- Revisar a nivel de Back en qué módulo, método o clase se genera esta excepción.
+- Corregir la excepción ya sea con bloques try-catch o a través de filtros.
+- Se hizo análisis exploratorio a nivel de código y se utiliza una clase Filtros, revisar y si es necesario corregirla o capturar la excepción a nivel de bloques try-catch
+- Realizar pruebas unitarias y de integración.
+- Revisar, corregir, mantener y/o superar la cobertura de código.
+- Corregir desde el Front la visualización de este mensaje al usuario.
+- Actualizar la documentación correspondiente
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Crítica
+
+  ### Issue 3
+Funcionalidad del Admin: Alta de Farmacia - Con Nombre Duplicado
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando el nombre está duplicado, lanza una excepción que obliga a reiniciar el servidor del back.
+throw new InvalidResourceException("The Pharmacy is not correctly created.");
+
+**Impacto:**
+Sería bastante frecuente en la carga inicial del Admin, al cargar todas las farmacias y hacer pausas entre las mismas que no retenga que farmacias ha ingresado o que quiera ingresar una ya existente.
+Ante esta repetición por nombre, el Admin recibe una excepción que obliga a reiniciar el servidor del back.
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar la lista de Farmacias ya creadas o que ante un nombre duplicado emita un mensaje amigable: 'Este nombre ya existe dentro de las Farmacias del Sistema' 
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar el módulo, método o clase donde se registra la excepción.
+- Darle el tratamiento correpsondiente ya sea a nivel de try catch o Filtros como en los casos anteriores.
+- En la invocación del Front al servicio controlar este mensaje de error.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar el porcentaje de cobertura de código, en lo posible mejorarlo.
+
+**Clasificación:**
+- Prioridad: Inmediata
+- Severidad: Crítica
+
+  ### Issue 4
+Funcionalidad del Admin: Alta de Farmacia - Sin Dirección
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando no tiene dirección.
+Mensaje genérico, poco explicativo.
+
+**Impacto:**
+Con Rol Admin, al querer ingresar una Farmacia sin dirección proporciona una mensaje bastante genérico sin explicación detallada de cuál es el error. 
+Esto ocaciona que el Admin no sepa donde está el error, aunque el Admin podría saberlo de antemano si se le dio un instructivo al respecto. 
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar un mensaje más detallado al crear la Farmacia sin dirección. 
+Esto se debería controlar a nivel de manejo de control de nulos. Si el back está devolviendo este error personalizado, que se pueda controlar en el Font para emitir un mensaje personalizado.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar si el método del back está devolviendo un mensaje personalizado o no.
+- Si el mensaje es correcto, entonces analizar en el Front donde se está devolviendo este mensaje para cambiarlo por un mensaje personalizado.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar en la docuemntaicón del Sistema e instructivo si los hubiera
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Leve
   
   
   
