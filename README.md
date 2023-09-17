@@ -6,13 +6,15 @@
 
 ### Equipo 5 - Mini proyecto
 
-### Estudiantes:  Sebastian Silveira
-
+### Estudiantes:  
+- Sebastian Silveira (242951)
+- Giuliano Rossito (256201)
+- Ana Laura Montes de Oca (146669)
 ---------------------------------------------------------------------------
 
 ### Herramienta para gestión del proyecto
 
-#### Azure Devops: 
+#### GitHub 
 
 ### Versionado
 
@@ -182,177 +184,150 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
 
 #### ISSUES
 
-### Issues 1 
-   
-a) Creación de medicamento con errores se genera una excepción general:
+
+### Issue 1 
+
+a) Login de usuario no existente en la base de datos
 
 **Descripción:**
-El sistema actual utiliza excepciones genéricas o errores generales para manejar problemas en lugar de excepciones específicas.
+Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excepción. 
 
 **Impacto:**
-Esto dificulta la identificación y corrección de errores, lo que puede llevar a una mayor carga de trabajo en el mantenimiento y una menor calidad del software, y dificulta la usabilidad para el propio usuario del sistema.
+Los usuarios se crean por invitación del Admin. o son usuarios 'anónimos'. En este caso al intentar loguearse un usuario no registrado lanza una excepción no controlada:
+
+**Excepción**
+
+throw new InvalidResourceException("Invalid Password");
+Se trata de una exception no contolada, no se devuelve el código de error: 404, como menciona en la documentación
+Error 404 - Cuando no se encuentra en el sistema un usuario con el nombre de usuario enviado. ("The user does not exist")
+El usuario que está utilizando no puede continuar. Se debe reinciar 
 
 **Solución ideal:**
-La solución ideal sería revisar y refactorizar el código para reemplazar las excepciones genéricas con excepciones específicas que proporcionen información detallada sobre el error.
+La solución ideal sería revisar en qué porción del código se da esta excepción y controlarla. Luego devolver y controlar este error en el Front
 
 **Plan de acción:**
 El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
 
-- Identificar todas las instancias de excepciones genéricas en el código.
+- Identificar la excepción de error que lanza esta excepción.
 - Analizar cada caso para determinar qué tipo de excepción específica debería usarse.
-- Reemplazar las excepciones genéricas con excepciones específicas.
+- Analizar si se estan utilizando Filtros o bloques try-catch desde el back. Solucionarlo desde esta perspectiva.
+- Se inspeciona el código, hay una clase Filtros que no está funcionando correctamente. 
 - Actualizar la documentación y las pruebas correspondientes.
-
-Reproducción del error:
-Logeado como empleado --> create drug
-se genera la siguiente droga
-- Code: Xa11
-- Name: a
-- Symptom: aa
-- Quantity: 1
-- Price: 2
-- Prescription: mg
-- Capsule
-
-Clasificación:
-- Prioridad: Media
-- Severidad: Leve
-
-### Issue 2
-**a) Creación de request de stock con valores negativos:**
-
-**Descripción:**
-El sistema actual permite la creación de solicitudes de stock con valores negativos, lo que puede llevar a problemas de seguimiento y control de inventario, así como a la generación de informes incorrectos.
-
-**Impacto:**
-La creación de solicitudes de stock con valores negativos puede resultar en un desequilibrio en el inventario y errores en el cálculo de existencias. Esto podría llevar a problemas de disponibilidad de productos y pérdida de ventas.
-
-**Solución ideal:**
-La solución ideal sería implementar validaciones en el sistema que impidan la creación de solicitudes de stock con valores negativos y proporcionen mensajes de error claros a los usuarios.
-
-**Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
-
-- Identificar las áreas del sistema donde se permite la creación de solicitudes de stock con valores negativos.
-- Agregar validaciones para verificar que los valores no sean negativos antes de crear una solicitud de stock.
-- Actualizar la interfaz de usuario para proporcionar retroalimentación visual y mensajes de error informativos.
-- Realizar pruebas exhaustivas para garantizar que las validaciones funcionen correctamente.
-
-**Reproducción del error:**
-- Iniciar sesión como empleado.
-- Acceder a la opción de "Crear solicitud de stock".
-- Ingresar un valor negativo en el campo de cantidad via teclado.
-- Continuar con la creación de la solicitud.
 
 **Clasificación:**
 - Prioridad: Baja
 - Severidad: Menor
 
-### Issue 3
-**Falta de botón claro para volver atrás en la aplicación:**
+  ### Issue 2
 
-**Descripción:**
-Actualmente, al ingresar al menú de la aplicación, no existe un botón claro o una opción intuitiva que permita a los usuarios volver atrás. Esto genera confusión y dificulta la navegación fluida dentro de la aplicación.
+**Descripción**
+La funcionalidad del Admin: Alta de Farmacia
 
-**Impacto:**
-La falta de un botón claro para volver atrás puede llevar a una experiencia de usuario frustrante y aumentar la curva de aprendizaje para nuevos usuarios. También puede generar confusión y requerir que los usuarios realicen acciones adicionales, como hacer clic en el logo de la aplicación, para regresar a una pantalla anterior.
-
-**Solución ideal:**
-La solución ideal sería implementar un botón o una opción clara y fácil de encontrar que permita a los usuarios volver atrás en la aplicación de manera intuitiva.
-
-**Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
-
-- Realizar un análisis de usabilidad para identificar la ubicación óptima del botón de retroceso.
-- Diseñar e implementar un botón de retroceso en una ubicación visible y coherente en todas las pantallas de la aplicación.
-- Actualizar la interfaz de usuario y proporcionar indicaciones visuales para destacar la existencia y la funcionalidad del botón de retroceso.
-- Realizar pruebas de usuario para garantizar que la nueva funcionalidad sea fácilmente comprensible y utilizable.
-
-**Clasificación:**
-- Prioridad: Media
-- Severidad: Moderada
-        
-### Issue 4
-**Discrepancia en el número de artículos solicitados durante la compra como usuario anónimo:**
-
-**Descripción:**
-Cuando un usuario anónimo realiza una compra de varios artículos en la aplicación, se ha observado que a veces los artículos no se incluyen correctamente en la lista de compras. Esto resulta en una discrepancia en el número de artículos solicitados y los que finalmente se incluyen en la compra.
+Con el Rol Admin, al ingresar a dar de Alta una farmacia se lanza un excepción no controlada, cuando el nombre de la farmacia tiene un largo > 50, que obliga a reiniciar el servidor del back-end.
 
 **Impacto:**
-La discrepancia en el número de artículos solicitados puede llevar a una experiencia insatisfactoria para los usuarios, ya que no reciben todos los productos que esperaban. Esto podría generar confusión y frustración, así como pérdida de ventas y la posibilidad de recibir devoluciones.
+Estando logueado como Admin y al intentar crear una farmacia con nombre de la misma con largo > 50 se lanza una excepción en el sistema que obliga a reiniciar el server.
+Esto genera a nivel de usuario, incomidad y pobre usabilidad ya que no permite continuar. No aparece ningún mensaje de aclaración de que se debe controlar el largo del nombre. 
+A nivel del usuario Admin que genera las farmacias el impacto es que no se puede generar ningún movimiento a nivel de ésta: Medicamentos, Stock, Solicitudes de Medicamentos, etc.
+
+**Excepción**
+Excepción: PharmaGo.Exceptions.InvalidResourceException: 'The Pharmacy is not correctly created.'
 
 **Solución ideal:**
-La solución ideal sería identificar y corregir el problema  que causa la discrepancia en la compra de artículos como usuario anónimo. Esto podría requerir una revisión detallada del flujo de compra y la identificación de cualquier error en el proceso.
+Una solución posible es controlar esta excepción y desde el Front emitir el mensaje correspondiente, discriminando en caso de error, sin necesidad que haya una excepción, permitiendo continuar el usuario con el resto de las funcionalidades
 
 **Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
-
-- Realizar pruebas exhaustivas para replicar y comprender el problema de la discrepancia en la compra.
-- Identificar las áreas del flujo de compra donde podría producirse el error.
-- Corregir cualquier error en el proceso de compra que esté causando la discrepancia.
-- Realizar pruebas de usuario para verificar que el problema se ha resuelto satisfactoriamente.
-
-**Reproducción del error:**
-- Crear una orden anonima con varios items incluidos en el carrito
-- Confirmar el pedido
-- Ingresar como empleado
-- Ingresar a View Stock Request 
-- Localizar la compra realizada 
-
-**Clasificación:**
-- Prioridad: Alta
-- Severidad: Critico
-
-### Issue 5
-**Excepción no controlada al dar de alta una farmacia con nombre > 50 caracteres:**
-
-**Descripción:**
-Al intentar dar de alta una nueva farmacia en la aplicación con un nombre que supere los 50 caracteres, se lanza una excepción no controlada en el sistema. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor del back-end para resolverla.
-
-**Impacto:**
-La excepción no controlada al dar de alta una farmacia con un nombre largo tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
-
-**Solución ideal:**
-La solución ideal sería manejar adecuadamente la excepción generada cuando se ingresa un nombre de farmacia mayor a 50 caracteres, proporcionando un mensaje de error claro al usuario y evitando que la excepción afecte la disponibilidad del servidor.
-
-**Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
-
-- Identificar el código o la lógica que causa la excepción al ingresar un nombre de farmacia largo.
-- Agregar un manejo adecuado de la excepción para proporcionar un mensaje de error al usuario sin requerir el reinicio del servidor.
-- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
-- Actualizar la documentación para reflejar los cambios realizados.
-
-**Clasificación:**
-- Prioridad: Alta
-- Severidad: Baja
-
-
-### Issue 6
-**Excepción al dar de alta una farmacia con nombre duplicado en la funcionalidad del Administrador:**
-
-**Descripción:**
-En la funcionalidad de administrador, cuando se intenta dar de alta una farmacia con un nombre que ya existe en el sistema, se lanza una excepción no controlada en el servidor del back-end. Esta excepción no se maneja adecuadamente y requiere reiniciar el servidor para resolverla.
-
-**Impacto:**
-La excepción no controlada al dar de alta una farmacia con nombre duplicado tiene un impacto negativo en la disponibilidad y la estabilidad del sistema. Requiere intervención manual (reinicio del servidor) para recuperarse, lo que puede causar interrupciones en el servicio y afectar la experiencia del usuario.
-
-**Solución ideal:**
-La solución ideal sería manejar adecuadamente la excepción generada cuando se intenta dar de alta una farmacia con un nombre duplicado. Esto debería incluir la gestión de errores en el servidor y proporcionar un mensaje de error claro al usuario.
-
-**Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
-
-- Identificar el código o la lógica que causa la excepción al intentar dar de alta una farmacia con un nombre duplicado.
-- Agregar un manejo adecuado de la excepción en el servidor para evitar interrupciones y proporcionar un mensaje de error al usuario.
-- Realizar pruebas exhaustivas para garantizar que la corrección no introduzca nuevos problemas.
-- Actualizar la documentación para reflejar los cambios realizados.
+- Revisar a nivel de Back en qué módulo, método o clase se genera esta excepción.
+- Corregir la excepción ya sea con bloques try-catch o a través de filtros.
+- Se hizo análisis exploratorio a nivel de código y se utiliza una clase Filtros, revisar y si es necesario corregirla o capturar la excepción a nivel de bloques try-catch
+- Realizar pruebas unitarias y de integración.
+- Revisar, corregir, mantener y/o superar la cobertura de código.
+- Corregir desde el Front la visualización de este mensaje al usuario.
+- Actualizar la documentación correspondiente
 
 **Clasificación:**
 - Prioridad: Alta
 - Severidad: Crítica
 
-  ### Issue 7
+  ### Issue 3
+Funcionalidad del Admin: Alta de Farmacia - Con Nombre Duplicado
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando el nombre está duplicado, lanza una excepción que obliga a reiniciar el servidor del back.
+throw new InvalidResourceException("The Pharmacy is not correctly created.");
+
+**Impacto:**
+Sería bastante frecuente en la carga inicial del Admin, al cargar todas las farmacias y hacer pausas entre las mismas que no retenga que farmacias ha ingresado o que quiera ingresar una ya existente.
+Ante esta repetición por nombre, el Admin recibe una excepción que obliga a reiniciar el servidor del back.
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar la lista de Farmacias ya creadas o que ante un nombre duplicado emita un mensaje amigable: 'Este nombre ya existe dentro de las Farmacias del Sistema' 
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar el módulo, método o clase donde se registra la excepción.
+- Darle el tratamiento correpsondiente ya sea a nivel de try catch o Filtros como en los casos anteriores.
+- En la invocación del Front al servicio controlar este mensaje de error.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar el porcentaje de cobertura de código, en lo posible mejorarlo.
+
+**Clasificación:**
+- Prioridad: Inmediata
+- Severidad: Crítica
+
+  ### Issue 4
+Funcionalidad del Admin: Alta de Farmacia - Sin Dirección
+
+**Descripción:**
+La funcionalidad del Admin: Alta de Farmacia cuando no tiene dirección.
+Mensaje genérico, poco explicativo.
+
+**Impacto:**
+Con Rol Admin, al querer ingresar una Farmacia sin dirección proporciona una mensaje bastante genérico sin explicación detallada de cuál es el error. 
+Esto ocaciona que el Admin no sepa donde está el error, aunque el Admin podría saberlo de antemano si se le dio un instructivo al respecto. 
+
+**Solución ideal:**
+La solución ideal sería que el usuario Admin puede visualizar un mensaje más detallado al crear la Farmacia sin dirección. 
+Esto se debería controlar a nivel de manejo de control de nulos. Si el back está devolviendo este error personalizado, que se pueda controlar en el Font para emitir un mensaje personalizado.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar si el método del back está devolviendo un mensaje personalizado o no.
+- Si el mensaje es correcto, entonces analizar en el Front donde se está devolviendo este mensaje para cambiarlo por un mensaje personalizado.
+- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
+- Actualizar en la docuemntaicón del Sistema e instructivo si los hubiera
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Leve
+
+### Issue 6
+**Excepción al iniciar sesión como invitado con las credenciales generadas:**
+
+**Descripción:**
+Después de que el administrador crea una invitación, se genera un usuario y un código de invitación, que se listan correctamente en la lista de invitados. Sin embargo, cuando el invitado intenta iniciar sesión con estas credenciales, se lanza una excepción no controlada con el mensaje "The user does not exist" ("El usuario no existe").
+
+**Impacto:**
+La excepción al intentar iniciar sesión como invitado con las credenciales generadas incorrectamente afecta la experiencia del usuario y puede causar frustración. Los usuarios no pueden acceder a la aplicación como invitados, lo que interrumpe el flujo esperado de uso.
+
+**Solución ideal:**
+La solución ideal sería identificar y corregir la lógica que causa la excepción al iniciar sesión como invitado con las credenciales generadas. Los usuarios deberían poder iniciar sesión exitosamente como invitados después de recibir una invitación.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Identificar la parte del código responsable de lanzar la excepción incorrecta al iniciar sesión como invitado.
+- Ajustar la lógica para permitir que los invitados inicien sesión correctamente con las credenciales generadas.
+- Realizar pruebas exhaustivas para verificar que la corrección funcione de manera adecuada.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Moderada
+
+### Issue 7
 **Excepción al dar de alta una farmacia sin dirección en la funcionalidad del Administrador:**
 
 **Descripción:**
@@ -376,8 +351,7 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 - Prioridad: Alta
 - Severidad: Crítica
 
-
-  ### Issue 8
+### Issue 8
 **Excepción al crear una invitación para un usuario con el rol de Administrador:**
 
 **Descripción:**
@@ -566,124 +540,124 @@ Utilizar este mecanismo para alterar el mensaje de error para indicar dicha ause
 - Prioridad : Baja
 - Severidad : Leve
 
-### Issue 1 
-
-a) Login de usuario no existente en la base de datos
+### Issues 16
+   
+a) Creación de medicamento con errores se genera una excepción general:
 
 **Descripción:**
-Un usuario no registrado aún en la base de datos, intenta loguearse, el sistema responde lanzando una excepción. 
+El sistema actual utiliza excepciones genéricas o errores generales para manejar problemas en lugar de excepciones específicas.
 
 **Impacto:**
-Los usuarios se crean por invitación del Admin. o son usuarios 'anónimos'. En este caso al intentar loguearse un usuario no registrado lanza una excepción no controlada:
-
-** Excepción **
-
-throw new InvalidResourceException("Invalid Password");
-Se trata de una exception no contolada, no se devuelve el código de error: 404, como menciona en la documentación
-Error 404 - Cuando no se encuentra en el sistema un usuario con el nombre de usuario enviado. ("The user does not exist")
-El usuario que está utilizando no puede continuar. Se debe reinciar 
+Esto dificulta la identificación y corrección de errores, lo que puede llevar a una mayor carga de trabajo en el mantenimiento y una menor calidad del software, y dificulta la usabilidad para el propio usuario del sistema.
 
 **Solución ideal:**
-La solución ideal sería revisar en qué porción del código se da esta excepción y controlarla. Luego devolver y controlar este error en el Front
+La solución ideal sería revisar y refactorizar el código para reemplazar las excepciones genéricas con excepciones específicas que proporcionen información detallada sobre el error.
 
 **Plan de acción:**
 El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
 
-- Identificar la excepción de error que lanza esta excepción.
+- Identificar todas las instancias de excepciones genéricas en el código.
 - Analizar cada caso para determinar qué tipo de excepción específica debería usarse.
-- Analizar si se estan utilizando Filtros o bloques try-catch desde el back. Solucionarlo desde esta perspectiva.
-- Se inspeciona el código, hay una clase Filtros que no está funcionando correctamente. 
+- Reemplazar las excepciones genéricas con excepciones específicas.
 - Actualizar la documentación y las pruebas correspondientes.
+
+Reproducción del error:
+Logeado como empleado --> create drug
+se genera la siguiente droga
+- Code: Xa11
+- Name: a
+- Symptom: aa
+- Quantity: 1
+- Price: 2
+- Prescription: mg
+- Capsule
+
+Clasificación:
+- Prioridad: Media
+- Severidad: Leve
+
+### Issue 17
+**a) Creación de request de stock con valores negativos:**
+
+**Descripción:**
+El sistema actual permite la creación de solicitudes de stock con valores negativos, lo que puede llevar a problemas de seguimiento y control de inventario, así como a la generación de informes incorrectos.
+
+**Impacto:**
+La creación de solicitudes de stock con valores negativos puede resultar en un desequilibrio en el inventario y errores en el cálculo de existencias. Esto podría llevar a problemas de disponibilidad de productos y pérdida de ventas.
+
+**Solución ideal:**
+La solución ideal sería implementar validaciones en el sistema que impidan la creación de solicitudes de stock con valores negativos y proporcionen mensajes de error claros a los usuarios.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar las áreas del sistema donde se permite la creación de solicitudes de stock con valores negativos.
+- Agregar validaciones para verificar que los valores no sean negativos antes de crear una solicitud de stock.
+- Actualizar la interfaz de usuario para proporcionar retroalimentación visual y mensajes de error informativos.
+- Realizar pruebas exhaustivas para garantizar que las validaciones funcionen correctamente.
+
+**Reproducción del error:**
+- Iniciar sesión como empleado.
+- Acceder a la opción de "Crear solicitud de stock".
+- Ingresar un valor negativo en el campo de cantidad via teclado.
+- Continuar con la creación de la solicitud.
 
 **Clasificación:**
 - Prioridad: Baja
 - Severidad: Menor
 
-  ### Issue 2
-
-**Descripción**
-La funcionalidad del Admin: Alta de Farmacia
-
-Con el Rol Admin, al ingresar a dar de Alta una farmacia se lanza un excepción no controlada, cuando el nombre de la farmacia tiene un largo > 50, que obliga a reiniciar el servidor del back-end.
-
-**Impacto:**
-Estando logueado como Admin y al intentar crear una farmacia con nombre de la misma con largo > 50 se lanza una excepción en el sistema que obliga a reiniciar el server.
-Esto genera a nivel de usuario, incomidad y pobre usabilidad ya que no permite continuar. No aparece ningún mensaje de aclaración de que se debe controlar el largo del nombre. 
-A nivel del usuario Admin que genera las farmacias el impacto es que no se puede generar ningún movimiento a nivel de ésta: Medicamentos, Stock, Solicitudes de Medicamentos, etc.
-
-**Excepción**
-Excepción: PharmaGo.Exceptions.InvalidResourceException: 'The Pharmacy is not correctly created.'
-
-**Solución ideal:**
-Una solución posible es controlar esta excepción y desde el Front emitir el mensaje correspondiente, discriminando en caso de error, sin necesidad que haya una excepción, permitiendo continuar el usuario con el resto de las funcionalidades
-
-**Plan de acción:**
-- Revisar a nivel de Back en qué módulo, método o clase se genera esta excepción.
-- Corregir la excepción ya sea con bloques try-catch o a través de filtros.
-- Se hizo análisis exploratorio a nivel de código y se utiliza una clase Filtros, revisar y si es necesario corregirla o capturar la excepción a nivel de bloques try-catch
-- Realizar pruebas unitarias y de integración.
-- Revisar, corregir, mantener y/o superar la cobertura de código.
-- Corregir desde el Front la visualización de este mensaje al usuario.
-- Actualizar la documentación correspondiente
-
-**Clasificación:**
-- Prioridad: Alta
-- Severidad: Crítica
-
-  ### Issue 3
-Funcionalidad del Admin: Alta de Farmacia - Con Nombre Duplicado
+### Issue 18
+**Falta de botón claro para volver atrás en la aplicación:**
 
 **Descripción:**
-La funcionalidad del Admin: Alta de Farmacia cuando el nombre está duplicado, lanza una excepción que obliga a reiniciar el servidor del back.
-throw new InvalidResourceException("The Pharmacy is not correctly created.");
+Actualmente, al ingresar al menú de la aplicación, no existe un botón claro o una opción intuitiva que permita a los usuarios volver atrás. Esto genera confusión y dificulta la navegación fluida dentro de la aplicación.
 
 **Impacto:**
-Sería bastante frecuente en la carga inicial del Admin, al cargar todas las farmacias y hacer pausas entre las mismas que no retenga que farmacias ha ingresado o que quiera ingresar una ya existente.
-Ante esta repetición por nombre, el Admin recibe una excepción que obliga a reiniciar el servidor del back.
+La falta de un botón claro para volver atrás puede llevar a una experiencia de usuario frustrante y aumentar la curva de aprendizaje para nuevos usuarios. También puede generar confusión y requerir que los usuarios realicen acciones adicionales, como hacer clic en el logo de la aplicación, para regresar a una pantalla anterior.
 
 **Solución ideal:**
-La solución ideal sería que el usuario Admin puede visualizar la lista de Farmacias ya creadas o que ante un nombre duplicado emita un mensaje amigable: 'Este nombre ya existe dentro de las Farmacias del Sistema' 
+La solución ideal sería implementar un botón o una opción clara y fácil de encontrar que permita a los usuarios volver atrás en la aplicación de manera intuitiva.
 
 **Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
 
-- Identificar el módulo, método o clase donde se registra la excepción.
-- Darle el tratamiento correpsondiente ya sea a nivel de try catch o Filtros como en los casos anteriores.
-- En la invocación del Front al servicio controlar este mensaje de error.
-- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
-- Actualizar el porcentaje de cobertura de código, en lo posible mejorarlo.
-
-**Clasificación:**
-- Prioridad: Inmediata
-- Severidad: Crítica
-
-  ### Issue 4
-Funcionalidad del Admin: Alta de Farmacia - Sin Dirección
-
-**Descripción:**
-La funcionalidad del Admin: Alta de Farmacia cuando no tiene dirección.
-Mensaje genérico, poco explicativo.
-
-**Impacto:**
-Con Rol Admin, al querer ingresar una Farmacia sin dirección proporciona una mensaje bastante genérico sin explicación detallada de cuál es el error. 
-Esto ocaciona que el Admin no sepa donde está el error, aunque el Admin podría saberlo de antemano si se le dio un instructivo al respecto. 
-
-**Solución ideal:**
-La solución ideal sería que el usuario Admin puede visualizar un mensaje más detallado al crear la Farmacia sin dirección. 
-Esto se debería controlar a nivel de manejo de control de nulos. Si el back está devolviendo este error personalizado, que se pueda controlar en el Font para emitir un mensaje personalizado.
-
-**Plan de acción:**
-El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
-
-- Identificar si el método del back está devolviendo un mensaje personalizado o no.
-- Si el mensaje es correcto, entonces analizar en el Front donde se está devolviendo este mensaje para cambiarlo por un mensaje personalizado.
-- Realizar pruebas de integración exhaustivas para garantizar que las funcionalidad está correctamente corregida.
-- Actualizar en la docuemntaicón del Sistema e instructivo si los hubiera
+- Realizar un análisis de usabilidad para identificar la ubicación óptima del botón de retroceso.
+- Diseñar e implementar un botón de retroceso en una ubicación visible y coherente en todas las pantallas de la aplicación.
+- Actualizar la interfaz de usuario y proporcionar indicaciones visuales para destacar la existencia y la funcionalidad del botón de retroceso.
+- Realizar pruebas de usuario para garantizar que la nueva funcionalidad sea fácilmente comprensible y utilizable.
 
 **Clasificación:**
 - Prioridad: Media
-- Severidad: Leve
-  
-  
-  
+- Severidad: Moderada
+        
+### Issue 19
+**Discrepancia en el número de artículos solicitados durante la compra como usuario anónimo:**
+
+**Descripción:**
+Cuando un usuario anónimo realiza una compra de varios artículos en la aplicación, se ha observado que a veces los artículos no se incluyen correctamente en la lista de compras. Esto resulta en una discrepancia en el número de artículos solicitados y los que finalmente se incluyen en la compra.
+
+**Impacto:**
+La discrepancia en el número de artículos solicitados puede llevar a una experiencia insatisfactoria para los usuarios, ya que no reciben todos los productos que esperaban. Esto podría generar confusión y frustración, así como pérdida de ventas y la posibilidad de recibir devoluciones.
+
+**Solución ideal:**
+La solución ideal sería identificar y corregir el problema  que causa la discrepancia en la compra de artículos como usuario anónimo. Esto podría requerir una revisión detallada del flujo de compra y la identificación de cualquier error en el proceso.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Realizar pruebas exhaustivas para replicar y comprender el problema de la discrepancia en la compra.
+- Identificar las áreas del flujo de compra donde podría producirse el error.
+- Corregir cualquier error en el proceso de compra que esté causando la discrepancia.
+- Realizar pruebas de usuario para verificar que el problema se ha resuelto satisfactoriamente.
+
+**Reproducción del error:**
+- Crear una orden anonima con varios items incluidos en el carrito
+- Confirmar el pedido
+- Ingresar como empleado
+- Ingresar a View Stock Request 
+- Localizar la compra realizada 
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Critico
         
