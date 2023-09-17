@@ -178,3 +178,128 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
     - Continuar con una breve descripción del cambio o problema que aborda.
     - Utilizar un estilo conciso y claro.
     - Evitar incluir información técnica compleja en el título del PR, reservar esos detalles para la descripción del PR.
+
+
+#### ISSUES
+
+### Issues 1 
+   
+a) Creación de medicamento con errores se genera una excepción general:
+
+**Descripción:**
+El sistema actual utiliza excepciones genéricas o errores generales para manejar problemas en lugar de excepciones específicas.
+
+**Impacto:**
+Esto dificulta la identificación y corrección de errores, lo que puede llevar a una mayor carga de trabajo en el mantenimiento y una menor calidad del software, y dificulta la usabilidad para el propio usuario del sistema.
+
+**Solución ideal:**
+La solución ideal sería revisar y refactorizar el código para reemplazar las excepciones genéricas con excepciones específicas que proporcionen información detallada sobre el error.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar todas las instancias de excepciones genéricas en el código.
+- Analizar cada caso para determinar qué tipo de excepción específica debería usarse.
+- Reemplazar las excepciones genéricas con excepciones específicas.
+- Actualizar la documentación y las pruebas correspondientes.
+
+Reproducción del error:
+Logeado como empleado --> create drug
+se genera la siguiente droga
+- Code: Xa11
+- Name: a
+- Symptom: aa
+- Quantity: 1
+- Price: 2
+- Prescription: mg
+- Capsule
+
+Clasificación:
+- Prioridad: Media
+- Severidad: Leve
+
+### Issue 2
+**a) Creación de request de stock con valores negativos:**
+
+**Descripción:**
+El sistema actual permite la creación de solicitudes de stock con valores negativos, lo que puede llevar a problemas de seguimiento y control de inventario, así como a la generación de informes incorrectos.
+
+**Impacto:**
+La creación de solicitudes de stock con valores negativos puede resultar en un desequilibrio en el inventario y errores en el cálculo de existencias. Esto podría llevar a problemas de disponibilidad de productos y pérdida de ventas.
+
+**Solución ideal:**
+La solución ideal sería implementar validaciones en el sistema que impidan la creación de solicitudes de stock con valores negativos y proporcionen mensajes de error claros a los usuarios.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta deuda técnica, como:
+
+- Identificar las áreas del sistema donde se permite la creación de solicitudes de stock con valores negativos.
+- Agregar validaciones para verificar que los valores no sean negativos antes de crear una solicitud de stock.
+- Actualizar la interfaz de usuario para proporcionar retroalimentación visual y mensajes de error informativos.
+- Realizar pruebas exhaustivas para garantizar que las validaciones funcionen correctamente.
+
+**Reproducción del error:**
+- Iniciar sesión como empleado.
+- Acceder a la opción de "Crear solicitud de stock".
+- Ingresar un valor negativo en el campo de cantidad via teclado.
+- Continuar con la creación de la solicitud.
+
+**Clasificación:**
+- Prioridad: Baja
+- Severidad: Menor
+
+### Issue 3
+**Falta de botón claro para volver atrás en la aplicación:**
+
+**Descripción:**
+Actualmente, al ingresar al menú de la aplicación, no existe un botón claro o una opción intuitiva que permita a los usuarios volver atrás. Esto genera confusión y dificulta la navegación fluida dentro de la aplicación.
+
+**Impacto:**
+La falta de un botón claro para volver atrás puede llevar a una experiencia de usuario frustrante y aumentar la curva de aprendizaje para nuevos usuarios. También puede generar confusión y requerir que los usuarios realicen acciones adicionales, como hacer clic en el logo de la aplicación, para regresar a una pantalla anterior.
+
+**Solución ideal:**
+La solución ideal sería implementar un botón o una opción clara y fácil de encontrar que permita a los usuarios volver atrás en la aplicación de manera intuitiva.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Realizar un análisis de usabilidad para identificar la ubicación óptima del botón de retroceso.
+- Diseñar e implementar un botón de retroceso en una ubicación visible y coherente en todas las pantallas de la aplicación.
+- Actualizar la interfaz de usuario y proporcionar indicaciones visuales para destacar la existencia y la funcionalidad del botón de retroceso.
+- Realizar pruebas de usuario para garantizar que la nueva funcionalidad sea fácilmente comprensible y utilizable.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Moderada
+        
+### Issue 4
+**Discrepancia en el número de artículos solicitados durante la compra como usuario anónimo:**
+
+**Descripción:**
+Cuando un usuario anónimo realiza una compra de varios artículos en la aplicación, se ha observado que a veces los artículos no se incluyen correctamente en la lista de compras. Esto resulta en una discrepancia en el número de artículos solicitados y los que finalmente se incluyen en la compra.
+
+**Impacto:**
+La discrepancia en el número de artículos solicitados puede llevar a una experiencia insatisfactoria para los usuarios, ya que no reciben todos los productos que esperaban. Esto podría generar confusión y frustración, así como pérdida de ventas y la posibilidad de recibir devoluciones.
+
+**Solución ideal:**
+La solución ideal sería identificar y corregir el problema  que causa la discrepancia en la compra de artículos como usuario anónimo. Esto podría requerir una revisión detallada del flujo de compra y la identificación de cualquier error en el proceso.
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta preocupación, como:
+
+- Realizar pruebas exhaustivas para replicar y comprender el problema de la discrepancia en la compra.
+- Identificar las áreas del flujo de compra donde podría producirse el error.
+- Corregir cualquier error en el proceso de compra que esté causando la discrepancia.
+- Realizar pruebas de usuario para verificar que el problema se ha resuelto satisfactoriamente.
+
+**Reproducción del error:**
+- Crear una orden anonima con varios items incluidos en el carrito
+- Confirmar el pedido
+- Ingresar como empleado
+- Ingresar a View Stock Request 
+- Localizar la compra realizada 
+
+**Clasificación:**
+- Prioridad: Alta
+- Severidad: Critico
+        
