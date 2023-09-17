@@ -425,6 +425,62 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 - Prioridad: Media
 - Severidad: Moderada
 
+### Issue 10
+** Excepción Testing Exploratorio Funciones Dueño - Excepción Detalle de Compras Realizadas **
+**Descripción:**
+
+Al seleccionar la opción de Listado Detallado de Compras se lanza una excepción que obliga a reiniciar el server. 
+Excepción lanzada: 
+
+Microsoft.Data.SqlClient.SqlException: 'Invalid column name 'PharmacyId'.
+Invalid column name 'PharmacyId'.
+Invalid column name 'Status'.
+Invalid column name 'TrackingCode'.'
+
+**Impacto:**
+Con el Rol como dueño, si se quiere acceder al listado de compras realizadas se lanza una excepción que obliga a reiniciar el server. El impacto es a nivel del usuario, se refleja que el software no está cumpliendo con la funcionalidad esperada, pero sobre todo la experiencia del usuario no es amigable, ya que no puede seguir utilizando el resto de las funcionalidades de su rol. 
+
+**Solución ideal:**
+Observando la excepción se muestra que no se está guardando o leyendo bien el ID de la Farmacia. 
+Se puede revisar a nivel de Front, sería menos costoso solucionar a nivel de form o de cookies si fuera el caso. En caso de no encontrar el error buscaríamos a nivel de Back. 
+
+**Plan de acción:**
+El plan de acción podría incluir pasos específicos para abordar esta excepción, como:
+
+- Identificar la parte del código del Front, si existe, responsable de lanzar la excepción incorrecta al iniciar sesión como dueño y querer acceder al listado.
+- Si no encontramos posible error, entonces buscamos en el Back, siguiendo los mismos pasos. Aunque en el back está lanzando la excepción, no se está controlando de forma adecuada. 
+- Completar pruebas unitarias del back del módulo que está experimentando la excepción
+- Mantener o superar la cobertura de código.
+- Actualizar la documentación para reflejar los cambios realizados.
+
+**Clasificación:**
+- Prioridad: Media
+- Severidad: Crítica
+
+### Issue 11
+**  **
+**Descripción:**
+
+**Impacto:**
+
+**Solución ideal:**
+
+**Plan de acción:**
+
+**Clasificación:**
+
+### Issue 12
+**  **
+**Descripción:**
+
+**Impacto:**
+
+**Solución ideal:**
+
+**Plan de acción:**
+
+**Clasificación:**
+
 
   
   
