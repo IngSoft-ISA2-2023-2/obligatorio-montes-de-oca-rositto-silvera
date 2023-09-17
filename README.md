@@ -459,17 +459,22 @@ El plan de acción podría incluir pasos específicos para abordar esta excepci�
 
 ### Issue 11
 **Busqueda de remedios filtra por titulo exacto**
+
 **Descripción:**
 Se tiene que escribir el nombre preciso del medicamento, espacios y numeros incluidos para encontrar el remedio elegido.
 No ocurren casos donde aparecen todos los remedios que tengan la palabra "parace" como paracetamol 200 o paracetamol 500.
 Se ignoran las Mayusculas por lo que el error no se extiende mas de esto.
+
 **Impacto:**
 Aquellos usuarios que sean poco familiares con el sistema, o no conozcan con exactitud el nombre completo del remedio pueden encontrar dificultades al momento de encontrar su objetivo, posiblemente causando abandono
+
 **Solución ideal:**
 Se implementa un filtro que devuelve resultados que coincidan parcialmente con la busqueda.
+
 **Plan de acción:**
 -Analizar la ubicacion en codigo del sistema de busqueda
 -Implementar una solicitud a base de datos menos estricta
+
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Menor
@@ -477,14 +482,19 @@ Se implementa un filtro que devuelve resultados que coincidan parcialmente con l
 
 ### Issue 12
 ** No se informa al Usuario cuando una farmacia no posee ningun medicamento que coincida con la busqueda **
+
 **Descripción:**
 La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
+
 **Impacto:**
 Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
+
 **Solución ideal:**
 Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
+
 **Plan de acción:**
 Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
+
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Leve
@@ -492,12 +502,16 @@ Añadir un if module que detecte cuando la lista resultado esta vacia y carge un
 
 ### Issue 13
 ** No se informa al Usuario cuando una farmacia no posee ningun medicamento que coincida con la busqueda **
+
 **Descripción:**
 Los medicamentos poseen un display de imagenes a pesar de que el sistema no implementa dicha funcionalidad
+
 **Impacto:**
 El hecho de que no se muestren imagenes de los medicamentos evita que los usuarios pueden verificar que es el medicamento que buscan
+
 **Solución ideal:**
 Se descarta el sistema de imagenes / Se implementa la funcionalidad y se realiza una solicitud de carga de imagenes para los medicamentos ya ingresados
+
 **Plan de acción:**
 Se Cambia el componente de medicamento por uno que no posea imagenes
 /
@@ -505,34 +519,46 @@ Se Cambia el componente de medicamento por uno que no posea imagenes
 - Se explora la base de datos en busqueda de medicamentos sin imagen
 - Se implementa un sistema de edicion de imagenes
 - Se les indica a los usuarios empleados sobre la falta de imagenes en los medicamentos que brinda su farmacia y se les solicita su actualizacion
+
+  
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Leve
 
 ### Issue 14
 **Falta de sistema de Imagenes**
+
 **Descripción:**
 La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
+
 **Impacto:**
 Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
+
 **Solución ideal:**
 Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
+
 **Plan de acción:**
 Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
+
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Leve
 
 ### Issue 15
 ** No se informa al Usuario cuando una farmacia no posee ningun medicamento que coincida con la busqueda **
+
 **Descripción:**
 La lista de medicamentos queda vacia y no indica una falta de resultados que puede confundirse con un estado congelado de la pagina
+
 **Impacto:**
 Usuarios pueden malinterpretar el estado en blanco del resultado como un error de performance de la pagina o malinterpretarlo como un error
+
 **Solución ideal:**
 Se implementa un Mensaje que indica la ausencia de medicamentos que cumplan con los filtros indicados
+
 **Plan de acción:**
 Añadir un if module que detecte cuando la lista resultado esta vacia y carge un mensaje que indique la ausencia de resultados que coincidan con el filtro
+
 **Clasificación:**
 - Prioridad : Baja
 - Severidad : Leve
