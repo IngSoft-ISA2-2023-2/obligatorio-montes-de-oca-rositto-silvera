@@ -82,6 +82,9 @@ Todas los tipos de tareas se pueden mover a un estado: DOING, donde indicamos qu
     
     Columna 3: Completado (Done): Cuando una tarea se ha finalizado o completado, se traslada a esta columna. Aquí, se muestra claramente qué tareas se han terminado y están listas para su revisión o entrega. Al moverla a DONE se agrega fecha y hora de finalización
 
+    Columna 4:
+    Al ir avanzando en el aprendizaje de la herramienta y metodología vimos que creamos tareas que estaban repetidas, o que habían sido desglosadas en otras más pequeñas o que simplemente las habíamos porpuesto pero en realidad no llegamos con los tiempos, para este caso creamos la columna DEPRECADOS. 
+
 Pruebas Unitarias: Se han realizado pruebas unitarias exhaustivas para asegurarse de que el código funcione correctamente. Todas las pruebas unitarias han pasado con éxito.
 
 Integración Completa: La nueva función de inicio de sesión se ha integrado con éxito en el repositorio principal del proyecto.
@@ -118,7 +121,12 @@ Cómo funciona:
 
 ### Roles
 
----- Cargar tabla con roles
+En principio y por requerimiento de la letra del obligatorio, todos los integrantes del equipo somos desarrolladores y testers.
+Aunque en la metodlogía KANBAN no tenemos la figura del SCRUM MASTER, vemos imprescindible en esta transición este rol, para ayudarnos a gestionar el tablero, indicar los atributos que tenía que tener cada tarjeta, así como promover las stand up.
+
+Product Owner (PO): en esta etapa de aprendizaje y transición creemos conveniente que los 3 integrantes seamos PO, para llegar a entender con mayor exactitud y claridad los requerimientos y necesidades de los clientes, sobre todo de las prioridades y severidades. 
+Los 3 podemos asignar prioridades y severidades así como opinar y solicitar cambio de alguna tarea que fue asignada a otro integrante del equipo.
+Entendemos que esto es importante para fortalecer el equipo y tener una escucha activa y efectiva ante las necesidades. 
 
 ### Políticas de trabajo
 
