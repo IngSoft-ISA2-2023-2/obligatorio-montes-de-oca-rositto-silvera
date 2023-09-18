@@ -64,15 +64,26 @@ Tablero Kanban
 Respecto al tablero:
 
 Para esta iteracion se promueve la utilizacion de un
-Tablero Kanban Simple:
+Tablero Kanban Ágile Simple:
+
+Optamos por esta ocpión de Tablero y no la sustentable, ya que entendemos que las tareas tienen diferentes niveles de desarrollo, algunas pasan por análisis y desarrollo, otras simplemente por ser realizadas como calcular el esfuerzo o las métricas o un informe que requiere lectura previa y reflexiones.
+
+Todas los tipos de tareas se pueden mover a un estado: DOING, donde indicamos que se está desarrollando esa tarea.
 
     Columna 1: Por Hacer (To Do): En esta columna, se enumeran todas las tareas o elementos de trabajo que aún no han comenzado. Representa las tareas pendientes que deben abordarse.
+    En esta etapa de entrega se encuentran tareas propias de planificaicón y diseño del Tablero, análisis y preparación de materiales, así como las propias tareas de testing exploratorio propuestas en el proyecto. 
 
-    Columna 2: En Progreso (In Progress): Las tareas que están en proceso se mueven a esta columna. Aquí, los miembros del equipo trabajan activamente en estas tareas. El objetivo es limitar la cantidad de tareas en esta columna para evitar la sobrecarga. Y limitar el numero WIP.
+    Al principio habíamos desglosado en tareas por Roles del proyecto como Admin, dueño, Farmacia, Anonimo, nos pareció que quedaban muy abiertas y muy genéricas y no nos iban a permitir calcular buenas métricas, o al menos más detalladas, ya que un Rol puede tener varias funcionalidades. 
+    Luesgo, fuimos discriminando por ROl - Funcionalidad ya que de esta manera quedaba encapsulada, en lo que luego podría ser una user stroy, para estimar, calcular tiempos de esfuezo, nos resultó más simple. 
+    
+    
+    Columna 2: En Progreso (In Progress - DOING): Las tareas que están en proceso se mueven a esta columna. Aquí, los miembros del equipo trabajan activamente en estas tareas. El objetivo es limitar la cantidad de tareas en esta columna para evitar la sobrecarga. Y limitar el numero WIP.
 
+    En nuestro caso en particualr, cada integrante del equipo trabajó en las tareas que fue tomando, agregando fecha y hora de comienzo así como fecha y hora de fin cuando las movía a la columna DONE.
+    
     Columna 3: Completado (Done): Cuando una tarea se ha finalizado o completado, se traslada a esta columna. Aquí, se muestra claramente qué tareas se han terminado y están listas para su revisión o entrega.
 
-     Respecto a la definicion of done:
+    Respecto a la definicion of done:
        Código Escrito: Todo el código necesario para la nueva función de inicio de sesión ha sido escrito y revisado.
 
 Pruebas Unitarias: Se han realizado pruebas unitarias exhaustivas para asegurarse de que el código funcione correctamente. Todas las pruebas unitarias han pasado con éxito.
