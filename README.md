@@ -79,50 +79,23 @@ Todas los tipos de tareas se pueden mover a un estado: DOING, donde indicamos qu
     Al moverlas se coloca fecha - hora de comienzo y a quien se le asigna. 
 
     En nuestro caso en particualr, cada integrante del equipo trabajó en las tareas que fue tomando, agregando fecha y hora de comienzo así como fecha y hora de fin cuando las movía a la columna DONE.
+    Se limita la cantidad de tarjetas que pueden estar en la columna "En Progreso" para evitar la congestión y fomentar la finalización de tareas antes de agregar nuevas. Es decir limitar el WIP.
+    Cada desarrollador debe realizar de a una tarea a la vez.
+
     
     Columna 3: Completado (Done): Cuando una tarea se ha finalizado o completado, se traslada a esta columna. Aquí, se muestra claramente qué tareas se han terminado y están listas para su revisión o entrega. Al moverla a DONE se agrega fecha y hora de finalización
 
     Columna 4:
     Al ir avanzando en el aprendizaje de la herramienta y metodología vimos que creamos tareas que estaban repetidas, o que habían sido desglosadas en otras más pequeñas o que simplemente las habíamos porpuesto pero en realidad no llegamos con los tiempos, para este caso creamos la columna DEPRECADOS. 
 
-Pruebas Unitarias: Se han realizado pruebas unitarias exhaustivas para asegurarse de que el código funcione correctamente. Todas las pruebas unitarias han pasado con éxito.
+    Conceptualmente se deberían defiir límites de WIP: En cada columna se establece un límite de cuántas tarjetas pueden estar en esa etapa al mismo tiempo. Esto evita la congestión y garantiza un flujo de trabajo constante.
 
-Integración Completa: La nueva función de inicio de sesión se ha integrado con éxito en el repositorio principal del proyecto.
-
-Pruebas de Integración: Se han realizado pruebas de integración para garantizar que la nueva función no cause conflictos con otras partes de la aplicación. Todas las pruebas de integración han pasado con éxito.
-
-Pruebas de Aceptación: Se han realizado pruebas de aceptación para garantizar que la nueva función cumple con los requisitos especificados en el documento de diseño. Todas las pruebas de aceptación han pasado con éxito.
-
-Revisión de Pares: La implementación ha sido revisada por al menos un compañero de equipo para verificar la calidad del código y cumplir con los estándares de codificación.
-
-Documentación Actualizada: Se ha actualizado la documentación relevante, como manuales de usuario o documentación técnica, para reflejar la nueva función de inicio de sesión.
-
-Revisión por el Product Owner: El Propietario del Producto o el interesado ha revisado la nueva función y la ha aprobado.
-
-Despliegue en Entorno de Pruebas: La nueva función se ha desplegado en un entorno de pruebas y se ha verificado su correcto funcionamiento en un entorno similar al de producción.
-
-Despliegue en Producción: La nueva función se ha desplegado en el entorno de producción de la aplicación y está disponible para los usuarios finales.
-
-Cómo funciona:
-
-    Las tareas se escriben en tarjetas individuales, cada una con una breve descripción y, posiblemente, detalles adicionales.
-
-    Inicialmente, todas las tarjetas se colocan en la columna "Por Hacer" To do.
-
-    Cuando un miembro del equipo comienza a trabajar en una tarea, la mueve a la columna "En Progreso".
-
-    A medida que se avanza en una tarea y se completa y se cumple con la definicion of done, se traslada a la columna "Completado".
-
-    Se limita la cantidad de tarjetas que pueden estar en la columna "En Progreso" para evitar la congestión y fomentar la finalización de tareas antes de agregar nuevas. Es decir limitar el WIP.
-
-    El equipo se reúne regularmente para revisar el tablero Kanban, identificar cuellos de botella y ajustar las prioridades según sea necesario. 
-    
-    Límites de WIP: En cada columna se establece un límite de cuántas tarjetas pueden estar en esa etapa al mismo tiempo. Esto evita la congestión y garantiza un flujo de trabajo constante.
+    En particular,  en nuestro equipo limitamos la cantidad de tareas  a la vez, que cada miembro puede trabajar.
 
 ### Roles
 
 En principio y por requerimiento de la letra del obligatorio, todos los integrantes del equipo somos desarrolladores y testers.
-Aunque en la metodlogía KANBAN no tenemos la figura del SCRUM MASTER, vemos imprescindible en esta transición este rol, para ayudarnos a gestionar el tablero, indicar los atributos que tenía que tener cada tarjeta, así como promover las stand up.
+Aunque en la metodlogía KANBAN no tenemos la figura del SCRUM MASTER como obligatoria, vemos imprescindible en esta transición este rol, para ayudarnos a gestionar el tablero, indicar los atributos que tenía que tener cada tarjeta, así como promover las stand up.
 
 Product Owner (PO): en esta etapa de aprendizaje y transición creemos conveniente que los 3 integrantes seamos PO, para llegar a entender con mayor exactitud y claridad los requerimientos y necesidades de los clientes, sobre todo de las prioridades y severidades. 
 Los 3 podemos asignar prioridades y severidades así como opinar y solicitar cambio de alguna tarea que fue asignada a otro integrante del equipo.
@@ -130,31 +103,42 @@ Entendemos que esto es importante para fortalecer el equipo y tener una escucha 
 
 ### Políticas de trabajo
 
+Tuvimos muchas dificultades al comienzo del Obligatorio para entrar en 'ritmo', nos costó organizarnos, encontrar espacios en común para las Stand Up y la planificación. Se visualiza en las retrospectiva el reflejo de esta mención, ya que se proponen como acciones correctivas buscar espacioes en común síncronos, así como gestionar de orma uniforme el tiempo. 
+
+
 #### Definición de Ready
 
+En esta entrega del Obligatorio no tenemos historias de usuario definidas com otal, solamente hemos incluido tareas. 
+Pero es deseable y lo dejamos previsto para las próximas entregas las siguientes pautas:
 Antes de que una historia de usuario pueda ser incluida en una iteración, es necesario que cumpla con ciertas condiciones previas.
 Estas condiciones incluyen que el equipo de desarrollo debe tener una comprensión compartida de lo que la historia de usuario significa y qué se espera de ella.
 También se debe presentar una estimación relativa del trabajo necesario para completar la historia de usuario, y los criterios de aceptación deben ser claros y representados en escenarios para que puedan ser comprobados.
-Además, la historia de usuario debe ser valiosa y no depender de otras historias de usuario para su completitud.
+Acá aún debemos definir si vamos a realizar la estimación a través de la técnica de Pocker impartida en ISA 1 u otra técnica. 
+
+Además, la historia de usuario debe ser valiosa y no depender de otras historias de usuario para su completitud, sabemos ue debe cumplir con los criterios de INVEST
 En resumen, estas condiciones previas aseguran que el equipo de desarrollo tenga toda la información necesaria y comprenda completamente lo que se espera de la historia de usuario antes de comenzar a trabajar en ella.
 
 La definición de lista de requisitos previos para una historia de usuario entrar en una iteración incluye que:
 
 1. El título debe ser breve y muy descriptivo.
-2. La narrativa debe tener una estructura que explique qué hace el usuario, qué quiere y por qué lo quiere.
-3. La estimación de tiempo debe estar en horas ideales de trabajo y estar en valores predefinidos.
+2. La narrativa debe tener una estructura que explique qué hace el usuario, qué quiere y por qué lo quiere, esquema (Cómo, Quiero, Para...)
+3. La estimación de tiempo debe estar en una unidad de tiempo acordada y estar en valores predefinidos.
 4. Los criterios de aceptación deben ser claros y presentados como escenarios, explicando el contexto, el evento y los resultados esperados.
 
 #### Definición de Done
 
 Los criterios para determinar qué historias terminaron con éxito su proceso de implementación serán:
 
-1. Las validaciones correspondiente con el cliente, ajustando su correspondiente feedback.
+1. Las validaciones correspondiente con el cliente, ajustando su correspondiente feedback. En este caso nuestros clientes serán los docentes y los 'potenciales' clientes de la aplicación que estamos testeando y analizando deuda técnica.
+
 2. El elemento ha sido revisado por un par o por el equipo de desarrollo.
+Como los integrantes del equipo somos tres, entendemos suficiente que se validen de a pares. E nestos casos la funcionalidad debe ser testeada de forma exhaustiva y/o mejorado la cobertura de código.
+
 3. El elemento ha sido probado y se ha verificado que funciona correctamente en diferentes entornos.
-4. Todo el trabajo debe estar integrado a main.
+
+4. Todo el trabajo debe estar integrado a la rama main.
+
 5. La documentación ha sido actualizada y se ha revisado para asegurarse de que esté completa y precisa.
-6. Debe ser probada por usuarios reales, ajustando su correspondiente feedback.
 
 ### Control de versiones
 
@@ -163,25 +147,12 @@ Se crea el repositorio <https://github.com/IngSoft-ISA2-2023-2/obligatorio-monte
 Iniciamos nuestro trabajo utilizando la metodologia de GitFlow pero sera nuestra intencion a futuro migrar a una metodologia Trunk-Based mientras investigamos caracteristicas 
 de la misma.
 
-Considerando esta transferencia creamos ramas paralelas desde main y trabajamos sobre ellas hasta considerar nuestro trabajo completo, en donde mergeamos el codigo a una rama
-develop. Una vez consideramos nuestro codigo listo para release mergeamos nuestro codigo en develop a main y luego continuamos trabajando en develop.
+Considerando esta transferencia creamos ramas paralelas desde main y trabajamos sobre ellas hasta considerar nuestro trabajo completo, en donde mergeamos el codigo a una rama develop. Una vez consideramos nuestro codigo listo para release mergeamos nuestro codigo en develop a main y luego continuamos trabajando en develop.
 
-Ante nuestra transicion entre gitflow y trunkbased iremos introduciendo metodologias de trunk lentamente hasta alcanzar la modalidad, por ejemplo haciendo pruebas sobre esta en algunas de nuestras ramas paralelas.
+Ante nuestra transición entre gitflow y trunkbased iremos introduciendo metodologías de trunk lentamente hasta alcanzar la modalidad, por ejemplo haciendo pruebas sobre esta en algunas de nuestras ramas paralelas.
 
 La rama issues-merge es una rama sobre la cual probaremos utilizar la metodologia trunk-based.
-
-#### Descripción de los PRs
-
-Puntos clave para redactar la descripción de los PRs:
-
-- Propósito del PR: Explicar de manera clara el propósito del PR, describiendo el problema que soluciona, la función que agrega o la mejora que implementa. Esto brinda contexto a los revisores y colaboradores.
-
-- Cambios realizados: Detallar específicamente los cambios efectuados, junto con cualquier detalle relevante.
-
-- Impacto y dependencias: Es importante mencionar si el PR tiene algún impacto en otras partes de las funcionalidades existentes.
-
-- Si el PR depende de otros PRs, debe ser informado.
-
+Para esta entrega ya experimentamos esta metoología, notando que es más ágil, rápida y con mejores resultados ya que los merge resultan más simples
 
 #### Nombre de ramas, commits y PRs
 
@@ -207,7 +178,6 @@ Puntos clave para redactar la descripción de los PRs:
 
 
 #### ISSUES
-
 
 ### Issue 1 
 
