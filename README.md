@@ -1,4 +1,4 @@
-# Informe de obligatorio ISA
+# Informe de Obligatorio ISA
 
 ---------------------------------------------------------------------------
 
@@ -55,6 +55,36 @@ Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligator
  Estos requerimientos forman parte del TODO: para hacer, que luego se van moviendo a una o varias columnas que conforman un artefacto visual: El tablero Kanban, donde luego de finalizadas y si cumple los criterios de aceptación se mueven al DONE.
 
  Este proceso de mover las tareas entre las diferentes columnas del Tablero, cumple con el Check, Control y Seguimiento pudiendo visualizar last tareas pendientes, en desarrollo y realizadas. Además permite agregar múltiples atributos que luego explicaremos en detalle.
+
+ **Cómo adaptamos los 6 principios Kanban a nuestro marco de trabajo:**
+ 
+ **1) Visualizar el flujo de trabajo:**
+ Dentro de nuestro repositorio creamos un proyecto de nombre Entrega 1 donde iremos gestionando nuestras diferentes entregas. Estas entregas, así como en estas utilizaremos tableros dinámicos, que se podrán ir modificando en la medida que el proyecto así lo requiera. Está visible para todos los integrantes del equipo y cada uno puede gestionarlo a medida que avanza. 
+
+**2) Limitar el WIP:**
+ limitamos el trabajo en curso para evitar cuellos de botella y para garantizar que solo entran elementos nuevos cuando hay capacidad de completarlos (no se produce por encima del cuello de botella).
+ Esto lo logramos evitando que cada uno trabaje en 2 tareas/issues a la vez.
+
+**3) Gestionar y medir el flujo:**
+Mmedir para ver si se mejora o no y decidir en consecuencia. Podría ser número de tareas completas en el Sprint, o número de Story Points completados, el Lead Time, el Cycle Time, etc..
+
+Como en esta Etapa tendremos básicamente tareas de diferentes titpo, hemos decidido medir con la unidad de esfuerzo: horas/hombre y no user stories. 
+Primero porque no tenemos US y luego porque si medimos en días hay tareas que no llevan un día, si no horas. Es una unidad que nos permite medir unidades más pequeñas.
+
+**4) Implementar ciclos de feedback:**
+Son muy importantes y de mucho aprendizaje las retrospectivas y las stand ups. Hemos tenido dificultades para encontrar momentos en común, como lo dejamos reflejado en las retrospectiva, igualmente vamos a intentar mejorar para próximas entregas.  
+son los standups y retrospectivas. Se debe recibir el feedback en todos los niveles (equipo, cliente, PO, etc.).
+
+**5) Explicitar políticas y procedimientos:**
+Por ejemplo los “Definition of Done”, “Definition of Ready”, valores y principios.
+Esto lo vemos en la sección del capítulo que de Políticas, Definition of Donde y Definition of Ready.
+
+**6) Mejora continua mediante la colaboración:**
+Usar modelos y experimentar científicamente: definir una hipótesis, implementar un experimento y medir las consecuencias. Si funciona se sigue y si no comienzas de nuevo el ciclo.
+
+Esta sección la comenzamos a experimentar con los commits de trunked-based. No conocíamos la técnica, la experimentamos y de ahora en más es la que vamos a utilizar o al menos hasta que surja otra que se recomiende en el curso.
+Seguro encontraremos otras instancias para este apredizaje experimental. 
+
 
 Tablero Kanban
 ![pngegg](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/62801065/83b9c5ec-6110-41e6-a8a2-ebe84cb1f28e)
@@ -177,7 +207,7 @@ Para esta entrega ya experimentamos esta metoología, notando que es más ágil,
     - Utilizar un estilo conciso y claro.
 
 
-#### ISSUES
+#### ISSUES - ANÁLISIS DE DEUDA TÉCNICA
 
 ### Issue 1 
 
