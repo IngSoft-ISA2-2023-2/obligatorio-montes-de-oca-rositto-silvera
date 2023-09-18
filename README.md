@@ -62,7 +62,7 @@ Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligator
  Dentro de nuestro repositorio creamos un proyecto de nombre Entrega 1 donde iremos gestionando nuestras diferentes entregas. Estas entregas, así como en estas utilizaremos tableros dinámicos, que se podrán ir modificando en la medida que el proyecto así lo requiera. Está visible para todos los integrantes del equipo y cada uno puede gestionarlo a medida que avanza. 
 
 **2) Limitar el WIP:**
- limitamos el trabajo en curso para evitar cuellos de botella y para garantizar que solo entran elementos nuevos cuando hay capacidad de completarlos (no se produce por encima del cuello de botella).
+ Limitamos el trabajo en curso para evitar cuellos de botella y para garantizar que solo entran elementos nuevos cuando hay capacidad de completarlos (no se produce por encima del cuello de botella).
  Esto lo logramos evitando que cada uno trabaje en 2 tareas/issues a la vez.
 
 **3) Gestionar y medir el flujo:**
@@ -82,7 +82,7 @@ Esto lo vemos en la sección del capítulo que de Políticas, Definition of Dond
 **6) Mejora continua mediante la colaboración:**
 Usar modelos y experimentar científicamente: definir una hipótesis, implementar un experimento y medir las consecuencias. Si funciona se sigue y si no comienzas de nuevo el ciclo.
 
-Esta sección la comenzamos a experimentar con los commits de trunked-based. No conocíamos la técnica, la experimentamos y de ahora en más es la que vamos a utilizar o al menos hasta que surja otra que se recomiende en el curso.
+Esta sección la comenzamos a experimentar con los commits de trunk-based. No conocíamos la técnica, la experimentamos y de ahora en más es la que vamos a utilizar o al menos hasta que surja otra que se recomiende en el curso.
 Seguro encontraremos otras instancias para este apredizaje experimental. 
 
 
