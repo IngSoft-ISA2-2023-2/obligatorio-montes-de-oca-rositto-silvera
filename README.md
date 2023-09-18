@@ -120,23 +120,19 @@ Los criterios para determinar qué historias terminaron con éxito su proceso de
 
 ### Control de versiones
 
-Se crea el repositorio <https://github.com/ORT-ISA1/pascale-rabunal-silvera>
+Se crea el repositorio <https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera>
 
-Se trabaja con dos ramas “main” y “develop”, en esta última cada miembro del equipo trabajará de acuerdo a las buenas prácticas aprendidas.
+Iniciamos nuestro trabajo utilizando la metodologia de GitFlow pero sera nuestra intencion a futuro migrar a una metodologia Trunk-Based mientras investigamos caracteristicas 
+de la misma.
 
-Trabajaremos sobre “develop”, donde cada miembro creara sus ramas y trabaja sobre ellas. Una vez completado el desarrollo deberá mergear a “develop”.
+Considerando esta transferencia creamos ramas paralelas desde main y trabajamos sobre ellas hasta considerar nuestro trabajo completo, en donde mergeamos el codigo a una rama
+develop. Una vez consideramos nuestro codigo listo para release mergeamos nuestro codigo en develop a main y luego continuamos trabajando en develop.
 
-Al finalizar cada sprint “develop” será mergeada a “main”.
+Ante nuestra transicion entre gitflow y trunkbased iremos introduciendo metodologias de trunk lentamente hasta alcanzar la modalidad, por ejemplo haciendo pruebas sobre esta en algunas de nuestras ramas paralelas.
 
-Borrar las ramas que ya integradas
-
-![Repositorio del proyecto_01](https://github.com/ORT-ISA1/pascale-rabunal-silvera/assets/22498383/df8a0c9e-c365-4b71-922a-aac28feb8582)
+La rama issues-merge es una rama sobre la cual probaremos utilizar la metodologia trunk-based.
 
 #### Descripción de los PRs
-
-En función a las recomendaciones utilizaremos el siguiente articulo para definir como deben ser las descripciones de los PRs
-
-Articulo: <https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository>
 
 Puntos clave para redactar la descripción de los PRs:
 
@@ -148,24 +144,15 @@ Puntos clave para redactar la descripción de los PRs:
 
 - Si el PR depende de otros PRs, debe ser informado.
 
-- Instrucciones para revisores: Proporciona orientación clara a los revisores sobre cómo evaluar y probar los cambios. Esto puede incluir detalles sobre la configuración necesaria, comandos específicos que deben ejecutarse u otros requisitos relevantes.
-
-- Capturas de pantalla (opcional): Si es relevante, incluir capturas de pantalla que muestren visualmente los cambios realizados. Esto puede ser especialmente útil en cambios relacionados con la interfaz de usuario.
 
 #### Nombre de ramas, commits y PRs
-
-En función a las recomendaciones utilizaremos el siguiente articulo para definir como deben ser los nombre de ramas, commits y PRs
-
-<https://code.erpenbeck.io/git/2021/03/01/git-naming-conventions/>
 
 1.Para nombrar las ramas:
 
     - Los nombres deben ser descriptivos y concisos.
+    - Para trabajos similares se añade el nombre del desarrollador para distinguir las ramas en la que trabajo cada uno
     - Utilizar minúsculas y separa las palabras con guiones.
     - Agregar prefijos como "feature/" para nuevas características, "bugfix/" para correcciones de errores, "hotfix/" para soluciones urgentes, entre otros.
-    - Evitar nombres genéricos o ambiguos y eligir nombres que reflejen el propósito o contenido de la rama.
-
-![Repositorio del proyecto_02](https://github.com/ORT-ISA1/pascale-rabunal-silvera/assets/22498383/be2e62d1-75c2-4efc-8eb0-a28738105797)
 
 2.Para nombrar los commits:
 
@@ -179,7 +166,6 @@ En función a las recomendaciones utilizaremos el siguiente articulo para defini
     - Comenzar con un prefijo que indique el propósito, como "Feature:", "Fix:", "Docs:", etc.
     - Continuar con una breve descripción del cambio o problema que aborda.
     - Utilizar un estilo conciso y claro.
-    - Evitar incluir información técnica compleja en el título del PR, reservar esos detalles para la descripción del PR.
 
 
 #### ISSUES
