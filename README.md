@@ -708,4 +708,33 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 **Clasificación:**
 - Prioridad: Alta
 - Severidad: Critico
-        
+
+**Retrospectiva:**
+
+Como fue explicado anteriormente a lo largo de este informe, la falta de coordinación por superposición de horarios ya sea laborales o por asistir a otras asignaturas es un denominador común en el equipo.
+Debido a esto hubo 2 instancias de retrospectivas: 
+- Una de Ana Laura con Sebastián y otra de Ana Laura con Giuliano. 
+Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la herramienta que hemos utilizado en otrs semestres. 
+
+  Se incluyen en este  respositorio el link al esapcio de trababajo:
+  <https://metroretro.io/BO5EQ6TVNWUT>
+  Así como links a las carpetas de print de pantallas del trabajo durante la retrospectiva. 
+  Las mismas se encuentran en la carpeta: /Entrega1/Retrospectiva
+
+  **Surgen como acciones correctivas:**
+  
+  1) Definir días y horarios fijos para las reuniones, no son efectivas las reuniones de Stand Up asíncronas o con la herramienta de chat instantáneo, ya que se lee a destiempo y muchas vecs no se entiende la necesidad del momento.
+  2) Debemos elegir un único Scrum Master que haga el seguimiento de todas las instancias en tiempo y forma
+  3) Nivelar el tiempo dedicado de cada integrante del equipo para no sobrecargar al resto. Lograr un compromiso uniforme a lo largo de toda la entrega.
+
+  **Link de Video de Restrospectiva**
+  <https://fi365-my.sharepoint.com/:v:/g/personal/am146669_fi365_ort_edu_uy/EQD5n4--4_JJuEhbFKLN7AUBQT1Y_6_xJjzaSagEkkj4OA>
+
+  **Estimaciones de esfuerzo y Registro de Tareas**
+  Se entregan en la carpeta: /Entrega1/Esfuerzo de Tareas
+  Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. 
+  Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
+  La dedicación completa del equipo es de 37,92.
+  Completando un total de 19 issues que fueron informadas y listadas en el ReadMe 
+  Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time. 
+
