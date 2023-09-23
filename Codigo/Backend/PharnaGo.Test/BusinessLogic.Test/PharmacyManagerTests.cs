@@ -94,6 +94,29 @@ namespace PharmaGo.Test.BusinessLogic.Test
             var pharmacyReturned = _pharmacyManager.Create(pharmacy);
             _pharmacyRepository.VerifyAll();
         }
+        
+        [TestMethod]
+        [ExpectedException(typeof(InvalidResourceException))]
+        public void CreateExistentPharmacy_ShouldThrowException()
+        {
+             List<Pharmacy> pharmacies = new List<Pharmacy>
+            {
+                new Pharmacy
+                {
+                    Id = 1,
+                    Name = "Farmacia 1234"
+                }
+            };
+            _pharmacyRepository.Setup(r => r.GetOneByExpression(It.IsAny<Expression<Func<Pharmacy, bool>>>()))
+                .Returns((Expression<Func<Pharmacy, bool>> expression) => pharmacies.FirstOrDefault(expression.Compile()));
+
+            var pharmacyToCreate = new Pharmacy
+            {
+                Id = 100, 
+                Name = "Farmacia 1234" 
+            };
+            _pharmacyManager.Create(pharmacyToCreate);
+        }
 
         [TestMethod]
         [ExpectedException(typeof(InvalidResourceException))]

@@ -32,23 +32,32 @@ export class LoginComponent implements OnInit {
 
   goLogin(): void {
     let loginRequest = new LoginRequest(this.user, this.password);
-    this.loginService.login(loginRequest).subscribe((login) => {
-      this.commonService.updateToastData(
-        'Welcome: ' + login.userName,
-        'success',
-        'Login successful.'
+    this.loginService.login(loginRequest)
+      .subscribe(
+        (login) => {
+          // Manejar la respuesta exitosa aquí
+          this.commonService.updateToastData(
+            'Welcome: ' + login.userName,
+            'success',
+            'Login successful.'
+          );
+  
+          this.storageManager.saveData("login", JSON.stringify(login));
+          if (login.role === 'Administrator') {
+            this.router.navigate(['/admin']);
+          } else if (login.role === 'Owner') {
+            this.router.navigate(['/owner']);
+          } else if (login.role === 'Employee') {
+            this.router.navigate(['/employee']);
+          } else {
+            this.router.navigate(['/home']);
+          }
+        },
+        (error) => {
+          // Manejar el error aquí
+          console.error('Error during login:', error);
+          // Puedes mostrar un mensaje de error al usuario o realizar otras acciones necesarias.
+        }
       );
-
-      this.storageManager.saveData("login", JSON.stringify(login));
-      if (login.role === 'Administrator') {
-        this.router.navigate(['/admin']);
-      } else if (login.role === 'Owner') {
-        this.router.navigate(['/owner']);
-      } else if (login.role === 'Employee'){
-        this.router.navigate(['/employee']);
-      }else {
-        this.router.navigate(['/home']);
-      }
-    });
   }
 }
