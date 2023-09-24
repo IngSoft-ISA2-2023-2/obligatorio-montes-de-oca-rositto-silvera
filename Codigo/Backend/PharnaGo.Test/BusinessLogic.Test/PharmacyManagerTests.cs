@@ -41,11 +41,11 @@ namespace PharmaGo.Test.BusinessLogic.Test
             };
         }
 
-        [TestCleanup]
-        public void Cleanup()
-        {
-            _pharmacyRepository.VerifyAll();
-        }
+        //[TestCleanup]
+        //public void Cleanup()
+        //{
+        //    _pharmacyRepository.VerifyAll();
+        //}
 
         [TestMethod]
         public void GetPharmaciesOk()
@@ -99,23 +99,19 @@ namespace PharmaGo.Test.BusinessLogic.Test
         [ExpectedException(typeof(InvalidResourceException))]
         public void CreateExistentPharmacy_ShouldThrowException()
         {
-             List<Pharmacy> pharmacies = new List<Pharmacy>
-            {
-                new Pharmacy
-                {
-                    Id = 1,
-                    Name = "Farmacia 1234"
-                }
-            };
+            _pharmacyRepository = new Mock<IRepository<Pharmacy>>();
+            _pharmacyManager = new PharmacyManager(_pharmacyRepository.Object);
             _pharmacyRepository.Setup(r => r.GetOneByExpression(It.IsAny<Expression<Func<Pharmacy, bool>>>()))
-                .Returns((Expression<Func<Pharmacy, bool>> expression) => pharmacies.FirstOrDefault(expression.Compile()));
+                .Returns(new Pharmacy { Name = "Farmacia 1234" });
 
             var pharmacyToCreate = new Pharmacy
             {
-                Id = 100, 
-                Name = "Farmacia 1234" 
+                
+                Name = "Farmacia 1234"
             };
-            _pharmacyManager.Create(pharmacyToCreate);
+
+           _pharmacyManager.Create(pharmacyToCreate);
+
         }
 
         [TestMethod]

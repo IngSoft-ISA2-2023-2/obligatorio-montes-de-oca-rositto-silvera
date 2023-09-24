@@ -47,11 +47,10 @@ namespace PharmaGo.BusinessLogic
                 throw new InvalidResourceException("The pharmacy to create is invalid.");
             }
             pharmacy.ValidOrFail();
-            Pharmacy pharmacySaved = _pharmacyRepository.GetOneByExpression(p => p.Name == pharmacy.Name);
-            if(pharmacySaved != null)
+            if (_pharmacyRepository.GetOneByExpression(p => p.Name == pharmacy.Name) != null)
             {
-                throw new InvalidResourceException("The pharmacy already exist.");
-            }
+                throw new InvalidResourceException("The pharmacy already exists.");
+            }            
             _pharmacyRepository.InsertOne(pharmacy);
             _pharmacyRepository.Save();
             return pharmacy;
