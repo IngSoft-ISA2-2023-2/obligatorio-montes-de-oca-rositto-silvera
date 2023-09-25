@@ -738,5 +738,22 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
   Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
   La dedicación completa del equipo es de 37,92.
   Completando un total de 19 issues que fueron informadas y listadas en el ReadMe 
-  Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time. 
+  Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time.
+
+
+  
+------------------------------------
+
+Entrega 2
+
+Cambios Tablero Kanban 
+En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante  nuestro tablero ya que en la entrega anterior esto no era necesario pero para esta entrega si que es se agrega la columna: 
+  Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad del código, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
+  Algunas de las ventajas de la incorporacion de estas columnas: 
+  
+   Mayor visibilidad y seguimiento: Las pruebas unitarias son una parte crítica del proceso de desarrollo, y su estado debe ser claramente visible para todo el equipo. Al agregar columnas específicas para las pruebas unitarias en tu tablero Kanban, todos los miembros del equipo pueden ver fácilmente en qué etapa se encuentran las pruebas y cuáles están pendientes.
+
+   Enfoque en la calidad del código: Las pruebas unitarias ayudan a garantizar que el código sea robusto y cumpla con los requisitos. Al tener una columna dedicada para las pruebas unitarias, podemos enfocar la atención en realizar pruebas exhaustivas antes de avanzar. 
+
+   Métricas y seguimiento de calidad: Con una columna específica para pruebas unitarias, podemos tener un registro más preciso de las métricas de calidad, como la cobertura de pruebas y el número de errores detectados y corregidos en esta etapa. Esto nos da informacion para el proceso de la mejora continua.
 
