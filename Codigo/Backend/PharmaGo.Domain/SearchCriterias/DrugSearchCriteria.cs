@@ -19,7 +19,7 @@ namespace PharmaGo.Domain.SearchCriterias
         {
             if (!string.IsNullOrEmpty(Name) && PharmacyId != null)
             {
-                return d => d.Name == drug.Name && d.Deleted == false && d.Pharmacy == drug.Pharmacy && d.Stock > 0;
+                return d => d.Name.Contains(Name) && d.Deleted == false && d.Pharmacy == drug.Pharmacy && d.Stock > 0;
             }
             else if (string.IsNullOrEmpty(Name) && PharmacyId != null)
             {
@@ -27,11 +27,11 @@ namespace PharmaGo.Domain.SearchCriterias
             }
             else if (!string.IsNullOrEmpty(Name) && PharmacyId == null)
             {
-                return d => d.Name == drug.Name && d.Deleted == false && d.Stock > 0;
+                return d => d.Name.Contains(Name) && d.Deleted == false && d.Stock > 0;
             }
             else
             {
-                return d => d.Name == d.Name && d.Deleted == false && d.Stock > 0;
+                return d => d.Deleted == false && d.Stock > 0;
             }
         }
     }

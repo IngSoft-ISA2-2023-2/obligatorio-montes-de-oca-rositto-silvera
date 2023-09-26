@@ -330,6 +330,30 @@ namespace PharmaGo.Test.WebApi.Test
             Assert.IsNotNull(res4);
         }
 
+        [TestMethod]
+        public void Test_DrugSearchCriteriaIncomplete()
+        {
+
+            var searchCriteria = new DrugSearchCriteria();
+            searchCriteria.Name = "Dr";
+            searchCriteria.PharmacyId = 123456;
+            var res1 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "Drug1" });
+            searchCriteria.Name = "";
+            searchCriteria.PharmacyId = 123456;
+            var res2 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "" });
+            searchCriteria.Name = "ug1";
+            searchCriteria.PharmacyId = null;
+            var res3 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "Drug1" });
+            searchCriteria.Name = "";
+            searchCriteria.PharmacyId = null;
+            var res4 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "" });
+
+            // Assert
+            Assert.IsNotNull(res1);
+            Assert.IsNotNull(res2);
+            Assert.IsNotNull(res3);
+            Assert.IsNotNull(res4);
+        }
 
         [TestMethod]
         public void Test_DrugModelResponse()
