@@ -21,9 +21,37 @@
 
 ---------------------------------------------------------------------------
 
-## Definición del marco de trabajo
+## Indice
+### Entrega 1
+1. [Definición del marco de trabajo](#definición-del-marco-de-trabajo)
 
-### Marco general de trabajo KANBAN
+2. [Marco general de trabajo KANBAN](#marco-general-de-trabajo-kanban)
+
+3. [Roles](#roles)
+
+4. [Políticas de trabajo](#políticas-de-trabajo)   
+
+    a. [Definición de Ready](#definición-de-ready)
+
+    b. [Definición de Done](#definición-de-done)
+
+5. [Control de versiones](#control-de-versiones)
+    
+    a. [Nombre de ramas, commits y PRs](#nombre-de-ramas-commits-y-prs)
+
+6. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
+
+7. [Retrospectiva](#retrospectiva)
+
+### [Entrega 2](#entrega-2-1)
+
+1. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
+2. [Correcciones](#correciones)
+
+
+## [Definición del marco de trabajo](#indice)
+
+### [Marco general de trabajo KANBAN](#indice)
 
 El resultado del proyecto es poder mejorar y ofrecerle mantenimiento a una aplicacion ya desarrollada por otro equipo con el objetivo de incrementar el valor que se entrega a los usuarios.
 
@@ -122,7 +150,7 @@ Todas los tipos de tareas se pueden mover a un estado: DOING, donde indicamos qu
 
     En particular,  en nuestro equipo limitamos la cantidad de tareas  a la vez, que cada miembro puede trabajar.
 
-### Roles
+### [Roles](#indice)
 
 En principio y por requerimiento de la letra del obligatorio, todos los integrantes del equipo somos desarrolladores y testers.
 Aunque en la metodlogía KANBAN no tenemos la figura del SCRUM MASTER como obligatoria, vemos imprescindible en esta transición este rol, para ayudarnos a gestionar el tablero, indicar los atributos que tenía que tener cada tarjeta, así como promover las stand up.
@@ -131,12 +159,12 @@ Product Owner (PO): en esta etapa de aprendizaje y transición creemos convenien
 Los 3 podemos asignar prioridades y severidades así como opinar y solicitar cambio de alguna tarea que fue asignada a otro integrante del equipo.
 Entendemos que esto es importante para fortalecer el equipo y tener una escucha activa y efectiva ante las necesidades. 
 
-### Políticas de trabajo
+### [Políticas de trabajo](#indice)
 
 Tuvimos muchas dificultades al comienzo del Obligatorio para entrar en 'ritmo', nos costó organizarnos, encontrar espacios en común para las Stand Up y la planificación. Se visualiza en las retrospectiva el reflejo de esta mención, ya que se proponen como acciones correctivas buscar espacioes en común síncronos, así como gestionar de orma uniforme el tiempo. 
 
 
-#### Definición de Ready
+#### [Definición de Ready](#indice)
 
 En esta entrega del Obligatorio no tenemos historias de usuario definidas com otal, solamente hemos incluido tareas. 
 Pero es deseable y lo dejamos previsto para las próximas entregas las siguientes pautas:
@@ -155,7 +183,7 @@ La definición de lista de requisitos previos para una historia de usuario entra
 3. La estimación de tiempo debe estar en una unidad de tiempo acordada y estar en valores predefinidos.
 4. Los criterios de aceptación deben ser claros y presentados como escenarios, explicando el contexto, el evento y los resultados esperados.
 
-#### Definición de Done
+#### [Definición de Done](#indice)
 
 Los criterios para determinar qué historias terminaron con éxito su proceso de implementación serán:
 
@@ -170,7 +198,7 @@ Como los integrantes del equipo somos tres, entendemos suficiente que se validen
 
 5. La documentación ha sido actualizada y se ha revisado para asegurarse de que esté completa y precisa.
 
-### Control de versiones
+### [Control de versiones](#indice)
 
 Se crea el repositorio <https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera>
 
@@ -184,7 +212,7 @@ Ante nuestra transición entre gitflow y trunkbased iremos introduciendo metodol
 La rama issues-merge es una rama sobre la cual probaremos utilizar la metodologia trunk-based.
 Para esta entrega ya experimentamos esta metoología, notando que es más ágil, rápida y con mejores resultados ya que los merge resultan más simples
 
-#### Nombre de ramas, commits y PRs
+#### [Nombre de ramas, commits y PRs](#indice)
 
 1.Para nombrar las ramas:
 
@@ -207,7 +235,7 @@ Para esta entrega ya experimentamos esta metoología, notando que es más ágil,
     - Utilizar un estilo conciso y claro.
 
 
-#### ISSUES - ANÁLISIS DE DEUDA TÉCNICA
+#### [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#indice)
 
 ### Issue 1 
 
@@ -709,7 +737,7 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 - Prioridad: Alta
 - Severidad: Critico
 
-**Retrospectiva:**
+### [Retrospectiva](#indice)
 
 Como fue explicado anteriormente a lo largo de este informe, la falta de coordinación por superposición de horarios ya sea laborales o por asistir a otras asignaturas es un denominador común en el equipo.
 Debido a esto hubo 2 instancias de retrospectivas: 
@@ -744,9 +772,10 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
   
 ------------------------------------
 
-Entrega 2
+# [Entrega 2](#indice)
 
-Cambios Tablero Kanban 
+### [Cambios Tablero Kanban](#indice) 
+
 En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante  nuestro tablero ya que en la entrega anterior esto no era necesario pero para esta entrega si que es se agrega la columna: 
   Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad del código, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
   Algunas de las ventajas de la incorporacion de estas columnas: 
@@ -762,7 +791,7 @@ En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objeti
 
 -------------------------------------
 
-Correciones 
+### [Correciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
