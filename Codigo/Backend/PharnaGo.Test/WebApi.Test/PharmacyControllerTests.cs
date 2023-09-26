@@ -35,10 +35,10 @@ namespace PharmaGo.Test.WebApi.Test
                 Users = new List<User>(),
                 Drugs = new List<Drug>()
             };
-            pharmacyModel = new PharmacyModel { Name = pharmacy.Name, Address = pharmacy.Address};
-    }
+            pharmacyModel = new PharmacyModel { Name = pharmacy.Name, Address = pharmacy.Address };
+        }
 
-    [TestCleanup]
+        [TestCleanup]
         public void Cleanup()
         {
             _pharmacyManagerMock.VerifyAll();
@@ -138,8 +138,31 @@ namespace PharmaGo.Test.WebApi.Test
             _pharmacyManagerMock.VerifyAll();
             Assert.AreEqual(400, statusCode);
         }
-
         [TestMethod]
+        public void Create_InvalidResourceException_ReturnsBadRequest()
+        {
+            // Arrange
+            var pharmacyModel = new PharmacyModel { Name = "Farmacy 1234" };
+            var expectedErrorMessage = "Invalid resource."; 
+
+            var pharmacyManagerMock = new Mock<IPharmacyManager>();
+            pharmacyManagerMock.Setup(x => x.Create(It.IsAny<Pharmacy>()))
+                .Throws(new InvalidResourceException(expectedErrorMessage));
+
+            var pharmacyController = new PharmacyController(pharmacyManagerMock.Object);
+
+            // Act
+            var result = pharmacyController.Create(pharmacyModel);
+
+            // Assert
+            var objectResult = result as BadRequestObjectResult;
+            Assert.IsNotNull(objectResult);
+            Assert.AreEqual(expectedErrorMessage, objectResult.Value);
+        }
+    
+
+
+    [TestMethod]
         [ExpectedException(typeof(ResourceNotFoundException))]
         public void PostPharmacyFailResourceNotFoundException()
         {
@@ -260,7 +283,7 @@ namespace PharmaGo.Test.WebApi.Test
             searchCriteria.Name = "";
             searchCriteria.Address = "";
             var res4 = searchCriteria.Criteria(new Pharmacy { Address = "", Name = "" });
-            
+
             // Assert
             Assert.IsNotNull(res1);
             Assert.IsNotNull(res2);

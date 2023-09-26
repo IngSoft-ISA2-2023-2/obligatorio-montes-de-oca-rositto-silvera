@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PharmaGo.Domain.Entities;
 using PharmaGo.Domain.SearchCriterias;
+using PharmaGo.Exceptions;
 using PharmaGo.IBusinessLogic;
 using PharmaGo.WebApi.Enums;
 using PharmaGo.WebApi.Filters;
@@ -41,10 +42,18 @@ namespace PharmaGo.WebApi.Controllers
         [AuthorizationFilter(new string[] { nameof(RoleType.Administrator) })]
         public IActionResult Create([FromBody] PharmacyModel pharmacyModel)
         {
-            Pharmacy pharmacyCreated = _pharmacyManager.Create(pharmacyModel.ToEntity());
-            PharmacyDetailModel pharmacyResponse = new PharmacyDetailModel(pharmacyCreated);
-            return Ok(pharmacyResponse);
+            try
+            {
+                Pharmacy pharmacyCreated = _pharmacyManager.Create(pharmacyModel.ToEntity());
+                PharmacyDetailModel pharmacyResponse = new PharmacyDetailModel(pharmacyCreated);
+                return Ok(pharmacyResponse);
+            }
+            catch (InvalidResourceException ex)
+            {                
+                return BadRequest(ex.Message);
+            }
         }
+
 
         [HttpPut("{id}")]
         [AuthorizationFilter(new string[] { nameof(RoleType.Administrator) })]
