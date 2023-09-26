@@ -47,6 +47,7 @@
 
 1. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
 2. [Correcciones](#correciones)
+3. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
 
 
 ## [Definición del marco de trabajo](#indice)
@@ -774,7 +775,7 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
 
 # [Entrega 2](#indice)
 
-### [Cambios Tablero Kanban](#indice) 
+## [Cambios Tablero Kanban](#indice) 
 
 En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante  nuestro tablero ya que en la entrega anterior esto no era necesario pero para esta entrega si que es se agrega la columna: 
   Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad del código, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
@@ -786,7 +787,7 @@ En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objeti
 
    Métricas y seguimiento de calidad: Con una columna específica para pruebas unitarias, podemos tener un registro más preciso de las métricas de calidad, como la cobertura de pruebas y el número de errores detectados y corregidos en esta etapa. Esto nos da informacion para el proceso de la mejora continua.
 
-### Explicación del tablero y su vínculo con el proceso de ingeniería"
+## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
 En nuestro tablero Kanban optamos por tener las siguientes columnas: 
 Gestion 
@@ -813,15 +814,15 @@ Done: Finalmente, la columna "Done" indica que todas las etapas anteriores se ha
 
 -------------------------------------
 
-### [Correciones](#indice) 
+## [Correciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
 Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equipo confirmó que se trataba de un bug crítico que tenía el potencial de afectar de manera significativa el funcionamiento del sistema. Y fue puesta en el backlog para ser tratada y solucionado dicho bug.
 
-Issue 17:
+### Issue 17:
 
-Codigo TDD
+#### Codigo TDD
 --------------------------------------------------------------------
 Se genera el codigo de TDD dentro de la carpeta StockManagerTest
 [TestMethod]
