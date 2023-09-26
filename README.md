@@ -757,8 +757,30 @@ En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objeti
 
    Métricas y seguimiento de calidad: Con una columna específica para pruebas unitarias, podemos tener un registro más preciso de las métricas de calidad, como la cobertura de pruebas y el número de errores detectados y corregidos en esta etapa. Esto nos da informacion para el proceso de la mejora continua.
 
+### Explicación del tablero y su vínculo con el proceso de ingeniería"
 
+En nuestro tablero Kanban optamos por tener las siguientes columnas: 
+Gestion 
+Analisis
+Diseño
+Desarrollo 
+Testing 
+Validacion
+Done
 
+Gestión: En esta columna, se abordan tareas relacionadas con la gestión general del proyecto de ingeniería. Esto  incluiye la asignación de recursos, la planificación de plazos, la comunicación con clientes (no aplica en nuestro caso) y la coordinación de actividades. La gestión efectiva es esencial para garantizar que el proyecto se desarrolle de manera ordenada y se mantenga dentro los plazos establecidos y fundamentalmente el cumplir con los objetivos de la iteracion.
+
+Análisis: Aqui nos enfocamos en tareas específicas relacionadas con la fase de análisis del proyecto de ingeniería. Aquí se recopilan los requisitos del cliente, se identifican las necesidades y se realiza un análisis detallado del problema que se va a resolver. Esta etapa es fundamental para comprender completamente el alcance y los objetivos del proyecto antes de pasar a la fase de diseño.
+
+Diseño: Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabajaria en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordiar para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+
+Desarrollo:  La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicacion de tecnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
+
+Testing: En esta fase, se verifica la calidad y la funcionalidad del trabajo realizado en la columna de Desarrollo. El objetivo aqui es realizar pruebas exhaustivas para asegurarse de que el producto cumple con los estándares de calidad y funciona correctamente. Esto es esencial para evitar problemas posteriores y garantizar la satisfacción del cliente.
+
+Validación: La columna de Validación está vinculada a la fase de aseguramiento de la calidad en el proceso de ingeniería. Aquí se verifica que el producto o proyecto cumple con los criterios de aceptación definidos en la etapa de Análisis. Esto garantiza que el trabajo realizado cumple con los objetivos establecidos al principio del proyecto.
+
+Done: Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica. En nuestro codigo de produccion.
 
 -------------------------------------
 
