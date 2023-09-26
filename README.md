@@ -767,3 +767,46 @@ Correciones
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
 Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equipo confirmó que se trataba de un bug crítico que tenía el potencial de afectar de manera significativa el funcionamiento del sistema. Y fue puesta en el backlog para ser tratada y solucionado dicho bug.
+
+Issue 17:
+
+Codigo TDD
+--------------------------------------------------------------------
+Se genera el codigo de TDD dentro de la carpeta StockManagerTest
+[TestMethod]
+        [ExpectedException(typeof(InvalidResourceException))]
+        public void CreateStockRequestNegative_ShouldReturnException()
+        {
+            //Arrange
+            var drug = new Drug() { Id = 1, Code = "XF324" };
+            User emplotyee = new User() { Id = 1, UserName = "jcastro" };
+            var stockRequest = new StockRequest()
+            {
+                Id = 1,
+                Status = Domain.Enums.StockRequestStatus.Pending,
+                Employee = new User() { Id = 1, UserName = "jcastro" },
+                Details = new List<StockRequestDetail>()
+                {
+                    new StockRequestDetail() { Id = 1, Drug = new Drug() { Id = 1, Code = "XF324" }, Quantity = -50 }
+                },
+                RequestDate = DateTime.Now
+            };
+
+            //Act
+            _employeeMock.Setup(u => u.GetOneDetailByExpression(It.IsAny<Expression<Func<User, bool>>>())).Returns(emplotyee);
+            _drugMock.Setup(d => d.GetOneByExpression(It.IsAny<Expression<Func<Drug, bool>>>())).Returns(drug);
+            _sessionMock.Setup(d => d.GetOneByExpression(It.IsAny<Expression<Func<Session, bool>>>())).Returns(session);
+
+          
+
+            var result = _stockRequestManager.CreateStockRequest(stockRequest, token);
+
+           
+        }	
+
+       FIX
+        -------------------------
+        Fix este bug se soluciono validando que la cantidad que se recibe al realizar la request es mayor a 0 para esto se agrego el siguiente codigo en la clase CreateStockRequest dentro de la clase StockRequestManager dentro del paquete BusinessLogic con el objetivo de generar una validacion para las cnatidades:
+
+        if(item.Quantity <0) throw new InvalidResourceException("Stock request quantity request must be positive.");
+
