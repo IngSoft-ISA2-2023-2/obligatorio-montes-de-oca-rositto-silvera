@@ -28,7 +28,7 @@ jobs:
             env:
                 cache-name: cache-node-modules
             with:
-                path: Codigo/Frontend/node_modules
+                path: node_modules
                 key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
                 restore-keys: |
                     ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -48,3 +48,15 @@ jobs:
         -   name: Test
             run: npm run test -- --prod
 
+        -   name: Conventional Changelog Action
+            id: changelog
+            uses: TriPSs/conventional-changelog-action@v3
+            with:
+              github-token: $
+              output-file: 'false'
+
+        -   name: Deploy
+            run: |
+                npm run deploy
+
+        
