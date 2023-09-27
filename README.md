@@ -864,7 +864,10 @@ Al momento de llegar a un Release se creara una nueva rama a partir de main con 
 -------------------------------------
 
 ## [Pipeline y Automatizacion](#indice)
-Utilizaremos Github actions para implementar procesos de automatizacion para asi facilitar la realizacion de validaciones e informar en caso de que se implemente un cambio con errores.
+
+Identificamos que nuestro pipeline se caracteriza por dos aspectos principales, un aspecto es la documentacion y gestion de reportes, y otro aspecto es el desarrollo de funcionalidad de nuestro sistema, ante esta situacion decidimos crear las columnas previamente mencionadas en la composicion del [Tablero KANBAN](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería). Utilizaremos el flujo de nuestras tareas en estas columnas para comprender el estado actual y posibles estados futuros de nuestro pipeline, como forma de monitoreo para prevenir errores, asi como para tratarlos al momento de encontralo. Ademas esta representacion nos ayudara a comprender como ubicar y utilizar las herramientas de Automatizacion, para asi reducir y agilizar el trabajo realizado.
+
+Utilizaremos Github Actions para implementar procesos de automatizacion para asi facilitar la realizacion de validaciones e informar en caso de que se implemente un cambio con errores.
 
 Las funciones automatizadas hasta el momento incluyen:
 - Verificacion de build correcta de backend
@@ -873,6 +876,8 @@ Las funciones automatizadas hasta el momento incluyen:
 - Verificacion de pruebas unitarias
 
 Las funciones automatizadas no seran ejecutadas en caso que los cambios realizados solo alteren la documentacion del proyecto.
+
+Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un caracter repetitivo y consumen mucho tiempo al ser realizadas por una persona
 -------------------------------------
 ## [Correciones](#indice) 
 
@@ -880,7 +885,7 @@ La Issue 19, que originalmente se había etiquetado como un problema, fue poster
 
 Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equipo confirmó que se trataba de un bug crítico que tenía el potencial de afectar de manera significativa el funcionamiento del sistema. Y fue puesta en el backlog para ser tratada y solucionado dicho bug.
 
-La Issues 11 fue reevaluada y se modifico su estado a Severidad Alta y Prioridad Mayor.
+La Issues 11 fue reevaluada y se modifico su estado a Severidad Alta y Prioridad Mayor. Esto se debe a que la necesidad de ser exacto con la busqueda frecuentemente resulta intrusivo en las acciones de los usuarios.
 
 ### Issue 17:
 
