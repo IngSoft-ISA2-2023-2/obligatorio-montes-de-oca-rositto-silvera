@@ -35,18 +35,21 @@ jobs:
                     ${{ runner.os }}-build-
                     ${{ runner.os }}-
 
+        -   name: move
+            run: cd Codigo/Frontend
+                    
         -   name: Install Dependencies
             if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-            run: npm ci Codigo/Frontend
+            run: npm ci
 
         -   name: Build
-            run: npm run build -- --prod Codigo/Frontend
+            run: npm run build -- --prod
 
         -   name: Lint
-            run: npm run lint Codigo/Frontend
+            run: npm run lint
 
         -   name: Test
-            run: npm run test -- --prod Codigo/Frontend
+            run: npm run test -- --prod
 
         -   name: Conventional Changelog Action
             id: changelog
@@ -57,6 +60,6 @@ jobs:
 
         -   name: Deploy
             run: |
-                npm run deploy Codigo/Frontend
+                npm run deploy
 
         
