@@ -46,8 +46,9 @@
 ### [Entrega 2](#entrega-2-1)
 
 1. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
-2. [Correcciones](#correciones)
-3. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+2. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
+3. [Correcciones](#correciones)
+4. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
 
 
 ## [Definición del marco de trabajo](#indice)
@@ -813,12 +814,20 @@ Validación: La columna de Validación está vinculada a la fase de aseguramient
 Done: Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica. En nuestro codigo de produccion.
 
 -------------------------------------
+## [Cambios en el control de Versiones](#indice)
 
+Ante la intencion de utilizar la modalidad de desarrollo Trunk-Based, nuestro repositorio consistira en una rama principal "main", a la cual se le realizaran cambios constantemente; bajo situaciones de implementacion de caracteristicas nuevas se podran abrir ramas paralelas a main para desarrollar los cambios sobre estos pero no se permitira que dichas ramas presenten un tiempo de vida extenso, limitando su vida a un maximo de 2 dias de duracion, donde dicha rama debera integrar los cambios realizados en main durante este periodo y procedera a sincronizar sus cambios a main. Luego de esto la rama puede ser eliminada o puede persistir su vida si aun no se ha finalizado su razon de existir.
+
+Al momento de llegar a un Release se creara una nueva rama a partir de main con el nombre adecuado y se creara un release en esta, indicando con un tag la version de la misma
+
+-------------------------------------
 ## [Correciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
 Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equipo confirmó que se trataba de un bug crítico que tenía el potencial de afectar de manera significativa el funcionamiento del sistema. Y fue puesta en el backlog para ser tratada y solucionado dicho bug.
+
+La Issues 11 fue reevaluada y se modifico su estado a Severidad Alta y Prioridad Mayor.
 
 ### Issue 17:
 
