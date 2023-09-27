@@ -929,6 +929,14 @@ Se genera el código de TDD dentro de la carpeta StockManagerTest
         Fix este bug se soluciono validando que la cantidad que se recibe al realizar la request es mayor a 0 para esto se agrego el siguiente codigo en la clase CreateStockRequest dentro de la clase StockRequestManager dentro del paquete BusinessLogic con el objetivo de generar una validacion para las cnatidades:
 
         if(item.Quantity <0) throw new InvalidResourceException("Stock request quantity request must be positive.");
+
+        ---------------------------
+
+        Demostracion error anterior: https://youtu.be/AFOJaAXP9bc
+
+        Validacion del Fix: https://youtu.be/-mipSE6ei24
+
+
 ~~~
 
 ### Issue 11
