@@ -860,6 +860,17 @@ Ante la intencion de utilizar la modalidad de desarrollo Trunk-Based, nuestro re
 Al momento de llegar a un Release se creara una nueva rama a partir de main con el nombre adecuado y se creara un release en esta, indicando con un tag la version de la misma
 
 -------------------------------------
+
+## [Pipeline y Automatizacion](#indice)
+Utilizaremos Github actions para implementar procesos de automatizacion para asi facilitar la realizacion de validaciones e informar en caso de que se implemente un cambio con errores.
+
+Las funciones automatizadas hasta el momento incluyen:
+- Verificacion de build correcta de backend
+- Verificacion de build correcta de frontend
+- Verificacion de instalacion correcta de dependencias en frontend
+- Verificacion de pruebas unitarias
+
+-------------------------------------
 ## [Correciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.

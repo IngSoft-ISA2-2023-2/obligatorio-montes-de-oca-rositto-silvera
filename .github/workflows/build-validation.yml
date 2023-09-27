@@ -34,3 +34,6 @@ jobs:
       
     - name: Build
       run: dotnet build --configuration Release --no-restore Codigo/Backend/PharmaGo.sln
+
+    - name: Test
+      run: dotnet test Codigo/Backend/PharmaGo.sln
