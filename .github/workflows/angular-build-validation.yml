@@ -37,16 +37,16 @@ jobs:
 
         -   name: Install Dependencies
             if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-            run: npm ci
+            run: npm ci Codigo/Frontend
 
         -   name: Build
-            run: npm run build -- --prod
+            run: npm run build -- --prod Codigo/Frontend
 
         -   name: Lint
-            run: npm run lint
+            run: npm run lint Codigo/Frontend
 
         -   name: Test
-            run: npm run test -- --prod
+            run: npm run test -- --prod Codigo/Frontend
 
         -   name: Conventional Changelog Action
             id: changelog
@@ -57,6 +57,6 @@ jobs:
 
         -   name: Deploy
             run: |
-                npm run deploy
+                npm run deploy Codigo/Frontend
 
         
