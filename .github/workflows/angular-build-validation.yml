@@ -42,13 +42,13 @@ jobs:
             run: npm ci
 
         -   name: Build
-            run: npm run build -- --prod
+            run: npm run build
 
         -   name: Lint
             run: npm run lint
 
         -   name: Test
-            run: npm run test -- --prod
+            run: npm run test
 
         -   name: Conventional Changelog Action
             id: changelog
