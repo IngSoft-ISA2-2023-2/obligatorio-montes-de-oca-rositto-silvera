@@ -47,8 +47,10 @@
 
 1. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
 2. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
-3. [Correcciones](#correciones)
-4. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+3. [Pipeline y Automatizacion](#pipeline-y-automatizacion)
+4. [Correcciones](#correciones)
+5. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+6. [Nuevos Issues](#nuevos-issues)
 
 
 ## [Definición del marco de trabajo](#indice)
@@ -922,3 +924,29 @@ Se genera el código de TDD dentro de la carpeta StockManagerTest
 
         if(item.Quantity <0) throw new InvalidResourceException("Stock request quantity request must be positive.");
 ~~~
+
+### Issue 11
+
+Se reevaluo la funcion Criteria de la clase SearchCriteria, esta ahora hace uso de sus atributos internos y ademas returna una condicion de busqueda mas permisiva, causando que se acepten coincidencias parciales, algo que previamente no ocurria y era la causa de este Issue
+
+## [Nuevos Issues](#indice)
+
+### Issue 20
+
+Error en Test Funcionalidad a nivel de codigo
+
+**Descripción:**
+Una de las pruebas unitarias falla por razones que aun no son claras. El error no es consistente en diferentes dispositivos 
+
+**Impacto:**
+Nuestra filosofia considera los errores de prueba unitarias como no aceptables, por lo que reduce nuestra aceptacion del codigo como valido y puede causar problemas a futuro. La funcionalidad aparenta cumplir con analisis de testing exploratorio
+
+**Solución ideal:**
+Se encuentra la causa del error y se ajusta la prueba para ser constante en multiples dispositivos.
+
+**Plan de acción:**
+Comprender si la prueba utiliza correctamente las herramientas de testing, ajustarla adecuadamente de no ser el caso, o ajustar el funcionamiento del codigo en caso de que la herramienta actue adecuadamente
+
+**Clasificación:**
+- Prioridad: Inmediata
+- Severidad: Critica
