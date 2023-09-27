@@ -775,10 +775,33 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
 
 # [Entrega 2](#indice)
 
+## [Definición del marco de trabajo](#indice)
+
+En general nuestro marco de trabajo Kanban no cambió, seguimos utilizando un Tablero para visualizar las distintas tareas en el flujo de valor, aunque ahora se trata de un tablero sustentable con más columnas que detallaremos en la sección del Tablero.
+
+Como mencionamos en la Entrega 1, vamos a utilizar una metodología incremental, notamos que esta se va fortaleciendo en contenidos que vamos adquiriendo, así como madurez en los ya adquiridos. El tablero se definió casi sin dificultad y las tareas fueron fluyendo por las distintas columnas.
+Entendimos rápidamente que había tareas: propias de Gestión: Scrum Dailys, Meeting Planning, redactar el informe de avance, etc. por eso una de las columnas se llama así. También visualizamos el proceso tradicional de desarrollo de software: Análisis, Diseño, Implementación, Testing, Validación, que se corresponden a la solución de las issues seleccionadas y a sus homónimas en las columnas.
+
+1)	Visualizar el flujo de trabajo: En esta entrega creamos un proyecto Entrega 2 donde colocamos la nueva definición del Tablero. Para mejorar la visualización y estructuración colocamos las Fechas – hora de creado, Fecha de Start Date y End Date como tugs que luego podemos utilizar para clasificar y/o ordenar.
+Luego generamos la View2 para mostrar las columnas que identificamos como tugs.
+ 
+2)	Limitar el WIP: No cambia la condición de que un desarrollador solo puede trabajar en una tarea/issue a la vez. Las tareas complejas, se desglosaron en tareas más pequeñas (similar a lo que hacíamos con las épicas a user stories). Tratamos de asignarlas agregando el integrante del equipo que las estaba trabajando para lograr visibilidad. 
+
+3)	Gestionar y medir el flujo: Esto no cambia. Mejoramos el registro en la herramienta clockify, mapeando nuestras columnas del tablero a los tiempo registrados para cada una de cada ella. 
+
+4)	Implementar ciclos de feedback: A través de las StandUp más frecuentes y organizadas logramos una instancia de feedback muy útil para el equipo. Notamos que igualmente debemos fortalecer estas instancias haciéndolas más frecuentes,  siendo un poco inviable por la carga de tiempo que lleva la asignatura y otras que están en curso. 
+Esta entrega fue de una semana, en este sentido no pudimos realizar más instancias de 2 instancias de StandUp y las respectivas ceremonias de Review y Retrospectiva
+
+5) Explicitar políticas y procedimientos: Acá notamos una cambio en el Definition of Done, teniendo alguna instancia más como Validación y Testing antes de que una issue esté resuelta.
+
+6) Mejora continua mediante la colaboración: en esta entrega, vamos a seguir aprendiendo con la definición del pipeline automático. La utilización de GitHub Actions a través del aprendizaje en el curso práctico y luego la experimentación en el Obligatorio.
+
+
 ## [Cambios Tablero Kanban](#indice) 
 
-En esta iteracion decidimos pasar a un tablero Kanban mas complejo con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante  nuestro tablero ya que en la entrega anterior esto no era necesario pero para esta entrega si que es se agrega la columna: 
-  Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad del código, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
+En esta iteracion decidimos pasar a un tablero Kanban más complejo (Sustentable) con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante en nuestro tablero ya que en la entrega anterior esto no fue necesario, pero para esta entrega notamos qu ees necesaria ya que en el ciclo de desarrollo tenemos que testear nuestras issues.
+
+  Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad de la gestión, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
   Algunas de las ventajas de la incorporacion de estas columnas: 
   
    Mayor visibilidad y seguimiento: Las pruebas unitarias son una parte crítica del proceso de desarrollo, y su estado debe ser claramente visible para todo el equipo. Al agregar columnas específicas para las pruebas unitarias en tu tablero Kanban, todos los miembros del equipo pueden ver fácilmente en qué etapa se encuentran las pruebas y cuáles están pendientes.
@@ -798,19 +821,23 @@ Testing
 Validacion
 Done
 
-Gestión: En esta columna, se abordan tareas relacionadas con la gestión general del proyecto de ingeniería. Esto  incluiye la asignación de recursos, la planificación de plazos, la comunicación con clientes (no aplica en nuestro caso) y la coordinación de actividades. La gestión efectiva es esencial para garantizar que el proyecto se desarrolle de manera ordenada y se mantenga dentro los plazos establecidos y fundamentalmente el cumplir con los objetivos de la iteracion.
+Análisis: Aquí nos enfocamos en tareas específicas relacionadas con la fase de análisis del proyecto de ingeniería. Aquí se recopilan los requisitos del cliente, se identifican las necesidades y se realiza un análisis detallado del problema que se va a resolver. Esta etapa es fundamental para comprender completamente el alcance y los objetivos del proyecto antes de pasar a la fase de diseño.
+En particular, el análisis de cómo solucionaremos las issues van a pasar por esta columna, aunque también podríamos analizar alguna tarea, como resolverla. En este caso nos resulta más simple pasarla a DONE directamente. 
 
-Análisis: Aqui nos enfocamos en tareas específicas relacionadas con la fase de análisis del proyecto de ingeniería. Aquí se recopilan los requisitos del cliente, se identifican las necesidades y se realiza un análisis detallado del problema que se va a resolver. Esta etapa es fundamental para comprender completamente el alcance y los objetivos del proyecto antes de pasar a la fase de diseño.
+Diseño: Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabaja en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordial para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+En esta etapa no tuvimos suficiente tiempo de diagramar, aunque nos apoyamos en el diseño de la documentación presentada para entender cómo se había implementado la solución.
 
-Diseño: Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabajaria en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordiar para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+Desarrollo: La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicación de técnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
+En particular, trabajamos en el código proporcionado reparando las issues seleccionadas, con el IDE Visual Studio y practicando la metodología TDD, recibiendo feedback de cada prueba pasando por RED-GREEN como metodología de aplicación de TDD.
 
-Desarrollo:  La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicacion de tecnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
-
-Testing: En esta fase, se verifica la calidad y la funcionalidad del trabajo realizado en la columna de Desarrollo. El objetivo aqui es realizar pruebas exhaustivas para asegurarse de que el producto cumple con los estándares de calidad y funciona correctamente. Esto es esencial para evitar problemas posteriores y garantizar la satisfacción del cliente.
+Testing: En esta fase, se verifica la calidad y la funcionalidad del trabajo realizado en la columna de Desarrollo. El objetivo aquí es realizar pruebas exhaustivas para asegurarse de que el producto cumple con los estándares de calidad y funciona correctamente. Esto es esencial para evitar problemas posteriores y garantizar la satisfacción del cliente.
+Se explicó anteriormente, se aplicó TDD como metodología de ir haciendo crecer el código así como su corrección ante bugs.
 
 Validación: La columna de Validación está vinculada a la fase de aseguramiento de la calidad en el proceso de ingeniería. Aquí se verifica que el producto o proyecto cumple con los criterios de aceptación definidos en la etapa de Análisis. Esto garantiza que el trabajo realizado cumple con los objetivos establecidos al principio del proyecto.
 
-Done: Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica. En nuestro codigo de produccion.
+La validación se realiza a través de la muestra de la issue reparada a otro compañero de equipo con un video. 
+
+Done: Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica. En nuestro código de producción.
 
 -------------------------------------
 
@@ -824,7 +851,7 @@ Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equ
 
 #### Codigo TDD
 --------------------------------------------------------------------
-Se genera el codigo de TDD dentro de la carpeta StockManagerTest
+Se genera el código de TDD dentro de la carpeta StockManagerTest
 [TestMethod]
         [ExpectedException(typeof(InvalidResourceException))]
         public void CreateStockRequestNegative_ShouldReturnException()
