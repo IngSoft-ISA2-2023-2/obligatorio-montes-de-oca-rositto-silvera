@@ -814,12 +814,12 @@ En esta iteracion decidimos pasar a un tablero Kanban más complejo (Sustentable
 ## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
 En nuestro tablero Kanban optamos por tener las siguientes columnas: 
-Gestion 
-Analisis
-Diseño
-Desarrollo 
-Testing 
-Validacion
+Gestion -
+Analisis -
+Diseño -
+Desarrollo -
+Testing -
+Validacion -
 Done
 
 **Análisis:**
@@ -873,6 +873,7 @@ La Issues 11 fue reevaluada y se modifico su estado a Severidad Alta y Prioridad
 #### Codigo TDD
 --------------------------------------------------------------------
 Se genera el código de TDD dentro de la carpeta StockManagerTest
+~~~
 [TestMethod]
         [ExpectedException(typeof(InvalidResourceException))]
         public void CreateStockRequestNegative_ShouldReturnException()
@@ -909,4 +910,4 @@ Se genera el código de TDD dentro de la carpeta StockManagerTest
         Fix este bug se soluciono validando que la cantidad que se recibe al realizar la request es mayor a 0 para esto se agrego el siguiente codigo en la clase CreateStockRequest dentro de la clase StockRequestManager dentro del paquete BusinessLogic con el objetivo de generar una validacion para las cnatidades:
 
         if(item.Quantity <0) throw new InvalidResourceException("Stock request quantity request must be positive.");
-
+~~~
