@@ -872,6 +872,7 @@ Las funciones automatizadas hasta el momento incluyen:
 - Verificacion de instalacion correcta de dependencias en frontend
 - Verificacion de pruebas unitarias
 
+Las funciones automatizadas no seran ejecutadas en caso que los cambios realizados solo alteren la documentacion del proyecto.
 -------------------------------------
 ## [Correciones](#indice) 
 
