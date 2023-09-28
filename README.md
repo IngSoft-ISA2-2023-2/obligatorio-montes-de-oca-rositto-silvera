@@ -993,6 +993,7 @@ Comprender si la prueba utiliza correctamente las herramientas de testing, ajust
  La realizamos a través del modelo DAKI, mencionándose dentro de las principales: 
  
  ![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/86540e4d-c8ae-4f4e-9071-b65048beb98c)
+ 
  En conclusión surgen como acciones correctivas: 
  
  "Pull Requests para mergear las ramas nuevas a main.
@@ -1000,8 +1001,12 @@ Continuar organizándonos con los horarios
 Mantenimiento del Tablero fluido
 Registro de Horas actualizado
 Continuar con el compromiso."
+
 ![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/5f5e9045-435c-4a4f-aca4-c0c566cd9239)
+
+
 Link del video de la retro: <https://drive.google.com/file/d/1PP6k1xTqwRMzKJNIkrD7dmXnF1CuMdIu/view?usp=sharing>
+
 Link del enlace del ambiente metroretro: <https://metroretro.io/BOA310C0VCO7>
 
 
