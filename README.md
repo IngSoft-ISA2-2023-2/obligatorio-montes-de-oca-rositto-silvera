@@ -767,7 +767,7 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
   <https://fi365-my.sharepoint.com/personal/am146669_fi365_ort_edu_uy/_layouts/15/stream.aspx?id=%2Fpersonal%2Fam146669%5Ffi365%5Fort%5Fedu%5Fuy%2FDocuments%2FGrabaciones%2FLlamada%20con%20Giuliano%20y%201%20m%C3%A1s%2D20230918%5F211805%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=Teams%2ETEAMS%2DELECTRON&referrerScenario=TMRChicletOpen%2Eview%2Eview&ga=1>
 
   **Estimaciones de esfuerzo y Registro de Tareas**
-  Se entregan en la carpeta: /Entrega1/Esfuerzo de Tareas
+  Se entregan en la carpeta: Esfuerzo de Tareas
   Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. 
   Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
   La dedicación completa del equipo es de 37,92.
@@ -817,7 +817,7 @@ En esta iteracion decidimos pasar a un tablero Kanban más complejo (Sustentable
 
 ## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
-En nuestro tablero Kanban optamos por tener las siguientes columnas: 
+En nuestro tablero Kanban <https://github.com/orgs/IngSoft-ISA2-2023-2/projects/26)> optamos por tener las siguientes columnas: 
 Gestion -
 Análisis -
 Diseño -
@@ -1110,5 +1110,10 @@ Continuar con el compromiso."
 Link del video de la retro: <https://drive.google.com/file/d/1PP6k1xTqwRMzKJNIkrD7dmXnF1CuMdIu/view?usp=sharing>
 
 Link del enlace del ambiente metroretro: <https://metroretro.io/BOA310C0VCO7>
+
+**Estimaciones de esfuerzo y Registro de Tareas:** 
+Para esta entrega se crea la carpeta: [/Esfuerzo de Tareas/Entrega2](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/tree/main/Esfuerzo%20de%20Tareas/Entrega%202)
+
+Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. En esta oportunidad pudimos agrupar las difernetes tareas según nuestro tablero Kanban. Estp nos va a permitir en las próximas entregas poder saber qué tiempo empleamos en cada actividad así como cuáles nos llevaron más tiempo y poder analizar las causas de estos esfuerzos. 
 
 
