@@ -1067,6 +1067,51 @@ public class DrugSearchCriteria
     }
 ~~~
 
+## Issue 3 
+
+Se crea el Test para evitar que lance la excepción al ingresar una farmacia duplicada. 
+
+[TestMethod]
+        public void Create_InvalidResourceException_ReturnsBadRequest()
+        {
+            // Arrange
+            var pharmacyModel = new PharmacyModel { Name = "Farmacy 1234" };
+            var expectedErrorMessage = "Invalid resource."; 
+
+            var pharmacyManagerMock = new Mock<IPharmacyManager>();
+            pharmacyManagerMock.Setup(x => x.Create(It.IsAny<Pharmacy>()))
+                .Throws(new InvalidResourceException(expectedErrorMessage));
+
+            var pharmacyController = new PharmacyController(pharmacyManagerMock.Object);
+
+            // Act
+            var result = pharmacyController.Create(pharmacyModel);
+
+            // Assert
+            var objectResult = result as BadRequestObjectResult;
+            Assert.IsNotNull(objectResult);
+            Assert.AreEqual(expectedErrorMessage, objectResult.Value);
+        }
+--------------------------
+Se corrige a través del Controller en el método Create. 
+
+[HttpPost]
+        [AuthorizationFilter(new string[] { nameof(RoleType.Administrator) })]
+        public IActionResult Create([FromBody] PharmacyModel pharmacyModel)
+        {
+            try
+            {
+                Pharmacy pharmacyCreated = _pharmacyManager.Create(pharmacyModel.ToEntity());
+                PharmacyDetailModel pharmacyResponse = new PharmacyDetailModel(pharmacyCreated);
+                return Ok(pharmacyResponse);
+            }
+            catch (InvalidResourceException ex)
+            {                
+                return BadRequest(ex.Message);
+            }
+        }
+
+
 ## [Nuevos Issues](#indice)
 
 ### Issue 20
@@ -1077,7 +1122,7 @@ Error en Test Funcionalidad a nivel de codigo
 Una de las pruebas unitarias falla por razones que aun no son claras. El error no es consistente en diferentes dispositivos 
 
 **Impacto:**
-Nuestra filosofia considera los errores de prueba unitarias como no aceptables, por lo que reduce nuestra aceptacion del codigo como valido y puede causar problemas a futuro. La funcionalidad aparenta cumplir con analisis de testing exploratorio
+Nuestra filosofia considera los errores de prueba unitarias como no aceptables, por lo que reduce nuestra aceptación del código como valido y puede causar problemas a futuro. La funcionalidad aparenta cumplir con analisis de testing exploratorio
 
 **Solución ideal:**
 Se encuentra la causa del error y se ajusta la prueba para ser constante en multiples dispositivos.
