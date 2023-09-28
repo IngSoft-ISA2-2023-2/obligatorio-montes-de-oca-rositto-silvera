@@ -21,9 +21,43 @@
 
 ---------------------------------------------------------------------------
 
-## Definición del marco de trabajo
+## Indice
+### Entrega 1
+1. [Definición del marco de trabajo](#definición-del-marco-de-trabajo)
 
-### Marco general de trabajo KANBAN
+2. [Marco general de trabajo KANBAN](#marco-general-de-trabajo-kanban)
+
+3. [Roles](#roles)
+
+4. [Políticas de trabajo](#políticas-de-trabajo)   
+
+    a. [Definición de Ready](#definición-de-ready)
+
+    b. [Definición de Done](#definición-de-done)
+
+5. [Control de versiones](#control-de-versiones)
+    
+    a. [Nombre de ramas, commits y PRs](#nombre-de-ramas-commits-y-prs)
+
+6. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
+
+7. [Retrospectiva](#retrospectiva)
+
+### [Entrega 2](#entrega-2-1)
+
+1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
+2. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
+3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
+4. [Pipeline y Automatización](#pipeline-y-automatizacion)
+5. [Correcciones](#correciones)
+6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+7. [Retrospectiva](#retrospectiva-1)
+8. [Nuevos Issues](#nuevos-issues)
+
+
+## [Definición del marco de trabajo](#indice)
+
+### [Marco general de trabajo KANBAN](#indice)
 
 El resultado del proyecto es poder mejorar y ofrecerle mantenimiento a una aplicacion ya desarrollada por otro equipo con el objetivo de incrementar el valor que se entrega a los usuarios.
 
@@ -47,7 +81,7 @@ En particular Kanban es una metodología de gestión visual que se utiliza comú
 El proceso de Ingeniería de requerimientos, se mapea a un proceso muy simple de Planning, dentro del proceso completo Planning-Do-Check, donde las tares de Planificación se corresponden a entrevistas con el cliente donde se describen sus necesidades que luego son transformadas en requerimientos de software. 
 Es importante en esta etapa identificar las necesidades propias del cliente, así como requerimientos de entorno o potenciales cambios que puedan delimitar nuestro escenario de implantación. 
 
-Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligatorio (la rúbrica), los requerimientos que fueron explicando los profesores y de alguna forma 'desmenusando' estas necesidades en tareas. 
+Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligatorio (la rúbrica), los requerimientos que fueron explicando los profesores y de alguna forma 'desmenuzando' estas necesidades en tareas. 
 
  Seguidamente este listado de necesidades identificadas es transformado a requerimientos, en general redactados como User Storys, en nuestro caso, aún no contamos con user story si no solo con tareas. 
  Estas tareas deben ser redactadas de forma clara y precisa evitando ambigüedades. La lista con los requerimientos obtenidos, es priorizada, categorizada teniendo en cuenta cada una de las tareas propuestas, las cuales conforman el producto de trabajo comúnmente conocido como Product Backlog.
@@ -122,7 +156,7 @@ Todas los tipos de tareas se pueden mover a un estado: DOING, donde indicamos qu
 
     En particular,  en nuestro equipo limitamos la cantidad de tareas  a la vez, que cada miembro puede trabajar.
 
-### Roles
+### [Roles](#indice)
 
 En principio y por requerimiento de la letra del obligatorio, todos los integrantes del equipo somos desarrolladores y testers.
 Aunque en la metodlogía KANBAN no tenemos la figura del SCRUM MASTER como obligatoria, vemos imprescindible en esta transición este rol, para ayudarnos a gestionar el tablero, indicar los atributos que tenía que tener cada tarjeta, así como promover las stand up.
@@ -131,12 +165,12 @@ Product Owner (PO): en esta etapa de aprendizaje y transición creemos convenien
 Los 3 podemos asignar prioridades y severidades así como opinar y solicitar cambio de alguna tarea que fue asignada a otro integrante del equipo.
 Entendemos que esto es importante para fortalecer el equipo y tener una escucha activa y efectiva ante las necesidades. 
 
-### Políticas de trabajo
+### [Políticas de trabajo](#indice)
 
 Tuvimos muchas dificultades al comienzo del Obligatorio para entrar en 'ritmo', nos costó organizarnos, encontrar espacios en común para las Stand Up y la planificación. Se visualiza en las retrospectiva el reflejo de esta mención, ya que se proponen como acciones correctivas buscar espacioes en común síncronos, así como gestionar de orma uniforme el tiempo. 
 
 
-#### Definición de Ready
+#### [Definición de Ready](#indice)
 
 En esta entrega del Obligatorio no tenemos historias de usuario definidas com otal, solamente hemos incluido tareas. 
 Pero es deseable y lo dejamos previsto para las próximas entregas las siguientes pautas:
@@ -155,7 +189,7 @@ La definición de lista de requisitos previos para una historia de usuario entra
 3. La estimación de tiempo debe estar en una unidad de tiempo acordada y estar en valores predefinidos.
 4. Los criterios de aceptación deben ser claros y presentados como escenarios, explicando el contexto, el evento y los resultados esperados.
 
-#### Definición de Done
+#### [Definición de Done](#indice)
 
 Los criterios para determinar qué historias terminaron con éxito su proceso de implementación serán:
 
@@ -170,7 +204,7 @@ Como los integrantes del equipo somos tres, entendemos suficiente que se validen
 
 5. La documentación ha sido actualizada y se ha revisado para asegurarse de que esté completa y precisa.
 
-### Control de versiones
+### [Control de versiones](#indice)
 
 Se crea el repositorio <https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera>
 
@@ -184,7 +218,7 @@ Ante nuestra transición entre gitflow y trunkbased iremos introduciendo metodol
 La rama issues-merge es una rama sobre la cual probaremos utilizar la metodologia trunk-based.
 Para esta entrega ya experimentamos esta metoología, notando que es más ágil, rápida y con mejores resultados ya que los merge resultan más simples
 
-#### Nombre de ramas, commits y PRs
+#### [Nombre de ramas, commits y PRs](#indice)
 
 1.Para nombrar las ramas:
 
@@ -207,7 +241,7 @@ Para esta entrega ya experimentamos esta metoología, notando que es más ágil,
     - Utilizar un estilo conciso y claro.
 
 
-#### ISSUES - ANÁLISIS DE DEUDA TÉCNICA
+#### [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#indice)
 
 ### Issue 1 
 
@@ -709,7 +743,7 @@ El plan de acción podría incluir pasos específicos para abordar esta preocupa
 - Prioridad: Alta
 - Severidad: Critico
 
-**Retrospectiva:**
+### [Retrospectiva](#indice)
 
 Como fue explicado anteriormente a lo largo de este informe, la falta de coordinación por superposición de horarios ya sea laborales o por asistir a otras asignaturas es un denominador común en el equipo.
 Debido a esto hubo 2 instancias de retrospectivas: 
@@ -738,5 +772,252 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
   Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
   La dedicación completa del equipo es de 37,92.
   Completando un total de 19 issues que fueron informadas y listadas en el ReadMe 
-  Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time. 
+  Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time.
+
+
+  
+------------------------------------
+
+# [Entrega 2](#indice)
+
+## [Definición del marco de trabajo](#indice)
+
+En general nuestro marco de trabajo Kanban no cambió, seguimos utilizando un Tablero para visualizar las distintas tareas en el flujo de valor, aunque ahora se trata de un tablero sustentable con más columnas que detallaremos en la sección del Tablero.
+
+Como mencionamos en la Entrega 1, vamos a utilizar una metodología incremental, notamos que esta se va fortaleciendo en contenidos que vamos adquiriendo, así como madurez en los ya adquiridos. El tablero se definió casi sin dificultad y las tareas fueron fluyendo por las distintas columnas.
+Entendimos rápidamente que había tareas: propias de Gestión: Scrum Dailys, Meeting Planning, redactar el informe de avance, etc. por eso una de las columnas se llama así. También visualizamos el proceso tradicional de desarrollo de software: Análisis, Diseño, Implementación, Testing, Validación, que se corresponden a la solución de las issues seleccionadas y a sus homónimas en las columnas.
+
+**1)	Visualizar el flujo de trabajo:** En esta entrega creamos un proyecto Entrega 2 donde colocamos la nueva definición del Tablero. Para mejorar la visualización y estructuración colocamos las Fechas – hora de creado, Fecha de Start Date y End Date como tugs que luego podemos utilizar para clasificar y/o ordenar.
+Luego generamos la View2 para mostrar las columnas que identificamos como tugs.
+ 
+**2)	Limitar el WIP:** No cambia la condición de que un desarrollador solo puede trabajar en una tarea/issue a la vez. Las tareas complejas, se desglosaron en tareas más pequeñas (similar a lo que hacíamos con las épicas a user stories). Tratamos de asignarlas agregando el integrante del equipo que las estaba trabajando para lograr visibilidad. 
+
+**3)	Gestionar y medir el flujo:** Esto no cambia. Mejoramos el registro en la herramienta clockify, mapeando nuestras columnas del tablero a los tiempo registrados para cada una de cada ella. 
+
+**4)	Implementar ciclos de feedback:** A través de las StandUp más frecuentes y organizadas logramos una instancia de feedback muy útil para el equipo. Notamos que igualmente debemos fortalecer estas instancias haciéndolas más frecuentes,  siendo un poco inviable por la carga de tiempo que lleva la asignatura y otras que están en curso. 
+Esta entrega fue de una semana, en este sentido no pudimos realizar más instancias de 2 instancias de StandUp y las respectivas ceremonias de Review y Retrospectiva
+
+**5) Explicitar políticas y procedimientos:** Acá notamos una cambio en el Definition of Done, teniendo alguna instancia más como Validación y Testing antes de que una issue esté resuelta.
+
+**6) Mejora continua mediante la colaboración:** en esta entrega, vamos a seguir aprendiendo con la definición del pipeline automático. La utilización de GitHub Actions a través del aprendizaje en el curso práctico y luego la experimentación en el Obligatorio.
+
+
+## [Cambios Tablero Kanban](#indice) 
+
+En esta iteracion decidimos pasar a un tablero Kanban más complejo (Sustentable) con el objetivo de tener un mejor seguimiento de las tareas de cada integrante del equipo y saber en que se encuentra cada uno e introducir el testing como parte importante en nuestro tablero ya que en la entrega anterior esto no fue necesario, pero para esta entrega notamos qu ees necesaria ya que en el ciclo de desarrollo tenemos que testear nuestras issues.
+
+  Un tablero más complejo permite un seguimiento más detallado y una comunicación más clara dentro de todo el equipo y un enfoque en la calidad de la gestión, lo que en última instancia contribuye a un proceso de desarrollo más sólido y confiable. 
+  Algunas de las ventajas de la incorporacion de estas columnas: 
+  
+   Mayor visibilidad y seguimiento: Las pruebas unitarias son una parte crítica del proceso de desarrollo, y su estado debe ser claramente visible para todo el equipo. Al agregar columnas específicas para las pruebas unitarias en tu tablero Kanban, todos los miembros del equipo pueden ver fácilmente en qué etapa se encuentran las pruebas y cuáles están pendientes.
+
+   Enfoque en la calidad del código: Las pruebas unitarias ayudan a garantizar que el código sea robusto y cumpla con los requisitos. Al tener una columna dedicada para las pruebas unitarias, podemos enfocar la atención en realizar pruebas exhaustivas antes de avanzar. 
+
+   Métricas y seguimiento de calidad: Con una columna específica para pruebas unitarias, podemos tener un registro más preciso de las métricas de calidad, como la cobertura de pruebas y el número de errores detectados y corregidos en esta etapa. Esto nos da informacion para el proceso de la mejora continua.
+
+## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
+
+En nuestro tablero Kanban optamos por tener las siguientes columnas: 
+Gestion -
+Análisis -
+Diseño -
+Desarrollo -
+Testing -
+Validacion -
+Done
+
+**Análisis:**
+
+Aquí nos enfocamos en tareas específicas relacionadas con la fase de análisis del proyecto de ingeniería. Aquí se recopilan los requisitos del cliente, se identifican las necesidades y se realiza un análisis detallado del problema que se va a resolver. Esta etapa es fundamental para comprender completamente el alcance y los objetivos del proyecto antes de pasar a la fase de diseño.
+En particular, el análisis de cómo solucionaremos las issues van a pasar por esta columna, aunque también podríamos analizar alguna tarea, como resolverla. En este caso nos resulta más simple pasarla a DONE directamente. 
+
+**Artefacto:** acá nos apoyamos en el entendimiento de los diagramas e informes ya realizados por el equipo que elaboró la aplicación para lograr comprender la solución y como interactauban sus capas y componentes.
+
+**Diseño:**
+
+Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabaja en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordial para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+
+**Artefacto:** De la misma manera que en la etapa anterior, en esta etapa no tuvimos suficiente tiempo de diagramar, aunque nos apoyamos en el diseño de la documentación presentada para entender cómo se había implementado la solución.
+
+**Desarrollo:**
+
+La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicación de técnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
+En particular, trabajamos en el código proporcionado reparando las issues seleccionadas, con el IDE Visual Studio y practicando la metodología TDD, recibiendo feedback de cada prueba pasando por RED-GREEN como metodología de aplicación de TDD.
+Los códigos reparados están en los respectivos commits en la rama main, carpeta /Código/BackEnd y /Código/FrontEnd respectivamente.
+
+**Artefacto:** El código que se construye junto al Test unitario a través de la técnica de TDD son los artefactos del Desarrollo y el testing.
+
+
+**Testing:**
+
+En esta fase, se verifica la calidad y la funcionalidad del trabajo realizado en la columna de Desarrollo. El objetivo aquí es realizar pruebas exhaustivas para asegurarse de que el producto cumple con los estándares de calidad y funciona correctamente. Esto es esencial para evitar problemas posteriores y garantizar la satisfacción del cliente.
+Se explicó anteriormente, se aplicó TDD como metodología de ir haciendo crecer el código así como su corrección ante bugs.
+
+**Artefacto:** De la misma manera que en el punto anterior, el Test pasando por RED-GREEN es el artefacto que nos permite testear el código.
+
+**Validación:**
+
+ La columna de Validación está vinculada a la fase de aseguramiento de la calidad en el proceso de ingeniería. Aquí se verifica que el producto o proyecto cumple con los criterios de aceptación definidos en la etapa de Análisis. Esto garantiza que el trabajo realizado cumple con los objetivos establecidos al principio del proyecto.
+La validación se realiza a través de la muestra de la issue reparada a otro compañero de equipo con un video. 
+
+**Artefacto**
+Los artefactos de esta instancia son 3 videos que se corresponden con una demo de la issues reparadas
+1) issue #3. Nombre de Farmacia duplicada:
+   
+   Error anterior: <https://drive.google.com/file/d/1_jEeCQFiLok7-KVxu2THFmjUn5Linqin/view?usp=sharing>
+   
+   Corrección:     <https://drive.google.com/file/d/1rhQWWQGjD7mQvcoNYRXTfXfvVPUeuDR2/view?usp=sharing>
+   
+2) issue #11. Búsqueda amigable por nombre de fármaco
+   
+   Corrección:     <https://drive.google.com/file/d/1XQwL0Xwf7vcYCKGs1H3lXiD4ijqSVlUV/view?usp=sharing>
+   
+3) issue #17: Demostracion error anterior: <https://youtu.be/AFOJaAXP9bc>
+   
+   Corrección: <https://youtu.be/-mipSE6ei24>
+
+**Done:**
+
+Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica.
+
+**Gestión:**
+
+Como se explicó anteriormente, por esta columna pasan todas las tareas de gestión como elaboración de documentos, guías, ceremonias de planificación o standup, retrospectiva 
+**Artefacto:** Todas las instancias de ceremonias generan una minuta que se guardan en la carpeta Gestión/Minutas. Además, la retrospectiva genera dos artefactos que son: el entrorno de trabajo utilizado en la plataforma MetroRetro y el video de la misma.
+
+MetroRetro: <https://metroretro.io/BOA310C0VCO7>
+
+Enlace del video de la reunión de retospectiva: <https://drive.google.com/file/d/1PP6k1xTqwRMzKJNIkrD7dmXnF1CuMdIu/view?usp=sharing>
+
+En esta instancia pudimos coincidir los 3 integrantes del equipo, aunque no se emite el audio de Ana. (una lástima!)
+-------------------------------------
+## [Cambios en el control de Versiones](#indice)
+
+Ante la intencion de utilizar la modalidad de desarrollo Trunk-Based, nuestro repositorio consistira en una rama principal "main", a la cual se le realizaran cambios constantemente; bajo situaciones de implementacion de caracteristicas nuevas se podran abrir ramas paralelas a main para desarrollar los cambios sobre estos pero no se permitira que dichas ramas presenten un tiempo de vida extenso, limitando su vida a un maximo de 2 dias de duracion, donde dicha rama debera integrar los cambios realizados en main durante este periodo y procedera a sincronizar sus cambios a main. Luego de esto la rama puede ser eliminada o puede persistir su vida si aun no se ha finalizado su razon de existir.
+
+Al momento de llegar a un Release se creara una nueva rama a partir de main con el nombre adecuado y se creara un release en esta, indicando con un tag la versión de la misma
+
+-------------------------------------
+
+## [Pipeline y Automatizacion](#indice)
+
+Identificamos que nuestro pipeline se caracteriza por dos aspectos principales, un aspecto es la documentacion y gestion de reportes, y otro aspecto es el desarrollo de funcionalidad de nuestro sistema, ante esta situacion decidimos crear las columnas previamente mencionadas en la composicion del [Tablero KANBAN](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería). Utilizaremos el flujo de nuestras tareas en estas columnas para comprender el estado actual y posibles estados futuros de nuestro pipeline, como forma de monitoreo para prevenir errores, asi como para tratarlos al momento de encontralo. Ademas esta representacion nos ayudara a comprender como ubicar y utilizar las herramientas de Automatizacion, para asi reducir y agilizar el trabajo realizado.
+
+Utilizaremos Github Actions para implementar procesos de automatizacion para asi facilitar la realizacion de validaciones e informar en caso de que se implemente un cambio con errores.
+
+Las funciones automatizadas hasta el momento incluyen:
+- Verificacion de build correcta de backend
+- Verificacion de build correcta de frontend
+- Verificacion de instalacion correcta de dependencias en frontend
+- Verificacion de pruebas unitarias
+
+Las funciones automatizadas no seran ejecutadas en caso que los cambios realizados solo alteren la documentacion del proyecto.
+
+Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un carácter repetitivo y consumen mucho tiempo al ser realizadas por una persona
+-------------------------------------
+## [Correcciones](#indice) 
+
+La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
+
+Por otro lado, la Issue 17 fue reevaluada y se reetiquetó como crítica. El equipo confirmó que se trataba de un bug crítico que tenía el potencial de afectar de manera significativa el funcionamiento del sistema. Y fue puesta en el backlog para ser tratada y solucionado dicho bug.
+
+La Issues 11 fue reevaluada y se modifico su estado a Severidad Alta y Prioridad Mayor. Esto se debe a que la necesidad de ser exacto con la busqueda frecuentemente resulta intrusivo en las acciones de los usuarios.
+
+### Issue 17:
+
+#### Codigo TDD
+--------------------------------------------------------------------
+Se genera el código de TDD dentro de la carpeta StockManagerTest
+~~~
+[TestMethod]
+        [ExpectedException(typeof(InvalidResourceException))]
+        public void CreateStockRequestNegative_ShouldReturnException()
+        {
+            //Arrange
+            var drug = new Drug() { Id = 1, Code = "XF324" };
+            User emplotyee = new User() { Id = 1, UserName = "jcastro" };
+            var stockRequest = new StockRequest()
+            {
+                Id = 1,
+                Status = Domain.Enums.StockRequestStatus.Pending,
+                Employee = new User() { Id = 1, UserName = "jcastro" },
+                Details = new List<StockRequestDetail>()
+                {
+                    new StockRequestDetail() { Id = 1, Drug = new Drug() { Id = 1, Code = "XF324" }, Quantity = -50 }
+                },
+                RequestDate = DateTime.Now
+            };
+
+            //Act
+            _employeeMock.Setup(u => u.GetOneDetailByExpression(It.IsAny<Expression<Func<User, bool>>>())).Returns(emplotyee);
+            _drugMock.Setup(d => d.GetOneByExpression(It.IsAny<Expression<Func<Drug, bool>>>())).Returns(drug);
+            _sessionMock.Setup(d => d.GetOneByExpression(It.IsAny<Expression<Func<Session, bool>>>())).Returns(session);
+
+          
+
+            var result = _stockRequestManager.CreateStockRequest(stockRequest, token);
+
+           
+        }	
+
+       FIX
+        -------------------------
+        Fix este bug se soluciono validando que la cantidad que se recibe al realizar la request es mayor a 0 para esto se agrego el siguiente codigo en la clase CreateStockRequest dentro de la clase StockRequestManager dentro del paquete BusinessLogic con el objetivo de generar una validacion para las cnatidades:
+
+        if(item.Quantity <0) throw new InvalidResourceException("Stock request quantity request must be positive.");
+
+        ---------------------------
+    
+
+
+~~~
+
+### Issue 11
+
+Se reevaluo la funcion Criteria de la clase SearchCriteria, esta ahora hace uso de sus atributos internos y ademas returna una condicion de busqueda mas permisiva, causando que se acepten coincidencias parciales, algo que previamente no ocurria y era la causa de este Issue
+
+## [Nuevos Issues](#indice)
+
+### Issue 20
+
+Error en Test Funcionalidad a nivel de codigo
+
+**Descripción:**
+Una de las pruebas unitarias falla por razones que aun no son claras. El error no es consistente en diferentes dispositivos 
+
+**Impacto:**
+Nuestra filosofia considera los errores de prueba unitarias como no aceptables, por lo que reduce nuestra aceptacion del codigo como valido y puede causar problemas a futuro. La funcionalidad aparenta cumplir con analisis de testing exploratorio
+
+**Solución ideal:**
+Se encuentra la causa del error y se ajusta la prueba para ser constante en multiples dispositivos.
+
+**Plan de acción:**
+Comprender si la prueba utiliza correctamente las herramientas de testing, ajustarla adecuadamente de no ser el caso, o ajustar el funcionamiento del código en caso de que la herramienta actúe adecuadamente
+
+**Clasificación:**
+- Prioridad: Inmediata
+- Severidad: Critica
+
+ ## [Retrospectiva](#indice)
+ Como mencionamos, realizamos la retrospectiva en la mimsa plataforma que la entrega anterior, destacándose que esta vez pudimos lograr estar los 3 integrantes presentes. Nos parecen 
+ instancias de feedback y aprendizaje muy enriquecedoras, permitiéndonos mejorar nuestros procesos y producto final.
+ La realizamos a través del modelo DAKI, mencionándose dentro de las principales: 
+ 
+ ![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/86540e4d-c8ae-4f4e-9071-b65048beb98c)
+ 
+ En conclusión surgen como acciones correctivas: 
+ 
+ "Pull Requests para mergear las ramas nuevas a main.
+Continuar organizándonos con los horarios
+Mantenimiento del Tablero fluido
+Registro de Horas actualizado
+Continuar con el compromiso."
+
+![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/5f5e9045-435c-4a4f-aca4-c0c566cd9239)
+
+
+Link del video de la retro: <https://drive.google.com/file/d/1PP6k1xTqwRMzKJNIkrD7dmXnF1CuMdIu/view?usp=sharing>
+
+Link del enlace del ambiente metroretro: <https://metroretro.io/BOA310C0VCO7>
+
 
