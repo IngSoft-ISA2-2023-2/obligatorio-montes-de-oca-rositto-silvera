@@ -45,12 +45,13 @@
 
 ### [Entrega 2](#entrega-2-1)
 
-1. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
-2. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
-3. [Pipeline y Automatizacion](#pipeline-y-automatizacion)
-4. [Correcciones](#correciones)
-5. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
-6. [Nuevos Issues](#nuevos-issues)
+1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
+2. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
+3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
+4. [Pipeline y Automatizacion](#pipeline-y-automatizacion)
+5. [Correcciones](#correciones)
+6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+7. [Nuevos Issues](#nuevos-issues)
 
 
 ## [Definición del marco de trabajo](#indice)
