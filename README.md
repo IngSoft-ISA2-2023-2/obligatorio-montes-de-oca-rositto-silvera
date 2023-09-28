@@ -81,7 +81,7 @@ En particular Kanban es una metodología de gestión visual que se utiliza comú
 El proceso de Ingeniería de requerimientos, se mapea a un proceso muy simple de Planning, dentro del proceso completo Planning-Do-Check, donde las tares de Planificación se corresponden a entrevistas con el cliente donde se describen sus necesidades que luego son transformadas en requerimientos de software. 
 Es importante en esta etapa identificar las necesidades propias del cliente, así como requerimientos de entorno o potenciales cambios que puedan delimitar nuestro escenario de implantación. 
 
-Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligatorio (la rúbrica), los requerimientos que fueron explicando los profesores y de alguna forma 'desmenusando' estas necesidades en tareas. 
+Esta etapa fue lograda en nuestro proyecto a través de la lectura del Obligatorio (la rúbrica), los requerimientos que fueron explicando los profesores y de alguna forma 'desmenuzando' estas necesidades en tareas. 
 
  Seguidamente este listado de necesidades identificadas es transformado a requerimientos, en general redactados como User Storys, en nuestro caso, aún no contamos con user story si no solo con tareas. 
  Estas tareas deben ser redactadas de forma clara y precisa evitando ambigüedades. La lista con los requerimientos obtenidos, es priorizada, categorizada teniendo en cuenta cada una de las tareas propuestas, las cuales conforman el producto de trabajo comúnmente conocido como Product Backlog.
@@ -836,6 +836,7 @@ En particular, el análisis de cómo solucionaremos las issues van a pasar por e
 **Diseño:**
 
 Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabaja en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordial para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+
 **Artefacto:** De la misma manera que en la etapa anterior, en esta etapa no tuvimos suficiente tiempo de diagramar, aunque nos apoyamos en el diseño de la documentación presentada para entender cómo se había implementado la solución.
 
 **Desarrollo:**
@@ -843,6 +844,7 @@ Después de completar la fase de análisis, las tareas se mueven a la columna de
 La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicación de técnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
 En particular, trabajamos en el código proporcionado reparando las issues seleccionadas, con el IDE Visual Studio y practicando la metodología TDD, recibiendo feedback de cada prueba pasando por RED-GREEN como metodología de aplicación de TDD.
 Los códigos reparados están en los respectivos commits en la rama main, carpeta /Código/BackEnd y /Código/FrontEnd respectivamente.
+
 **Artefacto:** El código que se construye junto al Test unitario a través de la técnica de TDD son los artefactos del Desarrollo y el testing.
 
 
@@ -850,21 +852,29 @@ Los códigos reparados están en los respectivos commits en la rama main, carpet
 
 En esta fase, se verifica la calidad y la funcionalidad del trabajo realizado en la columna de Desarrollo. El objetivo aquí es realizar pruebas exhaustivas para asegurarse de que el producto cumple con los estándares de calidad y funciona correctamente. Esto es esencial para evitar problemas posteriores y garantizar la satisfacción del cliente.
 Se explicó anteriormente, se aplicó TDD como metodología de ir haciendo crecer el código así como su corrección ante bugs.
+
 **Artefacto:** De la misma manera que en el punto anterior, el Test pasando por RED-GREEN es el artefacto que nos permite testear el código.
 
 **Validación:**
 
  La columna de Validación está vinculada a la fase de aseguramiento de la calidad en el proceso de ingeniería. Aquí se verifica que el producto o proyecto cumple con los criterios de aceptación definidos en la etapa de Análisis. Esto garantiza que el trabajo realizado cumple con los objetivos establecidos al principio del proyecto.
 La validación se realiza a través de la muestra de la issue reparada a otro compañero de equipo con un video. 
+
 **Artefacto**
 Los artefactos de esta instancia son 3 videos que se corresponden con una demo de la issues reparadas
 1) issue #3. Nombre de Farmacia duplicada:
+   
    Error anterior: <https://drive.google.com/file/d/1_jEeCQFiLok7-KVxu2THFmjUn5Linqin/view?usp=sharing>
+   
    Corrección:     <https://drive.google.com/file/d/1rhQWWQGjD7mQvcoNYRXTfXfvVPUeuDR2/view?usp=sharing>
+   
 2) issue #11. Búsqueda amigable por nombre de fármaco
+   
    Corrección:     <https://drive.google.com/file/d/1XQwL0Xwf7vcYCKGs1H3lXiD4ijqSVlUV/view?usp=sharing>
+   
 3) issue #17: Demostracion error anterior: <https://youtu.be/AFOJaAXP9bc>
-    Corrección: <https://youtu.be/-mipSE6ei24>
+   
+   Corrección: <https://youtu.be/-mipSE6ei24>
 
 **Done:**
 
@@ -876,6 +886,7 @@ Como se explicó anteriormente, por esta columna pasan todas las tareas de gesti
 **Artefacto:** Todas las instancias de ceremonias generan una minuta que se guardan en la carpeta Gestión/Minutas. Además, la retrospectiva genera dos artefactos que son: el entrorno de trabajo utilizado en la plataforma MetroRetro y el video de la misma.
 
 MetroRetro: <https://metroretro.io/BOA310C0VCO7>
+
 Enlace del video de la reunión de retospectiva: <https://drive.google.com/file/d/1PP6k1xTqwRMzKJNIkrD7dmXnF1CuMdIu/view?usp=sharing>
 
 En esta instancia pudimos coincidir los 3 integrantes del equipo, aunque no se emite el audio de Ana. (una lástima!)
@@ -902,7 +913,7 @@ Las funciones automatizadas hasta el momento incluyen:
 
 Las funciones automatizadas no seran ejecutadas en caso que los cambios realizados solo alteren la documentacion del proyecto.
 
-Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un caracter repetitivo y consumen mucho tiempo al ser realizadas por una persona
+Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un carácter repetitivo y consumen mucho tiempo al ser realizadas por una persona
 -------------------------------------
 ## [Correcciones](#indice) 
 
