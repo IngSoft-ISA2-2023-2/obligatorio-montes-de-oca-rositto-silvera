@@ -915,7 +915,7 @@ Las funciones automatizadas no seran ejecutadas en caso que los cambios realizad
 
 Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un carácter repetitivo y consumen mucho tiempo al ser realizadas por una persona
 -------------------------------------
-##[Correcciones](#indice) 
+## [Correcciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
