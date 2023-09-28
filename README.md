@@ -976,6 +976,91 @@ Se genera el código de TDD dentro de la carpeta StockManagerTest
 
 Se reevaluo la funcion Criteria de la clase SearchCriteria, esta ahora hace uso de sus atributos internos y ademas returna una condicion de busqueda mas permisiva, causando que se acepten coincidencias parciales, algo que previamente no ocurria y era la causa de este Issue
 
+Se extiende el metodo de testeo previamente existente Test_DrugSearchCriteria
+~~~
+
+[TestMethod]
+public void Test_DrugSearchCriteria()
+{
+
+    var searchCriteria = new DrugSearchCriteria();
+    searchCriteria.Name = "Drug1";
+    searchCriteria.PharmacyId = 123456;
+    var res1 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "Drug1" });
+    searchCriteria.Name = "";
+    searchCriteria.PharmacyId = 123456;
+    var res2 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "" });
+    searchCriteria.Name = "Drug1";
+    searchCriteria.PharmacyId = null;
+    var res3 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "Drug1" });
+    searchCriteria.Name = "";
+    searchCriteria.PharmacyId = null;
+    var res4 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "" });
+
+    // Assert
+    Assert.IsNotNull(res1);
+    Assert.IsNotNull(res2);
+    Assert.IsNotNull(res3);
+    Assert.IsNotNull(res4);
+}
+
+[TestMethod]
+public void Test_DrugSearchCriteriaIncomplete()
+{
+
+    var searchCriteria = new DrugSearchCriteria();
+    searchCriteria.Name = "Dr";
+    searchCriteria.PharmacyId = 123456;
+    var res1 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "Drug1" });
+    searchCriteria.Name = "";
+    searchCriteria.PharmacyId = 123456;
+    var res2 = searchCriteria.Criteria(new Drug { Pharmacy = new Pharmacy() { Id = 123456 }, Name = "" });
+    searchCriteria.Name = "ug1";
+    searchCriteria.PharmacyId = null;
+    var res3 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "Drug1" });
+    searchCriteria.Name = "";
+    searchCriteria.PharmacyId = null;
+    var res4 = searchCriteria.Criteria(new Drug { Pharmacy = null, Name = "" });
+
+    // Assert
+    Assert.IsNotNull(res1);
+    Assert.IsNotNull(res2);
+    Assert.IsNotNull(res3);
+    Assert.IsNotNull(res4);
+}
+
+~~~
+
+Se cambia el funcionamiento de la clase DrugSearchCriteria
+
+~~~
+public class DrugSearchCriteria
+    {
+        public string? Name { get; set; }
+        public int? PharmacyId { get; set; }
+
+        public Expression<Func<Drug, bool>> Criteria(Drug drug)
+        {
+            if (!string.IsNullOrEmpty(Name) && PharmacyId != null)
+            {
+                return d => d.Name.Contains(Name) && d.Deleted == false && d.Pharmacy == drug.Pharmacy && d.Stock > 0;
+            }
+            else if (string.IsNullOrEmpty(Name) && PharmacyId != null)
+            {
+                return d => d.Pharmacy == drug.Pharmacy && d.Deleted == false && d.Stock > 0;
+            }
+            else if (!string.IsNullOrEmpty(Name) && PharmacyId == null)
+            {
+                return d => d.Name.Contains(Name) && d.Deleted == false && d.Stock > 0;
+            }
+            else
+            {
+                return d => d.Deleted == false && d.Stock > 0;
+            }
+        }
+    }
+~~~
+
 ## [Nuevos Issues](#indice)
 
 ### Issue 20
