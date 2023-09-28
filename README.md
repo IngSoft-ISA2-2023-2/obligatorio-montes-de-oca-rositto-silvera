@@ -48,7 +48,7 @@
 1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
 2. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
 3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
-4. [Pipeline y Automatizacion](#pipeline-y-automatizacion)
+4. [Pipeline y Automatización](#pipeline-y-automatizacion)
 5. [Correcciones](#correciones)
 6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
 7. [Retrospectiva](#retrospectiva-1)
@@ -904,7 +904,7 @@ Las funciones automatizadas no seran ejecutadas en caso que los cambios realizad
 
 Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo y Validacion de nuestro tablero KANBAN, nuestro objetivo es lograr reducir la cantidad de trabajo manual requirido en estas columnas debido a que poseen un caracter repetitivo y consumen mucho tiempo al ser realizadas por una persona
 -------------------------------------
-## [Correciones](#indice) 
+## [Correcciones](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
