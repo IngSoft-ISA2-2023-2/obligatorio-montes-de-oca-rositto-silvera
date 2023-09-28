@@ -49,7 +49,7 @@
 2. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
 3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
 4. [Pipeline y Automatización](#pipeline-y-automatizacion)
-5. [Correcciones](#correciones)
+5. [Correcciones de Issues](#correcciones-de-issues)
 6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
 7. [Retrospectiva](#retrospectiva-1)
 8. [Nuevos Issues](#nuevos-issues)
@@ -917,7 +917,7 @@ Es posible ubicar estas herramientas de automatizacion en las columnas de Testeo
 
 -------------------------------------
 
-## [Correcciones](#indice) 
+## [Correcciones de Issues](#indice) 
 
 La Issue 19, que originalmente se había etiquetado como un problema, fue posteriormente reconsiderada y se llegó a una interpretación más precisa del código y los requisitos del ejercicio. Se determinó que lo que se había reportado como un error no era en realidad un error, sino que representaba el comportamiento esperado del sistema.
 
