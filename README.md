@@ -1092,7 +1092,7 @@ Se crea el Test para evitar que lance la excepción al ingresar una farmacia dup
             Assert.IsNotNull(objectResult);
             Assert.AreEqual(expectedErrorMessage, objectResult.Value);
         }
---------------------------
+
 Se corrige a través del Controller en el método Create. 
 
 [HttpPost]
