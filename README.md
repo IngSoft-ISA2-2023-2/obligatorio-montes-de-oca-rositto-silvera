@@ -573,7 +573,7 @@ Se Cambia el componente de medicamento por uno que no posea imagenes
 /
 - Se realiza la implementacion del sistema de imagenes
 - Se explora la base de datos en busqueda de medicamentos sin imagen
-- Se implementa un sistema de edicion de imagenes
+- Se implementa un sistema de edicion de imagenes 
 - Se les indica a los usuarios empleados sobre la falta de imagenes en los medicamentos que brinda su farmacia y se les solicita su actualizacion
 
   
