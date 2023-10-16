@@ -77,6 +77,8 @@ import { PurchaseByDateComponent } from './pages/owner/purchase-by-date/purchase
 // Owner
 import { InvitationComponent } from './pages/owner/invitation/invitation.component';
 import { StockRequestOwnerComponent } from './pages/owner/stock-request-owner/stock-request-owner.component';
+import { CreateProductComponent } from './pages/employee/create-product/create-product.component';
+
 
 @NgModule({
   declarations: [
@@ -116,7 +118,7 @@ import { StockRequestOwnerComponent } from './pages/owner/stock-request-owner/st
     PurchaseByDateComponent,
     InvitationComponent,
     StockRequestOwnerComponent,
-    
+    CreateProductComponent,   
 
   ],
   imports: [
