@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'employee/purchase-status', component: PurchaseStatusComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
   { path: 'employee/delete-drug', component: DeleteDrugComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
   { path: 'employee/create-drug', component: CreateDrugComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
-  { path: 'employee/create-product', component: CreateProductComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
+  { path: 'employee/create-products', component: CreateProductComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
   { path: 'employee/stock-request', component: StockRequestComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
   { path: 'employee/create-request', component: CreateRequestComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
   { path: 'employee/export-drugs', component: ExportDrugsComponent, canActivate: [AuthenticationGuard], data: {roles: ['Employee'] } },
