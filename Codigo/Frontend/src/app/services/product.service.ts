@@ -10,7 +10,7 @@ import { StorageManager } from '../utils/storage-manager';
 @Injectable({ providedIn: 'root'})
 export class ProductService {
 
-  
+
   private url = environment.apiUrl + '/api/product';
 
   httpOptions = {
@@ -27,7 +27,7 @@ export class ProductService {
   getHttpHeaders(): HttpHeaders {
     let login = JSON.parse(this.storageManager.getLogin());
     let token = login ? login.token : "";
-    
+
     return new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', token);
@@ -85,6 +85,16 @@ export class ProductService {
       tap(),
       catchError(this.handleError<Product>('Create Product'))
     );
+  }
+
+  /** PATCH Update Product**/
+
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.patch<Product>(this.url, product, {headers: this.getHttpHeaders() })
+      .pipe(
+        tap(),
+        catchError(this.handleError<Product>('Update Product'))
+      );
   }
 
   /** DELETE Delete Product */
