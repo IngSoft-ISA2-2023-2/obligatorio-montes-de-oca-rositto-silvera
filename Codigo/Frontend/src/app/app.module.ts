@@ -56,6 +56,7 @@ import { PurchaseStatusComponent } from './pages/employee/purchase-status/purcha
 import { CreateDrugComponent } from './pages/employee/create-drug/create-drug.component';
 import { DeleteDrugComponent } from './pages/employee/delete-drug/delete-drug.component';
 import { ExportDrugsComponent } from './pages/employee/export-drugs/export-drugs.component';
+import { ModifyProductComponent } from './pages/employee/modify-product/modify-product.component';
 
 // Login & Register
 import { LoginComponent } from './pages/login/login.component';
@@ -78,6 +79,7 @@ import { PurchaseByDateComponent } from './pages/owner/purchase-by-date/purchase
 import { InvitationComponent } from './pages/owner/invitation/invitation.component';
 import { StockRequestOwnerComponent } from './pages/owner/stock-request-owner/stock-request-owner.component';
 import { CreateProductComponent } from './pages/employee/create-product/create-product.component';
+import { ProductsComponent } from './pages/employee/products/products.component';
 
 
 @NgModule({
@@ -113,12 +115,14 @@ import { CreateProductComponent } from './pages/employee/create-product/create-p
     StockRequestComponent,
     CreateRequestComponent,
     ExportDrugsComponent,
+    ModifyProductComponent,   
     // Owner
     OwnerComponent,
     PurchaseByDateComponent,
     InvitationComponent,
     StockRequestOwnerComponent,
-    CreateProductComponent,   
+    CreateProductComponent,
+    ProductsComponent,
 
   ],
   imports: [
