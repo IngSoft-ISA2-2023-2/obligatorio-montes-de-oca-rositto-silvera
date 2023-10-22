@@ -41,6 +41,29 @@
                 </td>
               </tr>
             </tbody>
+
+            <tbody>
+              <tr *ngFor="let product of additionalProducts; let index = index">
+                <th scope="row">{{ index + 1 }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price | currency }}</td>
+                <td>{{ product.selectedQuantity }}</td>
+                <td>{{ product.price * product.selectedQuantity | currency }}</td>
+                <td>
+                  <button
+                    title="Delete"
+                    class="btn btn-outline-info"
+                    (click)="delete(index)"
+                  >
+                    <svg cIcon name="cil-trash"></svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody> 
+
+
+
+
             <tfoot>
               <tr>
                 <td><b>Total</b></td>
@@ -72,6 +95,53 @@
             </button>
           </div>
         </div>
+
+
+        <h3 [ngStyle]="{ 'text-align': 'center' }">Recommended Products</h3>
+<table cTable hover [responsive]="true">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      
+      <th scope="col">Total</th>
+      <th scope="col">Add to Cart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through your recommended products and display them here -->
+    <tr *ngFor="let recommendedProduct of recommendedProducts; let index = index">
+      <th scope="row">{{ index + 1 }}</th>
+      <td>{{ recommendedProduct.name }}</td>
+      <td>{{ recommendedProduct.price | currency }}</td>
+      <td>
+        <button class="btn btn-sm btn-outline-success" (click)="decrementQuantity(recommendedProduct)">
+          - <!-- Botón de decremento -->
+        </button>
+        {{ recommendedProduct.selectedQuantity }} <!-- Cantidad seleccionada -->
+        <button class="btn btn-sm btn-outline-success" (click)="incrementQuantity(recommendedProduct)">
+          + <!-- Botón de incremento -->
+        </button>
+      </td>  
+      <td>{{ recommendedProduct.price * recommendedProduct.selectedQuantity  }}</td>
+      <td>
+        <button
+          title="Add to Cart"
+          class="btn btn-outline-success"
+         (click)="addAditionalProducts(recommendedProduct)"
+        >
+          Add to Cart
+          <svg cIcon name="cil-cart-plus"></svg>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+        
 
         <div *ngIf="cart.length === 0" class="alert alert-info" role="alert">
           <h4 class="alert-heading">Your cart is empty.</h4>
