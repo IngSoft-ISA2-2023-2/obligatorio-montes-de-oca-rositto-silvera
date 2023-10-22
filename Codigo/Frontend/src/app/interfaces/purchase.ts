@@ -2,13 +2,16 @@ export class PurchaseRequest {
     buyerEmail: string = "";
     purchaseDate: string = "";
     details: PurchaseRequestDetail[] = [];
-
+    details2: PurchaseRequestDetail[] = [];
+    
     constructor(buyerEmail: string, 
                     purchaseDate: string, 
-                    details: PurchaseRequestDetail[]){
+                    details: PurchaseRequestDetail[] , 
+                    details2: PurchaseRequestDetail[] ){
         this.buyerEmail = buyerEmail;
         this.purchaseDate = purchaseDate;
         this.details = details;
+        this.details2 = details2;
     }
 }
 

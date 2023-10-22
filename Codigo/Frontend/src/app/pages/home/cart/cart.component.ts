@@ -16,14 +16,14 @@ export class CartComponent implements OnInit {
   cart: Drug[] = [];
   total: number = 0;
   recommendedProducts: RecommendedProduct[] = [
-    new RecommendedProduct(1, 'P1', 'Recommended Product 1', 'Description 1', 10, 25.0),
-    new RecommendedProduct(2, 'P2', 'Recommended Product 2', 'Description 2', 5, 30.0),
-    new RecommendedProduct(3, 'P3', 'Recommended Product 3', 'Description 3', 8, 15.0),
+    new RecommendedProduct(1, 'P1', 'Recommended Product 1', 'Description 1', 10, 25.0, ""),
+    new RecommendedProduct(2, 'P2', 'Recommended Product 2', 'Description 2', 5, 30.0, ""),
+    new RecommendedProduct(3, 'P3', 'Recommended Product 3', 'Description 3', 8, 15.0 , ""),
   ];
 
   additionalProducts: RecommendedProduct[] = [  // Nuevo array additionalProducts
-    new RecommendedProduct(4, 'P4', 'Additional Product 1', 'Description 4', 12, 40.0),
-    new RecommendedProduct(5, 'P5', 'Additional Product 2', 'Description 5', 7, 20.0),
+    new RecommendedProduct(4, 'P4', 'Additional Product 1', 'Description 4', 12, 40.0 , ""),
+    new RecommendedProduct(5, 'P5', 'Additional Product 2', 'Description 5', 7, 20.0 , ""),
   ];
 
 

@@ -27,6 +27,20 @@ namespace PharmaGo.WebApi.Converters
                     });
             }
 
+            foreach (var detail in model.Details2)
+            {
+                purchase.details
+                    .Add(new PurchaseDetail
+                    {
+                        Quantity = detail.Quantity,
+                        Product = new Product { Code = detail.Code },
+                        Pharmacy = new()
+                        {
+                            Id = detail.PharmacyId
+                        }
+                    });
+            }
+
             return purchase;
         }
 

@@ -31,6 +31,31 @@ namespace PharmaGo.DataAccess
             modelBuilder.Entity<UnitMeasure>().Property(u => u.Name).HasConversion<string>();
             modelBuilder.Entity<Presentation>().Property(u => u.Name).HasConversion<string>();
 
+
+
+
+            modelBuilder.Entity<PurchaseDetail>()
+         .HasOne(pd => pd.Drug)
+         .WithMany()
+         .HasForeignKey(pd => pd.DrugId);
+
+            modelBuilder.Entity<PurchaseDetail>()
+                .HasOne(pd => pd.Product)
+                .WithMany()
+                .HasForeignKey(pd => pd.ProductId);
+
+            modelBuilder.Entity<PurchaseDetail>()
+                .HasOne(pd => pd.Pharmacy)
+                .WithMany()
+                .HasForeignKey(pd => pd.PharmacyId);
+
+            modelBuilder.Entity<PurchaseDetail>()
+                .HasOne(pd => pd.Purchase)
+                .WithMany()
+                .HasForeignKey(pd => pd.PurchaseId);
+
+
+
             base.OnModelCreating(modelBuilder);
 
         }

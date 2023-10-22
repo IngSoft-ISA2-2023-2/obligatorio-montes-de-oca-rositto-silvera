@@ -44,8 +44,19 @@ export class ChoComponent implements OnInit {
       details.push(detail);
     }
 
+
+    const storedRecommendedProducts = JSON.parse(this.storageManager.getData('recommendedProducts'));
+  const recommendedProductsDetails2: PurchaseRequestDetail[] = [];
+
+  if (Array.isArray(storedRecommendedProducts) && storedRecommendedProducts.length > 0) {
+    for (const item of storedRecommendedProducts) {
+      const detail2 = new PurchaseRequestDetail(item.code, item.selectedQuantity, item.pharmacy.id);
+      
+    }
+  }
+
     let now = new Date().toISOString();
-    let purchaseRequest = new PurchaseRequest(this.email, now, details);
+    let purchaseRequest = new PurchaseRequest(this.email, now, details,recommendedProductsDetails2);
     this.purchaseService.addPurchase(purchaseRequest)
     .subscribe(purchase => {
       if (purchase){

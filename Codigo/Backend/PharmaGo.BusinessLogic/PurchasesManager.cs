@@ -75,6 +75,35 @@ namespace PharmaGo.BusinessLogic
                 detail.Drug = drug;
                 detail.Status = PENDING;
             }
+
+            foreach (var detail in purchase.details2)
+            {
+                int pharmacyId = detail.Pharmacy.Id;
+                if (pharmacyId <= 0)
+                    throw new ResourceNotFoundException($"Pharmacy Id is a mandatory field");
+
+                var pharmacy = _pharmacysRepository.GetOneByExpression(x => x.Id == pharmacyId);
+                if (pharmacy is null)
+                    throw new ResourceNotFoundException($"Pharmacy {detail.Pharmacy.Id} not found");
+
+                if (detail.Quantity <= 0)
+                    throw new InvalidResourceException("The Quantity is a mandatory field");
+
+                string productCode = detail.Product.Code;
+                var product = pharmacy.Products.FirstOrDefault(x => x.Code == productCode);
+                if (product is null)
+                    throw new ResourceNotFoundException($"Drug {productCode} not found in Pharmacy {pharmacy.Name}");
+
+                detail.Pharmacy = pharmacy;
+                total = total + (product.Price * detail.Quantity);
+                detail.Price = product.Price;
+                detail.Product = product;
+                detail.Status = PENDING;
+            }
+
+
+
+
             purchase.TotalAmount = total;
             purchase.TrackingCode = generateTrackingCode();
             _purchasesRepository.InsertOne(purchase);

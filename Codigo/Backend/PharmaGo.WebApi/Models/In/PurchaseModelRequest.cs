@@ -8,6 +8,7 @@ namespace PharmaGo.WebApi.Models.In
         public string BuyerEmail { get; set; }
         public DateTime PurchaseDate { get; set; }
         public ICollection<PurchaseDetailModelRequest> Details { get; set; }
+        public ICollection<PurchaseDetailModelRequest> Details2 { get; set; }
 
         public class PurchaseDetailModelRequest {
             public int PharmacyId { get; set; }
