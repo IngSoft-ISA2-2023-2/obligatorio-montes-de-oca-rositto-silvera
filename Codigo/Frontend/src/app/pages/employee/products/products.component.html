@@ -3,7 +3,7 @@
   <c-row [ngStyle]="{ width: '100%' }">
     <c-col>
       <c-row class="g-0 customAlign">
-        <h3>Delete Drug</h3>
+        <h3>Products</h3>
         <table 
           *ngIf="products.length > 0"
           cTable
@@ -14,7 +14,6 @@
               <th scope="col">Code</th>
               <th scope="col">Name</th>
               <th scope="col">Price</th>
-              <th scope="col">Pharmacy</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -23,7 +22,6 @@
               <td>{{ product.code }}</td>
               <td>{{ product.name }}</td>
               <td>{{ product.price | currency }}</td>
-              <td>{{ product.pharmacy.name }}</td>
               <td>
               <a class="font-weight-bold font-xs btn-block text-muted" 
                 routerLink="/employee/modify-product">

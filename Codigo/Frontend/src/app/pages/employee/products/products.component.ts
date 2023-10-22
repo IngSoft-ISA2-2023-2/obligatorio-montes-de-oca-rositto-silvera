@@ -21,26 +21,26 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private commonService: CommonService,
-    private producyService: ProductService
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {
-    this.getDrugsByUser();
+    this.getProductsByUser();
   }
 
-  getDrugsByUser() {
-    this.drugService.getDrugsByUser().subscribe((d: any) => (this.drugs = d));
+  getProductsByUser() {
+    this.productService.getProductsByUser().subscribe((d: any) => (this.products = d));
   }
 
   deleteDrug(index: number): void {
-    for (let drug of this.drugs) {
-      if (drug.id === index) {
-        this.targetItem = drug;
+    for (let product of this.products) {
+      if (product.id === index) {
+        this.targetItem = product;
         break;
       }
     }
     if (this.targetItem) {
-      this.modalTitle = 'Delete Drug';
+      this.modalTitle = 'Delete Product';
       this.modalMessage = `Deleting '${this.targetItem.code} - ${this.targetItem.name}'. Are you sure ?`;
       this.visible = true;
     }
@@ -52,12 +52,12 @@ export class ProductsComponent implements OnInit {
 
   saveModal(event: any): void {
     if (event) {
-      this.drugService.deleteDrug(this.targetItem.id).subscribe((p: any) => {
+      this.productService.deleteProduct(this.targetItem.id).subscribe((p: any) => {
         if (p) {
           this.visible = false;
-          this.getDrugsByUser();
+          this.getProductsByUser();
           this.commonService.updateToastData(
-            `Success deleting drug "${this.targetItem.code} - ${this.targetItem.name}"`,
+            `Success deleting product "${this.targetItem.code} - ${this.targetItem.name}"`,
             'success',
             'Drug deleted.'
           );
