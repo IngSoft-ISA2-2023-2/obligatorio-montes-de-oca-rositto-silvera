@@ -17,7 +17,7 @@ namespace SpecFlowPharmacyGo.StepDefinitions
 
 
         [Given(@"that I input the code (.*)")]
-        public void GivenThatIInputTheCode(int code)
+        public void GivenThatIInputTheCode(String code)
         {
             _product.Code = code;
         }
@@ -35,7 +35,7 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         }
 
         [Given(@"that I input the price  (.*),")]
-        public void GivenThatIInputThePrice(double price)
+        public void GivenThatIInputThePrice(decimal price)
         {
             _product.Price = price;
         }
