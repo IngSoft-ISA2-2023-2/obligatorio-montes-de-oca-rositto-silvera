@@ -79,7 +79,7 @@ namespace PharmaGo.BusinessLogic
 
                 if (detail.TypeOfProduct.Equals("P"))
                 {
-                    string productCode = detail.Drug.Code;
+                    string productCode = detail.Product.Code;
                     var product = pharmacy.Products.FirstOrDefault(x => x.Code == productCode);
                     if (product is null)
                         throw new ResourceNotFoundException($"Drug {productCode} not found in Pharmacy {pharmacy.Name}");

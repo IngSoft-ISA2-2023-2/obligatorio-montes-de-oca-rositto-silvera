@@ -19,6 +19,7 @@ namespace PharmaGo.WebApi.Converters
                 purchase.details
                     .Add(new PurchaseDetail
                     {
+                        TypeOfProduct = "D",
                         Quantity = detail.Quantity,
                         Drug = new Drug { Code = detail.Code },
                         Pharmacy = new()
@@ -33,13 +34,15 @@ namespace PharmaGo.WebApi.Converters
                     purchase.details
                         .Add(new PurchaseDetail
                         {
+                            TypeOfProduct = "P",
                             Quantity = detail.Quantity,
                             Product = new Product { Code = detail.Code },
                             Pharmacy = new()
                             {
                                 Id = detail.PharmacyId
                             }
-                        });
+
+                        }) ;
                 }
 
 
