@@ -8,6 +8,7 @@ namespace PharmaGo.DataAccess
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Drug> Drugs { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Invitation> Invitations { get; set; }
         public DbSet<Pharmacy> Pharmacys { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
@@ -26,7 +27,7 @@ namespace PharmaGo.DataAccess
             modelBuilder.Entity<Drug>().Property(property => property.Price).HasPrecision(14, 2);
             modelBuilder.Entity<Purchase>().Property(property => property.TotalAmount).HasPrecision(14, 2);
             modelBuilder.Entity<PurchaseDetail>().Property(property => property.Price).HasPrecision(14, 2);
-
+            modelBuilder.Entity<Product>().Property(property => property.Price).HasPrecision(14, 2);
             modelBuilder.Entity<UnitMeasure>().Property(u => u.Name).HasConversion<string>();
             modelBuilder.Entity<Presentation>().Property(u => u.Name).HasConversion<string>();
 

@@ -1,33 +1,32 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+﻿using PharmaGo.Exceptions;
+using System.Collections.Generic;
+using System.Diagnostics;
+
 
 namespace PharmaGo.Domain.Entities
 {
     public class Product
     {
-        private string productName;
-        private string productDescription;
-        private double productPrice;
-        private int productCode;
-
-        public Product()
-        {
-        }
-
-        public Product(int code,string productName, string productDescription, double productPrice)
-        {
-            this.productName = productName;
-            this.productDescription = productDescription;
-            this.productPrice = productPrice;
-            this.productCode = code;
-        }
-
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int Code { get; set; }
-        public double Price { get; set; }
+        public Pharmacy? Pharmacy { get; set; }
+        public decimal Price { get; set; }
+
+        public Product(int code, string productName, string productDescription, decimal productPrice)
+        {
+            this.Name = productName;
+            this.Description = productDescription;
+            this.Price = productPrice;
+            this.Id = code;
+        }
+
     }
 }
+
