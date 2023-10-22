@@ -15,6 +15,7 @@ namespace PharmaGo.WebApi.Converters
             purchase.details = new List<PurchaseDetail>();
             foreach (var detail in model.Details)
             {
+                if (detail.typeOfProduct.Equals("D")) { 
                 purchase.details
                     .Add(new PurchaseDetail
                     {
@@ -25,6 +26,23 @@ namespace PharmaGo.WebApi.Converters
                             Id = detail.PharmacyId
                         }
                     });
+                }
+
+                if (detail.typeOfProduct.Equals("P"))
+                {
+                    purchase.details
+                        .Add(new PurchaseDetail
+                        {
+                            Quantity = detail.Quantity,
+                            Product = new Product { Code = detail.Code },
+                            Pharmacy = new()
+                            {
+                                Id = detail.PharmacyId
+                            }
+                        });
+                }
+
+
             }
 
             return purchase;

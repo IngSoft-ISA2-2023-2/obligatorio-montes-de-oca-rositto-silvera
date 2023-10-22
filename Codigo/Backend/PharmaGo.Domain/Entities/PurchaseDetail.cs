@@ -10,5 +10,6 @@
         public decimal Price { get; set; }
         public Pharmacy Pharmacy { get; set; }
         public string Status { get; set; }
+        public string TypeOfProduct { get; set; }
     }
 }
