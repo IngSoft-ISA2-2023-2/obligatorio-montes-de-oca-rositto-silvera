@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PharmaGo.DataAccess;
 
@@ -11,9 +12,10 @@ using PharmaGo.DataAccess;
 namespace PharmaGo.DataAccess.Migrations
 {
     [DbContext(typeof(PharmacyGoDbContext))]
-    partial class PharmacyGoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231022202828_AddProductsTable4")]
+    partial class AddProductsTable4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,9 +231,6 @@ namespace PharmaGo.DataAccess.Migrations
                     b.Property<int?>("PurchaseId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PurchaseId1")
-                        .HasColumnType("int");
-
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
@@ -247,8 +246,6 @@ namespace PharmaGo.DataAccess.Migrations
                     b.HasIndex("ProductId");
 
                     b.HasIndex("PurchaseId");
-
-                    b.HasIndex("PurchaseId1");
 
                     b.ToTable("PurchaseDetails");
                 });
@@ -458,10 +455,6 @@ namespace PharmaGo.DataAccess.Migrations
                         .WithMany("details")
                         .HasForeignKey("PurchaseId");
 
-                    b.HasOne("PharmaGo.Domain.Entities.Purchase", null)
-                        .WithMany("productsDetails")
-                        .HasForeignKey("PurchaseId1");
-
                     b.Navigation("Drug");
 
                     b.Navigation("Pharmacy");
@@ -518,8 +511,6 @@ namespace PharmaGo.DataAccess.Migrations
             modelBuilder.Entity("PharmaGo.Domain.Entities.Purchase", b =>
                 {
                     b.Navigation("details");
-
-                    b.Navigation("productsDetails");
                 });
 
             modelBuilder.Entity("PharmaGo.Domain.Entities.StockRequest", b =>
