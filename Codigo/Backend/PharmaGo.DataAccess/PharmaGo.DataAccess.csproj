@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PharmaGo.Domain\PharmaGo.Domain.csproj" />
+    <ProjectReference Include="..\PharmaGo.IBusinessLogic\PharmaGo.IBusinessLogic.csproj" />
     <ProjectReference Include="..\PharmaGo.IDataAccess\PharmaGo.IDataAccess.csproj" />
   </ItemGroup>
 </Project>
