@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { cilUser, cilLockLocked, cilArrowThickRight } from '@coreui/icons';
 import { cilCheckAlt, cilX } from '@coreui/icons';
 import { ProductService } from '../../../services/product.service';
-import { Product } from '../../../interfaces/product';
+import { Product , ProductClass} from '../../../interfaces/product';
 import { CommonService } from '../../../services/CommonService';
+import {ModifyProductComponent} from "../modify-product/modify-product.component";
 
 @Component({
   selector: 'app-products',
@@ -13,11 +14,19 @@ import { CommonService } from '../../../services/CommonService';
 export class ProductsComponent implements OnInit {
   icons = { cilUser, cilLockLocked, cilArrowThickRight };
 
+
+  @ViewChild(ModifyProductComponent)
+  childModify!: ModifyProductComponent;
   products: Product[] = [];
+  emptyProduct: Product = new ProductClass(0,0,'','',{id:0, name:""},0);
   targetItem: any = undefined;
   visible = false;
   modalTitle = '';
   modalMessage = '';
+  currentCode: number = 0;
+  currentName:string = "";
+  currentDescription: string = "";
+  currentPrice: number = 42;
 
   constructor(
     private commonService: CommonService,
@@ -27,6 +36,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.getProductsByUser();
   }
+
 
   getProductsByUser() {
     this.productService.getProductsByUser().subscribe((d: any) => (this.products = d));
@@ -64,5 +74,13 @@ export class ProductsComponent implements OnInit {
         }
       });
     }
+  }
+
+  loadProduct(product: Product) {
+    this.currentCode = product.code;
+    this.currentName = product.name;
+    this.currentPrice = product.price;
+    this.currentDescription = product.description;
+    this.childModify.loadForm();
   }
 }

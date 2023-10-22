@@ -1,11 +1,17 @@
 <app-user-header title="Employee" link="employee"></app-user-header>
 <c-container class="mt-3">
+  <c-row>
+    <app-modify-product [currentPrice] = "currentPrice"
+                        [currentCode] = "currentCode"
+                        [currentDescription] = "currentDescription"
+                        [currentName] = "currentName"
+                        #child></app-modify-product>
+  </c-row>
   <c-row [ngStyle]="{ width: '100%' }">
     <c-col>
       <c-row class="g-0 customAlign">
         <h3>Products</h3>
-        <table 
-          *ngIf="products.length > 0"
+        <table
           cTable
           hover
           [responsive]="true">
@@ -18,13 +24,24 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>"15234"</td>
+              <td>"Sedal"</td>
+              <td>500</td>
+              <td>
+                <a class="font-weight-bold font-xs btn-block text-muted"
+                   (click)="loadProduct(emptyProduct)">
+                  <svg cIcon [cIcon]="icons.cilArrowThickRight"></svg>
+                </a>
+              </td>
+            </tr>
             <tr *ngFor="let product of products">
               <td>{{ product.code }}</td>
               <td>{{ product.name }}</td>
               <td>{{ product.price | currency }}</td>
               <td>
-              <a class="font-weight-bold font-xs btn-block text-muted" 
-                routerLink="/employee/modify-product">
+              <a class="font-weight-bold font-xs btn-block text-muted"
+                 (click)="loadProduct(product)">
               <svg cIcon [cIcon]="icons.cilArrowThickRight"></svg>
               </a>
               </td>
