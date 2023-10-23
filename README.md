@@ -65,6 +65,20 @@
 
 1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-2)
 
+2. [Cambios Tablero KANBAN](#cambios-tablero-kanban-1)
+
+3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones-1)
+
+4. [Pipeline y Automatización](#pipeline-y-automatizacion-1)
+
+5. [Correcciones de Issues](#correcciones-de-issues-1)
+
+6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería-1)
+
+7. [Retrospectiva](#retrospectiva-2)
+
+8. [Nuevos Issues](#nuevos-issues-1)
+
 ## [Definición del marco de trabajo](#indice)
 
 ### [Marco general de trabajo KANBAN](#indice)
@@ -1181,7 +1195,7 @@ Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tare
 
 ## [Cambios en el control de Versiones](#indice)
 
-##[Pipeline y Automatización](#indice)
+## [Pipeline y Automatización](#indice)
 
 ## [Correcciones de Issues](#indice)
 
