@@ -69,7 +69,7 @@
 
 3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones-1)
 
-4. [Pipeline y Automatización](#pipeline-y-automatizacion-1)
+4. [Pipeline y Automatización](#pipeline-y-automatización)
 
 5. [Correcciones de Issues](#correcciones-de-issues-1)
 
