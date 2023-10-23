@@ -4,7 +4,6 @@ export interface Product {
     name: string;
     description: string;
     price: number;
-    pharmacyId: number;
 }
 export class ProductClass {
   id: number;

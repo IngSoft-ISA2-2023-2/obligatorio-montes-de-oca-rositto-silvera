@@ -18,7 +18,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(ModifyProductComponent)
   childModify!: ModifyProductComponent;
   products: Product[] = [];
-  emptyProduct: Product = new ProductClass(0,0,'','',{id:0, name:""},0);
+  emptyProduct: Product = new ProductClass(0,0,'','',0,0);
   targetItem: any = undefined;
   visible = false;
   modalTitle = '';
@@ -69,7 +69,7 @@ export class ProductsComponent implements OnInit {
           this.commonService.updateToastData(
             `Success deleting product "${this.targetItem.code} - ${this.targetItem.name}"`,
             'success',
-            'Drug deleted.'
+            'Product deleted.'
           );
         }
       });
