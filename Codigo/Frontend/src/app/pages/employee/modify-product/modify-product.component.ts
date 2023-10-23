@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import {Product} from "../../../interfaces/product";
+import {Product, ProductClass, ProductDTO} from "../../../interfaces/product";
+import {ProductService} from "../../../services/product.service";
 
 
 @Component({
@@ -10,11 +11,14 @@ import {Product} from "../../../interfaces/product";
 })
 export class ModifyProductComponent {
   form: FormGroup;
+  private productService!: ProductService;
 
   @Input() currentPrice!: number;
   @Input() currentCode! :number;
   @Input() currentDescription! :string;
   @Input() currentName! :string;
+  @Input() currentId! :number;
+  @Input() currentPharma! :number;
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       code: [''],
@@ -35,5 +39,17 @@ export class ModifyProductComponent {
     })
   }
   modifyProduct() {
+
+    let code = this.form.get('code')!.value;
+
+    let productToUpdate:Product = new ProductClass(
+      this.currentId,
+      code,
+      this.form.get('name')!.value,
+      this.form.get('description')!.value,
+      this.form.get('price')!.value,
+      this.currentPharma)
+
+    this.productService.updateProduct(productToUpdate)
   }
 }
