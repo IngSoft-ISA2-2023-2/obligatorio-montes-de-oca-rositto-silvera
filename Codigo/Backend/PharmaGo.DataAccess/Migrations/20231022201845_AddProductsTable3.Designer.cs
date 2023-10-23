@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PharmaGo.DataAccess;
 
@@ -11,9 +12,10 @@ using PharmaGo.DataAccess;
 namespace PharmaGo.DataAccess.Migrations
 {
     [DbContext(typeof(PharmacyGoDbContext))]
-    partial class PharmacyGoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231022201845_AddProductsTable3")]
+    partial class AddProductsTable3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -223,9 +225,6 @@ namespace PharmaGo.DataAccess.Migrations
                         .HasPrecision(14, 2)
                         .HasColumnType("decimal(14,2)");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("PurchaseId")
                         .HasColumnType("int");
 
@@ -235,16 +234,11 @@ namespace PharmaGo.DataAccess.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TypeOfProduct")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("DrugId");
 
                     b.HasIndex("PharmacyId");
-
-                    b.HasIndex("ProductId");
 
                     b.HasIndex("PurchaseId");
 
@@ -448,10 +442,6 @@ namespace PharmaGo.DataAccess.Migrations
                         .WithMany()
                         .HasForeignKey("PharmacyId");
 
-                    b.HasOne("PharmaGo.Domain.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
                     b.HasOne("PharmaGo.Domain.Entities.Purchase", null)
                         .WithMany("details")
                         .HasForeignKey("PurchaseId");
@@ -459,8 +449,6 @@ namespace PharmaGo.DataAccess.Migrations
                     b.Navigation("Drug");
 
                     b.Navigation("Pharmacy");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("PharmaGo.Domain.Entities.StockRequest", b =>

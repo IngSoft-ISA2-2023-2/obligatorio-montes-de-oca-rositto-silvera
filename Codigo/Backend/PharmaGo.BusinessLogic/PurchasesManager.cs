@@ -64,16 +64,34 @@ namespace PharmaGo.BusinessLogic
                 if (detail.Quantity <= 0)
                     throw new InvalidResourceException("The Quantity is a mandatory field");
 
-                string drugCode = detail.Drug.Code;
-                var drug = pharmacy.Drugs.FirstOrDefault(x => x.Code == drugCode && x.Deleted == false);
-                if (drug is null)
-                    throw new ResourceNotFoundException($"Drug {drugCode} not found in Pharmacy {pharmacy.Name}");
+                if (detail.TypeOfProduct.Equals("D")) { 
+                    string drugCode = detail.Drug.Code;
+                    var drug = pharmacy.Drugs.FirstOrDefault(x => x.Code == drugCode && x.Deleted == false);
+                    if (drug is null)
+                         throw new ResourceNotFoundException($"Drug {drugCode} not found in Pharmacy {pharmacy.Name}");
 
-                detail.Pharmacy = pharmacy;
-                total = total + (drug.Price * detail.Quantity);
-                detail.Price = drug.Price;
-                detail.Drug = drug;
-                detail.Status = PENDING;
+                    detail.Pharmacy = pharmacy;
+                    total = total + (drug.Price * detail.Quantity);
+                    detail.Price = drug.Price;
+                    detail.Drug = drug;
+                    detail.Status = PENDING;
+                }
+
+                if (detail.TypeOfProduct.Equals("P"))
+                {
+                    string productCode = detail.Product.Code;
+                    var product = pharmacy.Products.FirstOrDefault(x => x.Code == productCode);
+                    if (product is null)
+                        throw new ResourceNotFoundException($"Drug {productCode} not found in Pharmacy {pharmacy.Name}");
+
+                    detail.Pharmacy = pharmacy;
+                    total = total + (product.Price * detail.Quantity);
+                    detail.Price = product.Price;
+                    detail.Product = product;
+                    detail.Status = PENDING;
+                }
+
+
             }
             purchase.TotalAmount = total;
             purchase.TrackingCode = generateTrackingCode();

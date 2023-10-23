@@ -34,6 +34,7 @@ namespace PharmaGo.WebApi.Models.Out
             Details = new List<PurchaseDetailModelResponse>();
             if (purchase.details != null) {
                 foreach (var detail in purchase.details) {
+                    if (detail.TypeOfProduct.Equals("D")){ 
                     Details.Add(new PurchaseDetailModelResponse {
                         Id = detail.Id,         
                         Name = detail.Drug.Name, 
@@ -44,6 +45,21 @@ namespace PharmaGo.WebApi.Models.Out
                         PharmacyName = detail.Pharmacy.Name,
                         Status = detail.Status
                 });
+                }
+                    if (detail.TypeOfProduct.Equals("P"))
+                    {
+                        Details.Add(new PurchaseDetailModelResponse
+                        {
+                            Id = detail.Id,
+                            Name = detail.Product.Name,
+                            Code = detail.Product.Code,
+                            Price = detail.Product.Price,
+                            Quantity = detail.Quantity,
+                            PharmacyId = detail.Pharmacy.Id,
+                            PharmacyName = detail.Pharmacy.Name,
+                            Status = detail.Status
+                        });
+                    }
                 }
             }
         }

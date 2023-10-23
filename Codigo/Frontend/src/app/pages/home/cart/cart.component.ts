@@ -22,8 +22,7 @@ export class CartComponent implements OnInit {
   ];
 
   additionalProducts: RecommendedProduct[] = [  // Nuevo array additionalProducts
-    new RecommendedProduct(4, 'P4', 'Additional Product 1', 'Description 4', 12, 40.0),
-    new RecommendedProduct(5, 'P5', 'Additional Product 2', 'Description 5', 7, 20.0),
+   
   ];
 
 
@@ -46,6 +45,10 @@ export class CartComponent implements OnInit {
       this.cart = [];
       this.storageManager.saveData('cart', JSON.stringify(this.cart));
     }
+    /*if(!this.additionalProducts){
+      this.additionalProducts = [];
+      this.storageManager.saveData('additionalProducts', JSON.stringify(this.additionalProducts));
+    }*/
     this.storageManager.saveData('total', JSON.stringify(0));
     this.updateTotal();
   }
@@ -91,6 +94,7 @@ export class CartComponent implements OnInit {
    }
 
   goToCho(){
+    this.storageManager.saveData('additionalProducts', JSON.stringify(this.additionalProducts));
     this.storageManager.saveData('total', JSON.stringify(this.total));
     this.router.navigate(['/home/cart/cho']);
   }
