@@ -48,6 +48,14 @@ namespace PharmaGo.WebApi.Controllers
             _productManager.Delete(id);
             return Ok(true);
         }
+
+        [HttpGet]
+        public IActionResult GetAll([FromQuery] ProductSearchCriteria productSearchCriteria)
+        {
+            IEnumerable<Product> products = _productManager.GetAll(productSearchCriteria);
+            IEnumerable<ProductBasicModel> productToReturn = products.Select(p => new ProductBasicModel(p));
+            return Ok(productToReturn);
+        }
     }
 
         

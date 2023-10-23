@@ -1,4 +1,5 @@
 ﻿using PharmaGo.Domain.Entities;
+using PharmaGo.Domain.SearchCriterias;
 using PharmaGo.Exceptions;
 using PharmaGo.IBusinessLogic;
 using PharmaGo.IDataAccess;
@@ -94,5 +95,30 @@ namespace PharmaGo.BusinessLogic
             _productRepository.DeleteOne(productSaved);
             _productRepository.Save();
         }
+
+
+        public IEnumerable<Product> GetAll(ProductSearchCriteria productSearchCriteria)
+        {
+            Product productToSearch = new Product();
+            if (productSearchCriteria.PharmacyId == null)
+            {
+                productToSearch.Name = productSearchCriteria.Name;
             }
+            else
+            {
+                Pharmacy pharmacySaved = _pharmacyRepository.GetOneByExpression(p => p.Id == productSearchCriteria.PharmacyId);
+                if (pharmacySaved != null)
+                {
+                    productToSearch.Name = productSearchCriteria.Name;
+                    productToSearch.Pharmacy = pharmacySaved;
+                }
+                else
+                {
+                    throw new ResourceNotFoundException("The pharmacy to get drugs of does not exist.");
+                }
+            }
+            return _productRepository.GetAllByExpression(productSearchCriteria.Criteria(productToSearch));
+        }
+
+    }
 }
