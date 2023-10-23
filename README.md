@@ -46,16 +46,24 @@
 ### [Entrega 2](#entrega-2-1)
 
 1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
+
 2. [Cambios Tablero KANBAN](#cambios-tablero-kanban)
+
 3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones)
+
 4. [Pipeline y Automatización](#pipeline-y-automatizacion)
+
 5. [Correcciones de Issues](#correcciones-de-issues)
+
 6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería)
+
 7. [Retrospectiva](#retrospectiva-1)
+
 8. [Nuevos Issues](#nuevos-issues)
 
-   ### [Entrega 3](#entrega-3-1)
-   1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
+### [Entrega 3](#entrega-3-1)
+
+1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-2)
 
 ## [Definición del marco de trabajo](#indice)
 
@@ -1164,3 +1172,6 @@ Para esta entrega se crea la carpeta: [/Esfuerzo de Tareas/Entrega2](https://git
 Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. En esta oportunidad pudimos agrupar las difernetes tareas según nuestro tablero Kanban. Estp nos va a permitir en las próximas entregas poder saber qué tiempo empleamos en cada actividad así como cuáles nos llevaron más tiempo y poder analizar las causas de estos esfuerzos. 
 
 
+# [Entrega 3](#indice)
+
+## [Definición del Marco de Trabajo](#indice)
