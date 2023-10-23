@@ -27,6 +27,14 @@ namespace PharmaGo.Domain.Entities
             this.Id = code;
         }
 
+        public Product()
+        {
+        }
+
+        public void ValidOrFail()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

@@ -19,7 +19,19 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         [Given(@"that I input the code (.*)")]
         public void GivenThatIInputTheCode(int code)
         {
-            _product.Code = code;
+            _product.Id = code;
+        }
+
+        [Given(@"that I input the code is empty (.*)")]
+        public void GivenThatIInputTheCodeEmpty(int code)
+        {
+            _product.Id = code;
+        }
+
+        [Then(@"the result  '([^']*)'")]
+        public void ThenTheResult(string result)
+        {
+            OkObjectResult = result;
         }
 
         [Given(@"that I input the name '([^']*)'")]
@@ -35,16 +47,21 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         }
 
         [Given(@"that I input the price  (.*),")]
-        public void GivenThatIInputThePrice(double price)
+        public void GivenThatIInputThePrice(decimal price)
         {
             _product.Price = price;
         }
 
-        [Then(@"the result  '([^']*)'")]
-        public void ThenTheResult(string result)
+        [Then(@"the result  ""El código de producto no puede ser vacío'")]
+        public void ThenTheResultElCodigoDeProductoNoPuedeSerVacio()
         {
-            OkObjectResult=result;
+            string expectedMessage = "El código de producto no puede ser vacío";
+            if (OkObjectResult != expectedMessage)
+            {
+                throw new Exception($"El mensaje esperado es '{expectedMessage}' pero se obtuvo '{OkObjectResult}'");
+            }
         }
+
         [When(@"I press the ""([^""]*)"" button")]
         public void WhenIPressTheButton(string add)
         {
