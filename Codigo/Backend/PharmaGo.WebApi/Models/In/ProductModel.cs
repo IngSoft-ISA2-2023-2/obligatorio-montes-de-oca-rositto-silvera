@@ -8,6 +8,7 @@ namespace PharmaGo.WebApi.Models.In
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public string Code { get; set; }
 
         public int PharmacyId { get; set; }
         
@@ -19,6 +20,7 @@ namespace PharmaGo.WebApi.Models.In
                 Name = Name,                
                 Price = Price,
                 Description = Description,
+                Code    =   Code,
                 Pharmacy = new Pharmacy() { Id = this.PharmacyId }
             };
         }
