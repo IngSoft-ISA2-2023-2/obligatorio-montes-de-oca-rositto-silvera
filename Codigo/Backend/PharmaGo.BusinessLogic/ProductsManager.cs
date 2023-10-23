@@ -53,29 +53,29 @@ namespace PharmaGo.BusinessLogic
                 throw new ResourceNotFoundException("The pharmacy of the product does not exist.");
             }
 
-            if (_productRepository.Exists(p => p.Id == product.Id && p.Pharmacy.Id == pharmacyOfProduct.Id))
+            if (_productRepository.Exists(p => p.Code == product.Code && p.Pharmacy.Id == pharmacyOfProduct.Id))
             {
                 throw new InvalidResourceException("The product already exists in that pharmacy.");
             }
-             product.Pharmacy.Id = pharmacyOfProduct.Id;
+            product.Pharmacy.Id = pharmacyOfProduct.Id;
             _productRepository.InsertOne(product);
             _productRepository.Save();
             return product;
         }
 
-        public Product Update(int id, Product updatedProduct)
+        public Product Update(Product updatedProduct)
         {
             if (updatedProduct == null)
             {
                 throw new ResourceNotFoundException("The updated product is invalid.");
             }
             updatedProduct.ValidOrFail();
-            var productSaved = _productRepository.GetOneByExpression(d => d.Id == id);
+            var productSaved = _productRepository.GetOneByExpression(d => d.Id == updatedProduct.Id);
             if (productSaved == null)
             {
                 throw new ResourceNotFoundException("The product to update does not exist.");
             }
-            productSaved.Id = updatedProduct.Id;
+            productSaved.Code = updatedProduct.Code;
             productSaved.Name = updatedProduct.Name;
             productSaved.Price = updatedProduct.Price;
             productSaved.Description = updatedProduct.Description;

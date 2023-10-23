@@ -1,18 +1,19 @@
 export interface Product {
     id: number;
-    code: number;
+    code: string;
     name: string;
     description: string;
     price: number;
 }
+
 export class ProductClass {
   id: number;
-  code: number;
+  code: string;
   name: string;
   description: string;
   price: number;
   pharmacyId: number;
-  constructor(id: number, code: number, name: string, description: string, pharmacyId: number, price: number) {
+  constructor(id: number, code: string, name: string, description: string, pharmacyId: number, price: number) {
     this.id = id;
     this.code = code;
     this.name = name;
@@ -23,21 +24,19 @@ export class ProductClass {
 
 }
 
-export class ProductDTO{
+export class ProductDTOOut{
   id:number;
-  code:number;
+  code:string;
   name:string;
   description:string;
   price: number;
-  pharmacyId: number;
 
-  constructor(id:number,code:number, name:string, description:string, price: number,pharmacyId: number) {
+  constructor(id:number,code:string, name:string, description:string, price: number) {
     this.id = id;
     this.code = code;
     this.name = name;
     this.description = description;
     this.price = price;
-    this.pharmacyId = pharmacyId;
   }
 }
 

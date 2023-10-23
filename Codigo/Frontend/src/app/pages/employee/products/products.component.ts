@@ -5,6 +5,7 @@ import { ProductService } from '../../../services/product.service';
 import { Product , ProductClass} from '../../../interfaces/product';
 import { CommonService } from '../../../services/CommonService';
 import {ModifyProductComponent} from "../modify-product/modify-product.component";
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -18,15 +19,16 @@ export class ProductsComponent implements OnInit {
   @ViewChild(ModifyProductComponent)
   childModify!: ModifyProductComponent;
   products: Product[] = [];
-  emptyProduct: Product = new ProductClass(0,0,'','',0,0);
+  emptyProduct: Product = new ProductClass(0,"23442",'Pantene','Lorem ipsum Dolor Amet Cesarum Lumina',0,0);
   targetItem: any = undefined;
   visible = false;
   modalTitle = '';
   modalMessage = '';
-  currentCode: number = 0;
+  currentId:number = -1;
+  currentCode: string = "";
   currentName:string = "";
   currentDescription: string = "";
-  currentPrice: number = 42;
+  currentPrice: number = 0;
 
   constructor(
     private commonService: CommonService,
@@ -39,7 +41,7 @@ export class ProductsComponent implements OnInit {
 
 
   getProductsByUser() {
-    this.productService.getProductsByUser().subscribe((d: any) => (this.products = d));
+    this.productService.getProducts().subscribe((d: any) => (this.products = d));
   }
 
   deleteDrug(index: number): void {
@@ -77,10 +79,16 @@ export class ProductsComponent implements OnInit {
   }
 
   loadProduct(product: Product) {
+    this.currentId = product.id;
     this.currentCode = product.code;
     this.currentName = product.name;
     this.currentPrice = product.price;
     this.currentDescription = product.description;
+    this.childModify.unload();
+  }
+
+  onExpected(expectant: boolean){
     this.childModify.loadForm();
   }
+
 }

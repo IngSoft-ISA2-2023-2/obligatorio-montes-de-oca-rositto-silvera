@@ -4,7 +4,8 @@
       <c-col lg="7" md="9" xl="6">
         <c-card class="mx-4">
           <c-card-body class="p-4">
-            <form [formGroup]="form" class="customAlign">
+            <form [formGroup]="form" class="customAlign" 
+                  (click)="loadAndWait()">
               <h3>Modify Product</h3>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
@@ -62,6 +63,17 @@
                 </button>
               </div>
             </form>
+          </c-card-body>
+        </c-card>
+      </c-col>
+      <c-col>
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <h3>Currently Selected</h3>
+            <h5> Code: {{currentCode}} </h5>
+            <h5> Name: {{currentName}} </h5>
+            <h5> Description: {{currentDescription}} </h5>
+            <h5> Price: {{currentPrice}} </h5>
           </c-card-body>
         </c-card>
       </c-col>

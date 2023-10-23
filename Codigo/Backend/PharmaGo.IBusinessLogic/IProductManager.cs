@@ -8,7 +8,7 @@ namespace PharmaGo.IBusinessLogic
     {
         Product GetById(int id);
         Product Create(Product product, string token);
-        Product Update(int id, Product product);
+        Product Update(Product product);
         void Delete(int id);
         
     }

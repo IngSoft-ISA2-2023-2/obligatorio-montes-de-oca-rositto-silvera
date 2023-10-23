@@ -11,7 +11,7 @@ import { StorageManager } from '../utils/storage-manager';
 export class ProductService {
 
 
-  private url = environment.apiUrl + '/api/product';
+  private url = environment.apiUrl + '/api/Products';
 
   httpOptions = {
     headers: new HttpHeaders()
@@ -87,10 +87,10 @@ export class ProductService {
     );
   }
 
-  /** PATCH Update Product**/
+  /** PUT Update Product**/
 
   updateProduct(product: Product): Observable<Product> {
-    return this.http.patch<Product>(this.url, product, {headers: this.getHttpHeaders() })
+    return this.http.put<Product>(this.url, product, {headers: this.getHttpHeaders() })
       .pipe(
         tap(),
         catchError(this.handleError<Product>('Update Product'))

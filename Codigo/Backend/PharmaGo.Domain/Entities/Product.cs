@@ -28,7 +28,10 @@ namespace PharmaGo.Domain.Entities
 
         public void ValidOrFail()
         {
-            throw new NotImplementedException();
+            if (Code == null)
+            {
+                throw new Exception();
+            }
         }
     }
 }

@@ -5,7 +5,8 @@
                         [currentCode] = "currentCode"
                         [currentDescription] = "currentDescription"
                         [currentName] = "currentName"
-                        #child></app-modify-product>
+                        #child
+                        (notify)="onExpected($event)"></app-modify-product>
   </c-row>
   <c-row [ngStyle]="{ width: '100%' }">
     <c-col>
@@ -25,9 +26,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>"15234"</td>
-              <td>"Sedal"</td>
-              <td>500</td>
+              <td>"23442"</td>
+              <td>"Pantene"</td>
+              <td>0</td>
               <td>
                 <a class="font-weight-bold font-xs btn-block text-muted"
                    (click)="loadProduct(emptyProduct)">
