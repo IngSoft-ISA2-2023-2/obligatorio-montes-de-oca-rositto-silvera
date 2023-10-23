@@ -1,12 +1,12 @@
-<app-user-header title="Employee" link="employee"></app-user-header>
-<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+
   <c-container>
     <c-row class="justify-content-center mt-3 mb-3">
       <c-col lg="7" md="9" xl="6">
         <c-card class="mx-4">
           <c-card-body class="p-4">
-            <form [formGroup]="form" class="customAlign">
-              <h3>Create Product</h3>
+            <form [formGroup]="form" class="customAlign" 
+                  (click)="loadAndWait()">
+              <h3>Modify Product</h3>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon [cIcon]="'cilBarcode'"></svg>
@@ -51,21 +51,31 @@
                   type="input"
                   formControlName="price"
                 />
-              </c-input-group>              
+              </c-input-group>
               <div class="d-grid">
                 <button
-                  (click)="hitCreateProduct()"
+                  (click)="modifyProduct()"
                   class="customButton"
                   cButton
                   color="primary"
                 >
-                  Create Product
+                  Modify Product
                 </button>
               </div>
             </form>
           </c-card-body>
         </c-card>
       </c-col>
+      <c-col>
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <h3>Currently Selected</h3>
+            <h5> Code: {{currentCode}} </h5>
+            <h5> Name: {{currentName}} </h5>
+            <h5> Description: {{currentDescription}} </h5>
+            <h5> Price: {{currentPrice}} </h5>
+          </c-card-body>
+        </c-card>
+      </c-col>
     </c-row>
   </c-container>
-</div>
