@@ -22,6 +22,14 @@ namespace PharmaGo.Domain.Entities
 
         
 
+        public Product()
+        {
+        }
+
+        public void ValidOrFail()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
