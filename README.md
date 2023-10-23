@@ -1175,3 +1175,19 @@ Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tare
 # [Entrega 3](#indice)
 
 ## [Definición del Marco de Trabajo](#indice)
+
+
+## [Cambios Tablero KANBAN](#indice)
+
+## [Cambios en el control de Versiones](#indice)
+
+##[Pipeline y Automatización](#indice)
+
+## [Correcciones de Issues](#indice)
+
+## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
+
+## [Retrospectiva](#indice)
+
+## [Nuevos Issues](#indice)
+
