@@ -19,7 +19,7 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         [Given(@"that I input the code (.*)")]
         public void GivenThatIInputTheCode(String code)
         {
-            _product.Id = code;
+            _product.Code = code;
         }
 
         [Given(@"that I input the code is empty (.*)")]

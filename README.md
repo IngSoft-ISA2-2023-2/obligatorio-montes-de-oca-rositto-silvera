@@ -54,6 +54,8 @@
 7. [Retrospectiva](#retrospectiva-1)
 8. [Nuevos Issues](#nuevos-issues)
 
+   ### [Entrega 3](#entrega-3-1)
+   1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
 
 ## [Definición del marco de trabajo](#indice)
 
