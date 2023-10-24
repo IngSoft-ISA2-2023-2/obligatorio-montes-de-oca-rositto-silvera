@@ -1256,11 +1256,11 @@ Luego, cuando tenemos implementados los métodos de prueba vemos que los test pa
 
 ![Alt text](/Gestion//imagenes/image-9.png)
 
-## Integration Tools ##
+## Integration Tools
 
 Para testear la integración del Front con el Back utilizamos PostMan y la propia aplicación.
 
-## Done ##
+## Done
 
 La definición conceptual de esta etapa es que nuestras issues puedan cumplir con los criterios de aceptación definidos.
 
@@ -1295,7 +1295,7 @@ Acciones de mejora
 
 El espacio de trabajo: https://metroretro.io/BOQFEI6GD9T1
 
-## [Registro de Horas](##indice)
+## [Registro de Horas](#indice)
 Vemos que aumentamos nuestro esfuerzo en horas, sin duda las tareas de desarrollo insumieron más esfuerzo.
 
 ![Alt text](/Gestion//imagenes/clockify.png)
