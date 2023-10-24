@@ -1189,24 +1189,34 @@ Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tare
 # [Entrega 3](#indice)
 
 ## [Definición del Marco de Trabajo](#indice)
+
 Nuestro marco de trabajo se mantiene en Kanban con las siguientes consideraciones: 
 Para visualizar el flujo de trabajo: En esta entrega creamos un proyecto Entrega 3 donde colocamos la nueva definición del Tablero. Para mejorar la visualización y estructuración colocamos las Fechas – hora de creado, Fecha de Start Date y End Date como tugs que luego podemos utilizar para clasificar y/o ordenar (esto lo teníamos desde la entrega 2). En esta entrega agregamos: Fecha de inicio de Front, Fecha de Fin de front, Fecha de incio de Back y Fecha de Fin de Back, como tags. De esta manera tenemos control sobre las fehcas en las que pasan a estas instancias. 
 Por qué no creamos Fornt y Back como columas? Si bien todas las issues iban a pasar por estas instancias, nos pareció más adecuado seguir la sugerencia del tablero de los docentes. Donde seguimos el proceso de ingeniería de la siguiente manera: 
-![Alt text](image.png)
+
+![Alt text](/Gestion//imagenes/image.png)
+
 En la sección del tablero explicamos qué significa cada etapa y cómo se mapea a nuestro tablero.
 
 ## [Cambios Tablero KANBAN](#indice)
-![Alt text](image-2.png)
-Al comenzar a trabajar en una issue, se toma de la columna TODO y se pasa a la columna
+
+![Alt text](/Gestion//imagenes/image10.png)
+
+Al comenzar a trabajar en una issue, se toma de la columna TODO y se mueve a la columna GEstión según sea el caso de trabajar con una tarea administrativa (minuta, planificaicón, informe) o trabajar en una issue.
+En esta imagen nuestro tablero, en un momento dado con una vista vertical donde se visualizan las tareas/issues y leugo el estado (columnas)
+
 ## Requirements Definitions.##
+
 Se establecen: 
 •	Start Date: es la fecha en la que comenzamos a trabajar con la issue.
-•	Se define como issue en GitHub, y se comienza el BDD, se define el requerimiento con el formato: ‘Como…quiero…Para…’ y se comienza a trabajar en los escenarios
-![Alt text](image-3.png)
+•	Se define como issue en GitHub, y se comienza el BDD, se define el requerimiento con el formato: ‘**Como**…**Quiero**…**Para**…’ y se comienza a trabajar en los escenarios.
+
+![Alt text](/Gestion//imagenes/image-3.png)
 
 En este momento nuestra tarjeta queda con 2 fechas: de creado y cuando comenzamos en Requirements definition. 
 La imagen representa estas 2 fechas: cuando se crea en el TODO y cuando comenzamos a trabajar con la issue en Requirements definition. 
-![Alt text](image-4.png)
+
+![Alt text](/Gestion/imagenes/image-4.png)
 
 ## App Implementation ## 
 
@@ -1214,14 +1224,16 @@ Al comenzar a trabajar en el Front End y luego de la etapa de Requierement Defin
 Start Date Front, para no perder este dato, ya que la misma debe ser implementada antes que los Test Cases Implementation. 
 En nuestro tablero, la columna: Test Cases Implementation la movimos hacia la derecha (después de APP Implementation, aunque sabemos que por el proceso BDD debería ser previa)
 Esto nos facilita que una issue no vaya hacia adelante y hacia atrás. De esta manera, lo próximo a completar por la issue en nuestro tablero es el BDD para el Back. 
-![Alt text](image-5.png)
+
+![Alt text](/Gestion/imagenes/image-5.png)
 
 ## Test Cases Implamentation ##
 
 En esta etapa implementamos a través de BDD las issues definidas como parte de la consigna para esta entrega.
 Utilizamos SpecFlow como herramienta para definir los casos de prueba. Una acotación importante: solo el backend utilzia esta técnica, por este motivo movimos APP Implementation a un paso más adelante, ya que debíamos de implementar esta etapa primero. 
 Luego nos dedicamos al back solamente utilzando BDD con SpecFlow.
-![Alt text](image-6.png)
+
+![Alt text](/Gestion//imagenes/image-6.png)
 
 ## Refactoring ##
 
@@ -1233,13 +1245,16 @@ Aquí podemos destacar que hay oportunidades de mejora para el uso de la herrami
 Aquí como mencionamos, incorporamos la herramienta de SpecFlow. Invertimos un poco más de tiempo del dispensado en clase, ya que no conocíamos la herramienta. Vimos que nos permite trabajar con  nuestros escenarios, definidos en las issues como criterios de aceptación y crear distintos casos de prueba a través de flujos de features y step definitions.
 
 En la carpeta del proyecto se creao una subcarpeta de SpectFlow. Mostramos una imagen de una ejecución de puebas:
-![Alt text](image-7.png)
+
+![Alt text](/Gestion//imagenes/image-7.png)
 
 Se experimentan con diferentes escenarios y tablas de datos:
-![Alt text](image-8.png)
+
+![Alt text](/Gestion//imagenes/image-8.png)
 
 Luego, cuando tenemos implementados los métodos de prueba vemos que los test pasan a green.
-![Alt text](image-9.png)
+
+![Alt text](/Gestion//imagenes/image-9.png)
 
 ## Integration Tools ##
 
@@ -1249,10 +1264,10 @@ Para testear la integración del Front con el Back utilizamos PostMan y la propi
 
 La definición conceptual de esta etapa es que nuestras issues puedan cumplir con los criterios de aceptación definidos.
 
-Pequeña gúia del tablero acá:
-
+Pequeña guía del tablero aquí: ![Alt text](/Gestion//Tablero%20vs%20Ingenieria.pdf)
 
 ## [Cambios en el control de Versiones](#indice)
+
 El versionado en esta instancia no sufrió cambios. Como mencionamos se crea una branch Entrega 3 como realease. Si notamos, que hemos mejorado en cuanto al merge sobre main, los commit's han sido más frecuentes e incluso algunos desarrolladores hemos trabajado con menos ramas paralelas, confiando más en el proceso de trunk based.
 
 ## [Pipeline y Automatización](#indice)
@@ -1268,6 +1283,26 @@ Se busco limitar el pipeline a una funcionalidad por cada miembro del equipo, co
 ## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
 ## [Retrospectiva](#indice)
+
+En esta oportunidad hicimos las retro asíncrona por no poder coincidir con los horarios (horarios  laborales y otras asignaturas)
+Igualmente vemos que algunas acciones de mejora se repiten, se agregan otras como mejorar lso tiempso en el uso de las herramientas técnicas prestadas en el curso.
+
+![Alt text](/Gestion//imagenes/retro11.png)
+
+Acciones de mejora 
+
+![Alt text](/Gestion//imagenes/retro12.png)
+
+El espacio de trabajo: https://metroretro.io/BOQFEI6GD9T1
+
+## [Registro de Horas](##indice)
+Vemos que aumentamos nuestro esfuerzo en horas, sin duda las tareas de desarrollo insumieron más esfuerzo.
+
+![Alt text](/Gestion//imagenes/clockify.png)
+
+![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/tareas-agrupadas.png)
+
+Se adjuntan los reportes en la carpeta Esfuerzo De Tareas/Entrega3: ![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/Clockify_Informe_De_Tiempo_Resumido_09_10_2023-23_10_2023.pdf)
 
 ## [Nuevos Issues](#indice)
 
