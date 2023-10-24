@@ -1192,7 +1192,9 @@ Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tare
 Nuestro marco de trabajo se mantiene en Kanban con las siguientes consideraciones: 
 Para visualizar el flujo de trabajo: En esta entrega creamos un proyecto Entrega 3 donde colocamos la nueva definición del Tablero. Para mejorar la visualización y estructuración colocamos las Fechas – hora de creado, Fecha de Start Date y End Date como tugs que luego podemos utilizar para clasificar y/o ordenar (esto lo teníamos desde la entrega 2). En esta entrega agregamos: Fecha de inicio de Front, Fecha de Fin de front, Fecha de incio de Back y Fecha de Fin de Back, como tags. De esta manera tenemos control sobre las fehcas en las que pasan a estas instancias. 
 Por qué no creamos Fornt y Back como columas? Si bien todas las issues iban a pasar por estas instancias, nos pareció más adecuado seguir la sugerencia del tablero de los docentes. Donde seguimos el proceso de ingeniería de la siguiente manera: 
-![Alt text](image.png)
+
+![Alt text](/Gestion//imagenes/image.png)
+
 En la sección del tablero explicamos qué significa cada etapa y cómo se mapea a nuestro tablero.
 
 ## [Cambios Tablero KANBAN](#indice)
@@ -1257,10 +1259,7 @@ El versionado en esta instancia no sufrió cambios. Como mencionamos se crea una
 
 ## [Pipeline y Automatización](#indice)
 
-
-## [Correcciones de Issues](#indice)
-
-## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
+En esta oportunidad no sufrió cambios esta configuración.
 
 ## [Retrospectiva](#indice)
 
