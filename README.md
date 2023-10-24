@@ -1200,9 +1200,10 @@ En la sección del tablero explicamos qué significa cada etapa y cómo se mapea
 
 ## [Cambios Tablero KANBAN](#indice)
 
-![Alt text](/Gestion//imagenes/image-2.png)
+![Alt text](/Gestion//imagenes/image10.png)
 
 Al comenzar a trabajar en una issue, se toma de la columna TODO y se mueve a la columna GEstión según sea el caso de trabajar con una tarea administrativa (minuta, planificaicón, informe) o trabajar en una issue.
+En esta imagen nuestro tablero, en un momento dado con una vista vertical donde se visualizan las tareas/issues y leugo el estado (columnas)
 
 ## Requirements Definitions.##
 
@@ -1223,7 +1224,8 @@ Al comenzar a trabajar en el Front End y luego de la etapa de Requierement Defin
 Start Date Front, para no perder este dato, ya que la misma debe ser implementada antes que los Test Cases Implementation. 
 En nuestro tablero, la columna: Test Cases Implementation la movimos hacia la derecha (después de APP Implementation, aunque sabemos que por el proceso BDD debería ser previa)
 Esto nos facilita que una issue no vaya hacia adelante y hacia atrás. De esta manera, lo próximo a completar por la issue en nuestro tablero es el BDD para el Back. 
-![Alt text](image-5.png)
+
+![Alt text](/Gestion/imagenes/image-5.png)
 
 ## Test Cases Implamentation ##
 
@@ -1273,6 +1275,26 @@ El versionado en esta instancia no sufrió cambios. Como mencionamos se crea una
 En esta oportunidad no sufrió cambios esta configuración.
 
 ## [Retrospectiva](#indice)
+
+En esta oportunidad hicimos las retro asíncrona por no poder coincidir con los horarios (horarios  laborales y otras asignaturas)
+Igualmente vemos que algunas acciones de mejora se repiten, se agregan otras como mejorar lso tiempso en el uso de las herramientas técnicas prestadas en el curso.
+
+![Alt text](/Gestion//imagenes/retro11.png)
+
+Acciones de mejora 
+
+![Alt text](/Gestion//imagenes/retro12.png)
+
+El espacio de trabajo: https://metroretro.io/BOQFEI6GD9T1
+
+## [Registro de Horas](##indice)
+Vemos que aumentamos nuestro esfuerzo en horas, sin duda las tareas de desarrollo insumieron más esfuerzo.
+
+![Alt text](/Gestion//imagenes/clockify.png)
+
+![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/tareas-agrupadas.png)
+
+Se adjuntan los reportes en la carpeta Esfuerzo De Tareas/Entrega3: ![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/Clockify_Informe_De_Tiempo_Resumido_09_10_2023-23_10_2023.pdf)
 
 ## [Nuevos Issues](#indice)
 
