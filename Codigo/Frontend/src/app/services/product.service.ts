@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Product } from '../interfaces/product';
+import { Product, ProductDTOOutNew } from '../interfaces/product';
 import { environment } from '../../environments/environment';
 import { CommonService } from './CommonService';
 import { StorageManager } from '../utils/storage-manager';
@@ -79,8 +79,7 @@ export class ProductService {
   }
 
   /** POST Create Product */
-  createProduct(product: Product): Observable<Product> {
-    console.log("tried to create")
+  createProduct(product: ProductDTOOutNew): Observable<Product> {
     return this.http.post<Product>(this.url, product, {headers: this.getHttpHeaders() })
     .pipe(
       tap(),
@@ -90,7 +89,7 @@ export class ProductService {
 
   /** PUT Update Product**/
 
-  updateProduct(product: Product): Observable<Product> {
+  updateProduct(product: ProductDTOOutNew): Observable<Product> {
     return this.http.put<Product>(this.url, product, {headers: this.getHttpHeaders() })
       .pipe(
         tap(),

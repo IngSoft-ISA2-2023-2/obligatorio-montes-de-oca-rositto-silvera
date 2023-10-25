@@ -58,25 +58,36 @@ namespace PharmaGo.BusinessLogic
             {
                 throw new InvalidResourceException("The product already exists in that pharmacy.");
             }
-             product.Pharmacy = pharmacyOfProduct;
+            product.Pharmacy = pharmacyOfProduct;
             _productRepository.InsertOne(product);
             _productRepository.Save();
             return product;
         }
 
-        public Product Update(Product updatedProduct)
+        public Product Update(Product updatedProduct, string token)
         {
             if (updatedProduct == null)
             {
                 throw new ResourceNotFoundException("The updated product is invalid.");
             }
             updatedProduct.ValidOrFail();
-            var productSaved = _productRepository.GetOneByExpression(d => d.Id == updatedProduct.Id);
+
+            var guidToken = new Guid(token);
+            Session session = _sessionRepository.GetOneByExpression(s => s.Token == guidToken);
+            var userId = session.UserId;
+            User user = _userRepository.GetOneDetailByExpression(u => u.Id == userId);
+
+            Pharmacy pharmacyOfProduct = _pharmacyRepository.GetOneByExpression(p => p.Id == user.Pharmacy.Id);
+            if (pharmacyOfProduct == null)
+            {
+                throw new ResourceNotFoundException("The pharmacy of the product does not exist.");
+            }
+
+            var productSaved = _productRepository.GetOneByExpression(d => d.Code == updatedProduct.Code && d.Pharmacy.Id == user.Pharmacy.Id);
             if (productSaved == null)
             {
                 throw new ResourceNotFoundException("The product to update does not exist.");
             }
-            productSaved.Code = updatedProduct.Code;
             productSaved.Name = updatedProduct.Name;
             productSaved.Price = updatedProduct.Price;
             productSaved.Description = updatedProduct.Description;

@@ -1,7 +1,8 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import {Product, ProductClass, ProductDTOOut} from "../../../interfaces/product";
+import {Product, ProductClass, ProductDTOOut, ProductDTOOutNew} from "../../../interfaces/product";
 import {ProductService} from "../../../services/product.service";
+import { CommonService } from 'src/app/services/CommonService';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class ModifyProductComponent {
 
   @Output() notify = new EventEmitter<boolean>();
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(private commonService: CommonService,
+              private formBuilder: FormBuilder,
               private productService: ProductService) {
     this.form = this.formBuilder.group({
       code: [''],
@@ -52,7 +54,7 @@ export class ModifyProductComponent {
     this.form.setValue({
       code: this.currentCode,
       name: this.currentName,
-      description: this.currentDescription,
+      description: this.currentDescription ? this.currentDescription : "",
       price: this.currentPrice
     })
   }
@@ -61,14 +63,23 @@ export class ModifyProductComponent {
 
     
 
-    let productToUpdate:Product = new ProductDTOOut(
-      this.currentId,
-      this.form.get('code')!.value,
+    let productToUpdate:Product = new ProductDTOOutNew(
+      this.currentCode,
       this.form.get('name')!.value,
       this.form.get('description')!.value,
       this.form.get('price')!.value
       )
 
-    this.productService.updateProduct(productToUpdate)
+    this.productService.updateProduct(productToUpdate).subscribe((prod) => {
+      this.form.reset();
+
+      if (prod){
+        this.commonService.updateToastData(
+          `Success creating "${prod.code} - ${prod.name}"`,
+          'success',
+          'Product created.'
+        );
+      }
+    });;
   }
 }

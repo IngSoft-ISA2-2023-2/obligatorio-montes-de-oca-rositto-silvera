@@ -45,7 +45,8 @@ namespace PharmaGo.WebApi.Controllers
         [AuthorizationFilter(new string[] { nameof(RoleType.Employee) })]
         public IActionResult Update([FromBody] UpdateProductModel updatedProduct)
         {
-            Product product = _productManager.Update(updatedProduct.ToEntity());
+            string token = HttpContext.Request.Headers["Authorization"];
+            Product product = _productManager.Update(updatedProduct.ToEntity(), token);
             return Ok(new ProductDetailModel(product));
         }
 
