@@ -1,13 +1,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-﻿using PharmaGo.Exceptions;
-using System.Collections.Generic;
-using System.Diagnostics;
-
 
 namespace PharmaGo.Domain.Entities
 {
@@ -20,17 +15,30 @@ namespace PharmaGo.Domain.Entities
         public Pharmacy? Pharmacy { get; set; }
         public decimal Price { get; set; }
 
-        
-
         public Product()
         {
         }
 
         public void ValidOrFail()
         {
-            if (Code == null)
+            if (string.IsNullOrWhiteSpace(Code))
             {
-                throw new Exception();
+                throw new ValidationException("El código no puede ser vacío.");
+            }
+            /*
+            if (productList.Any(p => p != this && p.Code == Code))
+            {
+                throw new ValidationException("El código ya está en uso por otro producto.");
+            }*/
+
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                throw new ValidationException("El nombre no puede ser vacío.");
+            }
+
+            if (string.IsNullOrWhiteSpace(Description))
+            {
+                throw new ValidationException("La descripción no puede estar vacía.");
             }
         }
     }

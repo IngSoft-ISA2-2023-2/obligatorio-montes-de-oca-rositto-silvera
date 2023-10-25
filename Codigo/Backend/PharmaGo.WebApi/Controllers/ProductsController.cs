@@ -22,13 +22,13 @@ namespace PharmaGo.WebApi.Controllers
             _productManager = manager;
         }
 
-        [HttpGet]
-        [AuthorizationFilter(new string[] { nameof(RoleType.Employee) })]
-        public IActionResult GetAll()
-        {
+        //[HttpGet]
+        //[AuthorizationFilter(new string[] { nameof(RoleType.Employee) })]
+        //public IActionResult GetAll()
+        //{
             
-            return Ok(Array.Empty<UpdateProductModel>());
-        }
+        //    return Ok(Array.Empty<UpdateProductModel>());
+        //}
         
 
         [HttpPost]

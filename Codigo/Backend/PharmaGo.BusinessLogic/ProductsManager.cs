@@ -58,7 +58,7 @@ namespace PharmaGo.BusinessLogic
             {
                 throw new InvalidResourceException("The product already exists in that pharmacy.");
             }
-            product.Pharmacy.Id = pharmacyOfProduct.Id;
+             product.Pharmacy = pharmacyOfProduct;
             _productRepository.InsertOne(product);
             _productRepository.Save();
             return product;
