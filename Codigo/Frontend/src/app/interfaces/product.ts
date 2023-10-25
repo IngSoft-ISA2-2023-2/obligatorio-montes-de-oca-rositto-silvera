@@ -1,5 +1,4 @@
 export interface Product {
-    id: number;
     code: string;
     name: string;
     description: string;
@@ -40,3 +39,16 @@ export class ProductDTOOut{
   }
 }
 
+export class ProductDTOOutNew{
+  code:string;
+  name:string;
+  description:string;
+  price: number;
+
+  constructor(code:string, name:string, description:string, price: number) {
+    this.code = code;
+    this.name = name;
+    this.description = description;
+    this.price = price;
+  }
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ProductDTOOut } from 'src/app/interfaces/product';
+import { ProductDTOOutNew } from 'src/app/interfaces/product';
 import {ProductService} from "../../../services/product.service";
 
 @Component({
@@ -23,8 +23,7 @@ export class CreateProductComponent {
   }
 
   hitCreateProduct() {  
-    let result = new ProductDTOOut(
-      -1,
+    let result = new ProductDTOOutNew(
       this.form.get('code')!.value,
       this.form.get('name')!.value,
       this.form.get('description')!.value,

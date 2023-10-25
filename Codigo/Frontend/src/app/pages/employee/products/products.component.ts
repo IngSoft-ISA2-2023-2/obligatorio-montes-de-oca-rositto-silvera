@@ -18,8 +18,8 @@ export class ProductsComponent implements OnInit {
 
   @ViewChild(ModifyProductComponent)
   childModify!: ModifyProductComponent;
-  products: Product[] = [];
-  emptyProduct: Product = new ProductClass(0,"23442",'Pantene','Lorem ipsum Dolor Amet Cesarum Lumina',0,0);
+  products: ProductClass[] = [];
+  emptyProduct: ProductClass = new ProductClass(0,"23442",'Pantene','Lorem ipsum Dolor Amet Cesarum Lumina',0,0);
   targetItem: any = undefined;
   visible = false;
   modalTitle = '';
@@ -78,7 +78,7 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  loadProduct(product: Product) {
+  loadProduct(product: ProductClass) {
     this.currentId = product.id;
     this.currentCode = product.code;
     this.currentName = product.name;
