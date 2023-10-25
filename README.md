@@ -1272,7 +1272,15 @@ El versionado en esta instancia no sufrió cambios. Como mencionamos se crea una
 
 ## [Pipeline y Automatización](#indice)
 
-En esta oportunidad no sufrió cambios esta configuración.
+Durante la preparacion de este Release el sistema de verificacion automatica pipeline no recibio ninguna modificacion; pero debido a un error previo y pendiente sobre una de las pruebas unitarias no pudimos hacer uso de la verificacion.
+
+Ante requisitos de la entrega se implemento un proceso al pipeline consistente en identificar las historias de usuario, luego se realizo la implementacion de la estructura de Frontend para la funcionalidad. Una vez finalizada se utiliza la herramienta de SpecFlow y la metodologia BDD para producir el Backend que usara el sistema finalmente realizando el proceso de conexion y verificacion del sistema producido.
+
+Se busco limitar el pipeline a una funcionalidad por cada miembro del equipo, considerando Front y Back como funcionalidades separadas. En la practica encontramos oportunidades para colaborar o redistribuir dichas tareas al encontrar similitudes o al cambiar la priorizacion de las mismas.
+
+## [Correcciones de Issues](#indice)
+
+## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
 ## [Retrospectiva](#indice)
 
@@ -1298,3 +1306,25 @@ Se adjuntan los reportes en la carpeta Esfuerzo De Tareas/Entrega3: ![Alt text](
 
 ## [Nuevos Issues](#indice)
 
+### Issue 3: Modificacion de Productos
+
+Los empleados de farmacia pueden modificar la informacion de los productos, solo los siguientes datos pueden ser modificados:
+
+Nombre.
+Descripción.
+Precio.
+
+No se puede eliminar un campo de los datos.
+
+US:
+
+Titulo : Modificación de Productos
+
+Como empleado de una farmacia
+
+Quiero poder modificar la informacion de los productos
+
+Para que correspondan con la realidad
+
+![ModifyProd](./img/ModifyProd.jpeg)
+---------------------------------------------------------------------------------------------------

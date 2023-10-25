@@ -11,7 +11,7 @@ import { StorageManager } from '../utils/storage-manager';
 export class ProductService {
 
 
-  private url = environment.apiUrl + '/api/Products';
+  private url = environment.apiUrl + '/api/products';
 
   httpOptions = {
     headers: new HttpHeaders()
@@ -80,6 +80,7 @@ export class ProductService {
 
   /** POST Create Product */
   createProduct(product: Product): Observable<Product> {
+    console.log("tried to create")
     return this.http.post<Product>(this.url, product, {headers: this.getHttpHeaders() })
     .pipe(
       tap(),
