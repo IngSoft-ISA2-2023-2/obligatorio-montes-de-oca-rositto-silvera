@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { cilCheckAlt, cilX } from '@coreui/icons';
 import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../interfaces/product';
+
 import { CommonService } from '../../../services/CommonService';
 
 @Component({

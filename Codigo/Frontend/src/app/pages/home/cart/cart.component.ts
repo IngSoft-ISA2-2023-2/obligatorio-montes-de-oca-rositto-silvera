@@ -6,6 +6,8 @@ import { RecommendedProduct } from 'src/app/interfaces/recomendedProduct';
 import { StorageManager } from '../../../utils/storage-manager';
 import { Router } from '@angular/router';
 import { CommonService } from '../../../services/CommonService';
+import { Product } from '../../../interfaces/product';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +16,7 @@ import { CommonService } from '../../../services/CommonService';
 })
 export class CartComponent implements OnInit {
   cart: Drug[] = [];
+  products: Product[] = [];
   total: number = 0;
   recommendedProducts: RecommendedProduct[] = [
     new RecommendedProduct(1, 'P1', 'Recommended Product 1', 'Description 1', 10, 25.0),
@@ -32,14 +35,17 @@ export class CartComponent implements OnInit {
     public iconSet: IconSetService,
     private storageManager: StorageManager,
     private router: Router,
+    private productService: ProductService,
     private commonService: CommonService) {
     iconSet.icons = { cilCart, cilPlus, cilCompass, cilCheckCircle, cilTrash };
-    
+   
   }
 
   
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe((data: Product[]) => {
+      this.products = data;});
     this.cart = JSON.parse(this.storageManager.getData('cart'));
     if (!this.cart) {
       this.cart = [];
