@@ -98,7 +98,7 @@ export class ProductService {
   }
 
   /** DELETE Delete Product */
-  deleteProduct(id: number): Observable<any> {
+  deleteProduct(id: string): Observable<any> {
     const url = `${this.url}/${id}`;
     return this.http.delete<any>(url, {headers: this.getHttpHeaders() })
     .pipe(

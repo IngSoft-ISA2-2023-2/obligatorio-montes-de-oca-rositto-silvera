@@ -27,7 +27,7 @@ export class DeleteproductComponent implements OnInit {
   }
 
   getproductsByUser() {
-    this.productService.getProductsByUser().subscribe((d: any) => (this.products = d));
+    this.productService.getProducts().subscribe((d: any) => (this.products = d));
   }
 
   deleteproduct(index: String): void {
@@ -50,7 +50,7 @@ export class DeleteproductComponent implements OnInit {
 
   saveModal(event: any): void {
     if (event) {
-      this.productService.deleteProduct(this.targetItem.id).subscribe((p: any) => {
+      this.productService.deleteProduct(this.targetItem.code).subscribe((p: any) => {
         if (p) {
           this.visible = false;
           this.getproductsByUser();

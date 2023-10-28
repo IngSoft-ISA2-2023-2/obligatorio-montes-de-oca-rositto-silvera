@@ -9,7 +9,7 @@ namespace PharmaGo.IBusinessLogic
         Product GetById(int id);
         Product Create(Product product, string token);
         Product Update(Product product, string token);
-        void Delete(int id);
+        void Delete(String id);
         IEnumerable<Product> GetAll(ProductSearchCriteria productSearchCriteria);        
     }
 }

@@ -52,7 +52,7 @@ namespace PharmaGo.WebApi.Controllers
 
         [HttpDelete("{id}")]
         [AuthorizationFilter(new string[] { nameof(RoleType.Employee) })]
-        public IActionResult Delete([FromRoute] int id)
+        public IActionResult Delete([FromRoute] String id)
         {
             _productManager.Delete(id);
             return Ok(true);
