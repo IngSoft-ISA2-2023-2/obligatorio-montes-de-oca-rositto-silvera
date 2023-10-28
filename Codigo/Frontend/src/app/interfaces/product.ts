@@ -31,13 +31,14 @@ export class ProductDTOOut{
   name:string;
   description:string;
   price: number;
-
+  selectedQuantity = 0;
   constructor(id:number,code:string, name:string, description:string, price: number) {
     this.id = id;
     this.code = code;
     this.name = name;
     this.description = description;
     this.price = price;
+    
   }
 }
 
@@ -52,6 +53,6 @@ export class ProductDTOOutNew{
     this.name = name;
     this.description = description;
     this.price = price;
-    
+    this.selectedQuantity = 0;
   }
 }

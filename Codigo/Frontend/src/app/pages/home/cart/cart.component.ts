@@ -38,7 +38,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((data: Product[]) => {
-      this.RecommendedProduct = data;});
+      this.RecommendedProduct = data.map(product => ({
+        ...product,
+        selectedQuantity: 0
+      }));});
     this.cart = JSON.parse(this.storageManager.getData('cart'));
     if (!this.cart) {
       this.cart = [];
@@ -99,15 +102,14 @@ export class CartComponent implements OnInit {
   }
 
   incrementQuantity(recommendedProduct: Product) {
-    if (recommendedProduct.selectedQuantity >0) {
+    if (recommendedProduct.selectedQuantity >=0) {
       recommendedProduct.selectedQuantity++;
     }
   }
   
   decrementQuantity(recommendedProduct: Product) {
-    if (recommendedProduct.selectedQuantity > 0) {
+    if (recommendedProduct.selectedQuantity >= 0) {
       recommendedProduct.selectedQuantity--;
-      
     }
   }
   
