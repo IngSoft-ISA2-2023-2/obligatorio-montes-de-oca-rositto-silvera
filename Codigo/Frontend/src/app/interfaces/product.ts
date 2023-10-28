@@ -3,6 +3,7 @@ export interface Product {
     name: string;
     description: string;
     price: number;
+    selectedQuantity : number;
 }
 
 export class ProductClass {
@@ -12,6 +13,7 @@ export class ProductClass {
   description: string;
   price: number;
   pharmacyId: number;
+  selectedQuantity = 0;
   constructor(id: number, code: string, name: string, description: string, pharmacyId: number, price: number) {
     this.id = id;
     this.code = code;
@@ -44,11 +46,12 @@ export class ProductDTOOutNew{
   name:string;
   description:string;
   price: number;
-
+  selectedQuantity = 0;
   constructor(code:string, name:string, description:string, price: number) {
     this.code = code;
     this.name = name;
     this.description = description;
     this.price = price;
+    
   }
 }
