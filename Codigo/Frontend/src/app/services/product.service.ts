@@ -89,8 +89,8 @@ export class ProductService {
 
   /** PUT Update Product**/
 
-  updateProduct(product: ProductDTOOutNew): Observable<Product> {
-    return this.http.put<Product>(this.url, product, {headers: this.getHttpHeaders() })
+  updateProduct(product: ProductDTOOutNew, id: number): Observable<Product> {
+    return this.http.put<Product>(`${this.url}/${id}`, product, {headers: this.getHttpHeaders() })
       .pipe(
         tap(),
         catchError(this.handleError<Product>('Update Product'))

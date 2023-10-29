@@ -70,14 +70,14 @@ export class ModifyProductComponent {
       this.form.get('price')!.value
       )
 
-    this.productService.updateProduct(productToUpdate).subscribe((prod) => {
+    this.productService.updateProduct(productToUpdate, this.currentId).subscribe((prod) => {
       this.form.reset();
 
       if (prod){
         this.commonService.updateToastData(
-          `Success creating "${prod.code} - ${prod.name}"`,
+          `Success Modifying "${prod.code} - ${prod.name}"`,
           'success',
-          'Product created.'
+          'Product Modified.'
         );
       }
     });;

@@ -64,7 +64,7 @@ namespace PharmaGo.BusinessLogic
             return product;
         }
 
-        public Product Update(Product updatedProduct, string token)
+        public Product Update(Product updatedProduct, string token, int id)
         {
             if (updatedProduct == null)
             {
@@ -83,7 +83,7 @@ namespace PharmaGo.BusinessLogic
                 throw new ResourceNotFoundException("The pharmacy of the product does not exist.");
             }
 
-            var productSaved = _productRepository.GetOneByExpression(d => d.Code == updatedProduct.Code && d.Pharmacy.Id == user.Pharmacy.Id);
+            var productSaved = _productRepository.GetOneByExpression(d => d.Id == id && d.Pharmacy.Id == user.Pharmacy.Id);
             if (productSaved == null)
             {
                 throw new ResourceNotFoundException("The product to update does not exist.");
