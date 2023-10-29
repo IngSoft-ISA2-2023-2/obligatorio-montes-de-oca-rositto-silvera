@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Update;
 using Microsoft.VisualBasic;
 using PharmaGo.Domain.Entities;
+using PharmaGo.WebApi.Controllers;
 using System;
 using System.ComponentModel.Design;
 using TechTalk.SpecFlow;
@@ -51,12 +52,12 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         {
             _product.Price = price;
         }
-       
-        //[When(@"I press the ""([^""]*)"" button")]
-        //public void WhenIPressTheButton(ProductController prductcontroller)
-        //{
-        //    prductcontroller.create(_product);
-        //}
+        [When(@"I call the ""(.*)"" controller,")]
+        public void WhenICallTheController(string create)
+        {
+            //_scenarioContext.Pending();
+        }
+
 
         [Then(@"the result  ""El código de producto no puede ser vacío'")]
         public void ThenTheResultElCodigoDeProductoNoPuedeSerVacio()
@@ -64,7 +65,7 @@ namespace SpecFlowPharmacyGo.StepDefinitions
             string expectedMessage = "El código de producto no puede ser vacío";
             if (OkObjectResult != expectedMessage)
             {
-                throw new Exception($"El mensaje esperado es '{expectedMessage}' pero se obtuvo '{OkObjectResult}'");
+             throw new Exception($"El mensaje esperado es '{expectedMessage}' pero se obtuvo '{OkObjectResult}'");
             }
         }
     }
