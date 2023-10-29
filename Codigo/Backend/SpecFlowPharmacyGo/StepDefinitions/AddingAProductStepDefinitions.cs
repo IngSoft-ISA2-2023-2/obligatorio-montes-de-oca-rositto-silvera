@@ -51,6 +51,12 @@ namespace SpecFlowPharmacyGo.StepDefinitions
         {
             _product.Price = price;
         }
+       
+        //[When(@"I press the ""([^""]*)"" button")]
+        //public void WhenIPressTheButton(ProductController prductcontroller)
+        //{
+        //    prductcontroller.create(_product);
+        //}
 
         [Then(@"the result  ""El código de producto no puede ser vacío'")]
         public void ThenTheResultElCodigoDeProductoNoPuedeSerVacio()
@@ -60,12 +66,6 @@ namespace SpecFlowPharmacyGo.StepDefinitions
             {
                 throw new Exception($"El mensaje esperado es '{expectedMessage}' pero se obtuvo '{OkObjectResult}'");
             }
-        }
-
-        [When(@"I press the ""([^""]*)"" button")]
-        public void WhenIPressTheButton(string add)
-        {
-            OkObjectResult = add;
         }
     }
 }

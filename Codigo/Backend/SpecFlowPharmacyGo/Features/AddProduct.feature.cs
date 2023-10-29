@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("that I input the price  50.50,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.When("I press the \"Add\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I call the \"Create\" controller,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
  testRunner.Then("the result  \'Su producto se agregó de forma correcta\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -168,7 +168,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("that I input the price  50.50,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
- testRunner.When("I press the \"Add\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I call the \"Create\" controller,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
  testRunner.Then("the result  \"El código de producto no puede ser vacío\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

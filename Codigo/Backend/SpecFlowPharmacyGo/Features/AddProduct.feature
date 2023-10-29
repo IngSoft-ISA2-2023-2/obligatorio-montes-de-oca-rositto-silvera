@@ -14,7 +14,7 @@ Scenario: Adding a Valid Product Entry
 	And   that I input the name 'Shampoo-Bella' 
 	And   that I input the description 'Para el Cabello', 
 	And   that I input the price  50.50,
-	When  I press the "Add" button
+	When  I call the "Create" controller,
 	Then  the result  'Su producto se agregó de forma correcta'
 
 	#
@@ -29,5 +29,5 @@ Scenario: Adding a Valid Product Entry
 	And   that I input the name 'Shampoo-Bella' 
 	And   that I input the description 'Para el Cabello', 
 	And   that I input the price  50.50,
-	When  I press the "Add" button
+	When  I call the "Create" controller,
 	Then  the result  "El código de producto no puede ser vacío'
