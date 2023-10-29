@@ -26,17 +26,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>"23442"</td>
-              <td>"Pantene"</td>
-              <td>0</td>
-              <td>
-                <a class="font-weight-bold font-xs btn-block text-muted"
-                   (click)="loadProduct(emptyProduct)">
-                  <svg cIcon [cIcon]="icons.cilArrowThickRight"></svg>
-                </a>
-              </td>
-            </tr>
             <tr *ngFor="let product of products">
               <td>{{ product.code }}</td>
               <td>{{ product.name }}</td>
