@@ -1348,7 +1348,7 @@ Para que correspondan con la realidad
 ---------------------------------------------------------------------------------------------------
 
 
-8. [Métricas](#indice) 
+## [Métricas] (#indice) 
 
 Durante todas las entregas fuimos relevando los diferentes tiempos para realizar los cálculos de métricas necesarios para esta entrega. 
 Las evidencias de las entregas anteriores se encuentran en la carpeta de Esfuerzo de tareas y luego las subcarpetas de cada entrega.
@@ -1416,13 +1416,14 @@ Vemos que se incremnetaron las tareas sí como el esfuerzo de la misma.
 Resumen:	
 CycleTime Entrega: 	12
 LeadTime Entrega:	12
-FlowEfficiency	1
+FlowEfficiency	    1
 Total esfuerzo: 	39,1
 
 Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega y lo completamos en esta. 
 
 En el archivo:
-![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas.xlsx) se encuentra el resumen de cada etapa. 
+
+![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
 
 
 
