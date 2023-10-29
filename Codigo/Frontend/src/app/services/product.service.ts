@@ -120,7 +120,7 @@ export class ProductService {
       //console.error(error); // log to console instead
 
       // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.error.message}`);
+      this.log(`${operation} failed: ${error.error.errors[(Object.keys(error.error.errors))[0]]}`);
 
       // Let the app keep running by returning an empty result.
       return of(result as T);

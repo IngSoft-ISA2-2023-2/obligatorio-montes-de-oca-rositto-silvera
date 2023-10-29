@@ -1,0 +1,167 @@
+{
+  "id": "2837bc3f-69eb-43db-8934-1ecce7683fe0",
+  "version": "2.0",
+  "name": "PharmaGo",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "6157a3b5-d0ef-46c8-be1f-9c0f266d74c0",
+    "name": "cremoso",
+    "commands": [{
+      "id": "4ae3cc91-a8f8-44c4-82a7-dd290190b88f",
+      "comment": "",
+      "command": "open",
+      "target": "/employee/products",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76a33cb7-7c08-472e-8b64-08d44e55fd13",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ad67381-ea01-4f58-99c8-35cb81866a9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-star-inserted:nth-child(3) .font-weight-bold",
+      "targets": [
+        ["css=.ng-star-inserted:nth-child(3) .font-weight-bold", "css:finder"],
+        ["xpath=//tr[3]/td[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d56af7e8-0a45-435f-84f0-46e82bf8ae2e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-untouched > h3",
+      "targets": [
+        ["css=.ng-untouched > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Modify Product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8de5a7b8-88d7-4ea7-9b16-a3372ecb287c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(4) > .ng-untouched",
+      "targets": [
+        ["css=.mb-3:nth-child(4) > .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "300c9e96-a59f-492e-8016-5d1394ac2c93",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(4) > .ng-valid",
+      "targets": [
+        ["css=.mb-3:nth-child(4) > .ng-valid", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": "Es Cremoso"
+    }, {
+      "id": "275144d3-0bfe-4438-ab17-afbfd6fea600",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customButton",
+      "targets": [
+        ["css=.customButton", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Modify Product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fabdc59-952f-4fe7-9554-aeb657d41c4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-brand > span",
+      "targets": [
+        ["css=.header-brand > span", "css:finder"],
+        ["xpath=//c-header-brand/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Employee Panel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8816b29-2ff7-41a4-9819-fbc09bb35638",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-4:nth-child(4) .col-6:nth-child(4) .card-footer > .font-weight-bold",
+      "targets": [
+        ["css=.mt-4:nth-child(4) .col-6:nth-child(4) .card-footer > .font-weight-bold", "css:finder"],
+        ["xpath=//a[contains(@href, '/employee/products')]", "xpath:href"],
+        ["xpath=//c-container[2]/div/div[4]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d77a9b4-e424-44d2-b112-a5a87d1d4eb7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-star-inserted:nth-child(3) .font-weight-bold",
+      "targets": [
+        ["css=.ng-star-inserted:nth-child(3) .font-weight-bold", "css:finder"],
+        ["xpath=//tr[3]/td[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f86d8b70-35a2-4223-8b1e-1e3123216643",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-untouched > h3",
+      "targets": [
+        ["css=.ng-untouched > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Modify Product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "986669cf-0cf8-439f-8b59-6af352cfd091",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(4) > .ng-untouched",
+      "targets": [
+        ["css=.mb-3:nth-child(4) > .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18b84183-4ad0-4eb8-8c27-1492574483d8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(4) > .ng-valid",
+      "targets": [
+        ["css=.ng-touched:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": "Es Cremosisimo"
+    }, {
+      "id": "836d6541-aba6-4586-bc14-f6e6e0a5d00d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customButton",
+      "targets": [
+        ["css=.customButton", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Modify Product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "806ce80c-370f-4269-abba-305b92a450c6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6157a3b5-d0ef-46c8-be1f-9c0f266d74c0"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}
