@@ -6,6 +6,8 @@ import { RecommendedProduct } from 'src/app/interfaces/recomendedProduct';
 import { StorageManager } from '../../../utils/storage-manager';
 import { Router } from '@angular/router';
 import { CommonService } from '../../../services/CommonService';
+import { Product } from '../../../interfaces/product';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,16 +16,10 @@ import { CommonService } from '../../../services/CommonService';
 })
 export class CartComponent implements OnInit {
   cart: Drug[] = [];
+  products: Product[] = [];
+  RecommendedProduct: Product[] = [];
   total: number = 0;
-  recommendedProducts: RecommendedProduct[] = [
-    new RecommendedProduct(1, 'P1', 'Recommended Product 1', 'Description 1', 10, 25.0),
-    new RecommendedProduct(2, 'P2', 'Recommended Product 2', 'Description 2', 5, 30.0),
-    new RecommendedProduct(3, 'P3', 'Recommended Product 3', 'Description 3', 8, 15.0),
-  ];
-
-  additionalProducts: RecommendedProduct[] = [  // Nuevo array additionalProducts
-   
-  ];
+  
 
 
 
@@ -32,14 +28,20 @@ export class CartComponent implements OnInit {
     public iconSet: IconSetService,
     private storageManager: StorageManager,
     private router: Router,
+    private productService: ProductService,
     private commonService: CommonService) {
     iconSet.icons = { cilCart, cilPlus, cilCompass, cilCheckCircle, cilTrash };
-    
+   
   }
 
   
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe((data: Product[]) => {
+      this.RecommendedProduct = data.map(product => ({
+        ...product,
+        selectedQuantity: 0
+      }));});
     this.cart = JSON.parse(this.storageManager.getData('cart'));
     if (!this.cart) {
       this.cart = [];
@@ -59,9 +61,9 @@ export class CartComponent implements OnInit {
     // Puedes usar una lógica similar a la que tienes para agregar drogas al carrito
   }
 
-  addAditionalProducts(recommendedProduct: RecommendedProduct) {
+  addAditionalProducts(recommendedProduct: Product) {
     // Añadir el producto adicional al carrito
-    this.additionalProducts.push(recommendedProduct); // Agregar el producto a la lista additionalProducts
+    this.products.push(recommendedProduct); // Agregar el producto a la lista additionalProducts
     this.updateTotal(); // Actualizar el total del carrito
   }
   
@@ -84,7 +86,7 @@ export class CartComponent implements OnInit {
       this.total += (item.price * item.quantity);
     }
 
-    for (let recommendedProduct of this.additionalProducts) {
+    for (let recommendedProduct of this.products) {
       this.total += recommendedProduct.price * recommendedProduct.selectedQuantity;
     }
   }
@@ -94,19 +96,19 @@ export class CartComponent implements OnInit {
    }
 
   goToCho(){
-    this.storageManager.saveData('additionalProducts', JSON.stringify(this.additionalProducts));
+    this.storageManager.saveData('additionalProducts', JSON.stringify(this.products));
     this.storageManager.saveData('total', JSON.stringify(this.total));
     this.router.navigate(['/home/cart/cho']);
   }
 
-  incrementQuantity(recommendedProduct: RecommendedProduct) {
-    if (recommendedProduct.selectedQuantity < recommendedProduct.quantity) {
+  incrementQuantity(recommendedProduct: Product) {
+    if (recommendedProduct.selectedQuantity >=0) {
       recommendedProduct.selectedQuantity++;
     }
   }
   
-  decrementQuantity(recommendedProduct: RecommendedProduct) {
-    if (recommendedProduct.selectedQuantity > 0) {
+  decrementQuantity(recommendedProduct: Product) {
+    if (recommendedProduct.selectedQuantity >= 0) {
       recommendedProduct.selectedQuantity--;
     }
   }

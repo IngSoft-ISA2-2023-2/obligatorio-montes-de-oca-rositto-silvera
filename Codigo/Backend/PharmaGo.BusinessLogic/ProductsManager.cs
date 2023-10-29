@@ -96,9 +96,9 @@ namespace PharmaGo.BusinessLogic
             return productSaved;
         }
 
-        public void Delete(int id)
+        public void Delete(String id)
         {
-            var productSaved = _productRepository.GetOneByExpression(d => d.Id == id);
+            var productSaved = _productRepository.GetOneByExpression(d => d.Code.Equals(id));
             if (productSaved == null)
             {
                 throw new ResourceNotFoundException("The product to delete does not exist.");

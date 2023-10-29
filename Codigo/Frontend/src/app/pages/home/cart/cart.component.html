@@ -43,7 +43,7 @@
             </tbody>
 
             <tbody>
-              <tr *ngFor="let product of additionalProducts; let index = index">
+              <tr *ngFor="let product of products; let index = index">
                 <th scope="row">{{ index + 1 }}</th>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price | currency }}</td>
@@ -112,9 +112,10 @@
   </thead>
   <tbody>
     <!-- Loop through your recommended products and display them here -->
-    <tr *ngFor="let recommendedProduct of recommendedProducts; let index = index">
+    <tr *ngFor="let recommendedProduct of RecommendedProduct; let index = index">
       <th scope="row">{{ index + 1 }}</th>
       <td>{{ recommendedProduct.name }}</td>
+
       <td>{{ recommendedProduct.price | currency }}</td>
       <td>
         <button class="btn btn-sm btn-outline-success" (click)="decrementQuantity(recommendedProduct)">

@@ -57,6 +57,7 @@ import { CreateDrugComponent } from './pages/employee/create-drug/create-drug.co
 import { DeleteDrugComponent } from './pages/employee/delete-drug/delete-drug.component';
 import { ExportDrugsComponent } from './pages/employee/export-drugs/export-drugs.component';
 import { ModifyProductComponent } from './pages/employee/modify-product/modify-product.component';
+import { DeleteproductComponent } from './pages/employee/delete-product/delete-product.component';
 
 // Login & Register
 import { LoginComponent } from './pages/login/login.component';
@@ -116,6 +117,8 @@ import { ProductsComponent } from './pages/employee/products/products.component'
     CreateRequestComponent,
     ExportDrugsComponent,
     ModifyProductComponent,   
+    ProductsComponent,
+    DeleteproductComponent,
     // Owner
     OwnerComponent,
     PurchaseByDateComponent,
