@@ -79,6 +79,24 @@
 
 8. [Nuevos Issues](#nuevos-issues-1)
 
+### [Entrega 4](#entrega-4-1)
+
+1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-3)
+
+2. [Cambios Tablero KANBAN](#cambios-tablero-kanban-2)
+
+3. [Cambios en el control de Versiones](#cambios-en-el-control-de-versiones-2)
+
+4. [Pipeline y Automatización](#pipeline-y-automatización)
+
+5. [Correcciones de Issues](#correcciones-de-issues-2)
+
+6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería-2)
+
+7. [Retrospectiva](#retrospectiva-2)
+
+8. [Métricas](#metricas)
+
 ## [Definición del marco de trabajo](#indice)
 
 ### [Marco general de trabajo KANBAN](#indice)
@@ -1328,3 +1346,11 @@ Para que correspondan con la realidad
 
 ![ModifyProd](./img/ModifyProd.jpeg)
 ---------------------------------------------------------------------------------------------------
+
+
+8. [Métricas](#metricas) 
+
+Durante todas las entregas fuimos relevando los diferentes tiempos para realizar los cálculos de métricas necesarios para esta entrega. 
+Las evidencias de las entregas anteriores se encuentran en la carpeta de Esfuerzo de tareas y luego las subcarpetas de cada entrega.
+Para esta entrega creamos una subcarpeta ![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/)
+donde colocamos los archivos excel necesarios (ya que también adjuntamos PDF como evidencia en las entregas anteriores) y elaboramos un excel resumen donde cada etapa se encuentra en su hoja correspondiente. 
