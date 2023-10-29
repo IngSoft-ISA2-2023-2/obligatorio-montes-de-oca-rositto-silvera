@@ -1348,9 +1348,23 @@ Para que correspondan con la realidad
 ---------------------------------------------------------------------------------------------------
 
 
-8. [Métricas](#metricas) 
+8. [Métricas](#indice) 
 
 Durante todas las entregas fuimos relevando los diferentes tiempos para realizar los cálculos de métricas necesarios para esta entrega. 
 Las evidencias de las entregas anteriores se encuentran en la carpeta de Esfuerzo de tareas y luego las subcarpetas de cada entrega.
-Para esta entrega creamos una subcarpeta ![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/)
+Para esta entrega creamos una subcarpeta:
+
+![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/)
+
 donde colocamos los archivos excel necesarios (ya que también adjuntamos PDF como evidencia en las entregas anteriores) y elaboramos un excel resumen donde cada etapa se encuentra en su hoja correspondiente. 
+
+Se dejan fuera de los cálculos todas aquellas tareas que insumen tiempos de Gestión como Configuración de environment, informes de avances u otras tareas de clasificadas dentro de este item. 
+
+Solo se toman en cuenta aquellas referidas al proceso de Ingeniería de cada etapa y que son necesarias para el cliente o negocio, es decir aquellos bugs qeu corregimos o funcionalidades neuvas que desarrollamos, es decir relacionadas con la entrega del producto final.
+
+Si bien la creación de documentación o realización de ceremonias es importante para mejorar nuestro preceso ágil, no las tomamos en cuenta en esta etapa, sobre todo porque es de aprendizaje y le interesa al equipo solamente. Por lo anterior, de cada archivo de tiempos, solo nos quedamos con las tareas seleccionadas y correspondientes a la elaboración del producto que cumple las necesidades del cliente.
+
+
+
+
+
