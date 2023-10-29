@@ -1364,6 +1364,69 @@ Solo se toman en cuenta aquellas referidas al proceso de Ingeniería de cada eta
 
 Si bien la creación de documentación o realización de ceremonias es importante para mejorar nuestro preceso ágil, no las tomamos en cuenta en esta etapa, sobre todo porque es de aprendizaje y le interesa al equipo solamente. Por lo anterior, de cada archivo de tiempos, solo nos quedamos con las tareas seleccionadas y correspondientes a la elaboración del producto que cumple las necesidades del cliente.
 
+## Definimos los criterios generales:## 
+CycleTime: Tiempo estimado, en días en que una tarea comienza para su desarrollo y se entrega. Comienza su desarrollo cuando pasa del TODO a Requirements  Definition o Análisis según la entrega. 
+Fórmula de cálculo = - Fecha de Entrega (Done)- Fecha de inicio Doing/RD/Análisis (Fecha de inicio en el Doing, Requirement Definition o Análisis según el caso)
+
+
+LeadTime: Tiempo en días en que una tarea se solicita, entra en TODO y se entrega
+Bajo el mismo criterio que el anterior, LeadTime inferior a 1 consideramos como predeterminado 1. 
+
+Fórmula de cálculo = Fecha de Entrega (Done)- Fecha de Creado en el TODO
+
+Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al mayor CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella. 
+
+Definimos como FlowEfficiency al valor de CycleTime/LeadTime
+PAra los casos en que el LeadTime puede ser 0, por ser menor a un día predefinimos un tiempo de 1 día, para que la fórmula no nos de excepción y se pueda realizar el cálculo.
+
+**Entrega 1:**
+
+Observamos  un CycleTime de la entrega de 0,875
+Observamos un LeadTime de la entrega de 3
+
+Resumen:	
+CycleTime Entrega: 	2,156944444
+LeadTime Entrega:	3,765972222
+FlowEfficiency	0,572745713
+Esfuerzo (horas)	22
+
+
+Vemos que la mayoría de las tareas que se utilizan para el indicador son de Gestión, por lo que solo sirven las mediciones de los últimos días.
+Los primeros días de la entrega fue de apropiación de las herramientas, entendimiento de la letra y sus requerimientos, definición del repositorio y configuración del tablero.
+
+
+**Entrega 2:**
+
+Para la entrega 2 nos encontramos con la mejora en el registro de Clockify ya que pudimos extraer un resumen de todos los datos del equipo y no por cada integrante del equipo como en la primer entrega. Esto fue debido a que no todos utilizamos la herramienta en la primer entrega, para la segunda unificamos la herrmaienta y ahora el resumido se emite de la misma forma.
+
+Mejoramos nuestras métricas:
+Resumen:	
+CycleTime Entrega: 	2,156944444
+LeadTime Entrega:	3
+FlowEfficiency	0,718981481
+
+**Entrega 3**
+
+Mejoramos los registros en Clockify ya que pudimos obtener las tareas agrupadas por etiquetas que se correspondía con nuetro Tablero como: Requirement Definition, Test Cases Implementation, etc.
+De esta forma podemos saber que proceso de nuestro CycleTiem está demorado o atrasado y analizar las causas para poder corregirlas. 
+También vimos que muchas tareas no pudieron ser completadas en fecha, por ejemplo la integración de BDD aunque si cumplimos con los criterios de aceptación definidos. 
+Las tareas restantes fueron transferidas a la entrega 4. 
+Vemos que se incremnetaron las tareas sí como el esfuerzo de la misma. 
+
+Resumen:	
+CycleTime Entrega: 	12
+LeadTime Entrega:	12
+FlowEfficiency	1
+Total esfuerzo: 	39,1
+
+Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega y lo completamos en esta. 
+
+En el archivo:
+![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas.xlsx) se encuentra el resumen de cada etapa. 
+
+
+
+
 
 
 
