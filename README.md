@@ -1302,6 +1302,93 @@ Se busco limitar el pipeline a una funcionalidad por cada miembro del equipo, co
 
 ## [Explicación del tablero y su vínculo con el proceso de ingeniería](#indice)
 
+En nuestro tablero Kanban <https://github.com/orgs/IngSoft-ISA2-2023-2/projects/26)> optamos por tener las siguientes columnas: 
+Gestion -
+Análisis -
+Diseño -
+Desarrollo -
+Testing -
+Validacion -
+Done
+
+
+**Gestión:**
+
+Como se explicó anteriormente, por esta columna pasan todas las tareas de gestión como elaboración de documentos, guías, ceremonias de planificación o standup, retrospectiva 
+
+    Artefacto: Todas las instancias de ceremonias generan una minuta que se guardan en la carpeta Gestión/Minutas. Además, la retrospectiva genera dos artefactos que son: el entrorno de trabajo utilizado en la plataforma MetroRetro y el video de la misma.
+
+**Análisis:**
+
+Aquí nos enfocamos en tareas específicas relacionadas con la fase de análisis del proyecto de ingeniería. Aquí se recopilan los requisitos del cliente, se identifican las necesidades y se realiza un análisis detallado del problema que se va a resolver. Esta etapa es fundamental para comprender completamente el alcance y los objetivos del proyecto antes de pasar a la fase de diseño.
+En particular, el análisis de cómo solucionaremos las issues van a pasar por esta columna, aunque también podríamos analizar alguna tarea, como resolverla. En este caso nos resulta más simple pasarla a DONE directamente.
+
+    Artefacto: acá nos apoyamos en el entendimiento de los diagramas e informes ya realizados por el equipo que elaboró la aplicación para lograr comprender la solución y como interactauban sus capas y componentes.
+
+**Diseño:**
+
+Después de completar la fase de análisis, las tareas se mueven a la columna de Diseño. Aquí, se trabaja en crear diagramas, especificaciones técnicas de diseño de software y cualquier otra actividad necesaria para guiar el desarrollo del proyecto. Esta columna es primordial para asegurarnos de que el diseño se ajuste a los requisitos y sea factible en términos técnicos aplicable a nuestro diseño actual.
+
+    Artefacto: De la misma manera que en la etapa anterior, en esta etapa no tuvimos suficiente tiempo de diagramar, aunque nos apoyamos en el diseño de la documentación presentada para entender cómo se había implementado la solución.
+
+**Desarrollo:**
+
+La columna de Desarrollo se relaciona con la creación y la construcción  lógica del producto. Los desarrolladores escribimos el código mediante la aplicación de técnicas de TDD y se construyen los componentes, y trabajamos en la implementación del diseño previamente establecido.
+En particular, trabajamos en el código proporcionado reparando las issues seleccionadas, con el IDE Visual Studio y practicando la metodología TDD, recibiendo feedback de cada prueba pasando por RED-GREEN como metodología de aplicación de TDD.
+Los códigos reparados están en los respectivos commits en la rama main, carpeta /Código/BackEnd y /Código/FrontEnd respectivamente.
+
+    Artefacto: El código que se construye junto al Test unitario a través de la técnica de TDD son los artefactos del Desarrollo y el testing.
+
+
+
+**Validación:**
+
+ La columna de Validación está vinculada a la fase de aseguramiento de la calidad en el proceso de ingeniería. Aquí se verifica que el producto o proyecto cumple con los criterios de aceptación definidos en la etapa de Análisis. Esto garantiza que el trabajo realizado cumple con los objetivos establecidos al principio del proyecto.
+La validación se realiza a través de la muestra de la issue reparada a otro compañero de equipo con un video. 
+
+**Artefacto**
+Los artefactos de esta instancia son videos de la interaccion del desarrollador con el PO sobre lo implementado por el primero
+
+
+**Requirements Definition**
+
+Esta columna se utiliza para indicar que una User Story se encuentra en la fase de definicion de requerimiento, aplicando tecnicas como BDD para extender y crear escenarios que guian a los desarrolladores
+
+    Artefacto: User Story, e Issues de Github en las que se escriben Escenarios en su descripcion
+
+**Test Case Implementation**
+
+Esta columna indica que la funcionalidad esta en una fase de creacion de pruebas
+
+    Artefacto: Dependiendo la metodologia pueden ser pruebas unitarias creadas a travez de TDD o Pruebas creadas a traves de BDD con la Herramienta Specflow
+
+**APP Implementation**
+
+Esta columna esta vinculada con la fase de desarrollo de la funcionalidad, donde los desarrolladores crean codigo que cumpla con los requerimientos definidos y no falle las pruebas creadas en fases anteriores.
+    
+    Artefacto: Codigo siendo implementado, resultado de pruebas unitarias
+
+**Refactoring**
+
+Esta columna indica que las pruebas son cumplidas y el codigo se encuentra en un estado de refinado, creando nuevas pruebas unitarias o extendiendo la funcionalidad para que sea acorde con cosas que no se consideraron previamente
+
+**Testing Integration**
+
+Esta columna marca la creacion de pruebas de integracion a travez de herramientas como Selenium que buscan verificar y notificar sobre el funcionamiento de la UI de la Aplicacion
+
+    Artefacto: Pruebas realizadas en Selenium sobre la interfaz de Usuario
+
+**Doing**
+
+Esta columna se utiliza de forma generica para indicar algo sobre lo que se esta trabajando que cae por fuera del proceso de ingenieria definido por nuestro tablero, tareas como dedicarnos a aprender una herramienta u otras tareas mas generales
+
+**Done:**
+
+Finalmente, la columna "Done" indica que todas las etapas anteriores se han completado con éxito, y el proyecto o producto está implementado en la práctica.
+
+
+
+
 ## [Retrospectiva](#indice)
 
 En esta oportunidad hicimos las retro asíncrona por no poder coincidir con los horarios (horarios  laborales y otras asignaturas)
@@ -1322,7 +1409,8 @@ Vemos que aumentamos nuestro esfuerzo en horas, sin duda las tareas de desarroll
 
 ![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/tareas-agrupadas.png)
 
-Se adjuntan los reportes en la carpeta Esfuerzo De Tareas/Entrega3: ![Alt text](/Esfuerzo%20de%20Tareas/Entrega%203/Clockify_Informe_De_Tiempo_Resumido_09_10_2023-23_10_2023.pdf)
+Se adjuntan los reportes en la carpeta Esfuerzo De Tareas/Entrega3: 
+[Reportes](/Esfuerzo%20de%20Tareas/Entrega%203/Clockify_Informe_De_Tiempo_Resumido_09_10_2023-23_10_2023.pdf)
 
 ## [Nuevos Issues](#indice)
 
