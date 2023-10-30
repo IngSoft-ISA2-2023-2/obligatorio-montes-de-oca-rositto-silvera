@@ -1468,6 +1468,7 @@ Conclusiones:
 **FlowEfficiency:**
 
 Entrega 1< Entrega 2< Entrega 3 < Entrega 4
+
 8% < 39%  < 62% < 73%
 
 Prodemos concluir que nuestro proceso fue mejorando ha medida que avanzaba, aunque las tareas que se ingresaron en el tablero como features y bugs demandaron mayor esfuerzo.
