@@ -1348,13 +1348,14 @@ Para que correspondan con la realidad
 ---------------------------------------------------------------------------------------------------
 
 
-## [Métricas] (#indice) 
+## [Métricas](#indice) 
 
 Durante todas las entregas fuimos relevando los diferentes tiempos para realizar los cálculos de métricas necesarios para esta entrega. 
 Las evidencias de las entregas anteriores se encuentran en la carpeta de Esfuerzo de tareas y luego las subcarpetas de cada entrega.
+
 Para esta entrega creamos una subcarpeta:
 
-![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/)
+[Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/)
 
 donde colocamos los archivos excel necesarios (ya que también adjuntamos PDF como evidencia en las entregas anteriores) y elaboramos un excel resumen donde cada etapa se encuentra en su hoja correspondiente. 
 
@@ -1364,7 +1365,7 @@ Solo se toman en cuenta aquellas referidas al proceso de Ingeniería de cada eta
 
 Si bien la creación de documentación o realización de ceremonias es importante para mejorar nuestro preceso ágil, no las tomamos en cuenta en esta etapa, sobre todo porque es de aprendizaje y le interesa al equipo solamente. Por lo anterior, de cada archivo de tiempos, solo nos quedamos con las tareas seleccionadas y correspondientes a la elaboración del producto que cumple las necesidades del cliente.
 
-## Definimos los criterios generales:## 
+## Definimos los criterios generales:
 CycleTime: Tiempo estimado, en días en que una tarea comienza para su desarrollo y se entrega. Comienza su desarrollo cuando pasa del TODO a Requirements  Definition o Análisis según la entrega. 
 Fórmula de cálculo = - Fecha de Entrega (Done)- Fecha de inicio Doing/RD/Análisis (Fecha de inicio en el Doing, Requirement Definition o Análisis según el caso)
 
@@ -1384,11 +1385,7 @@ PAra los casos en que el LeadTime puede ser 0, por ser menor a un día predefini
 Observamos  un CycleTime de la entrega de 0,875
 Observamos un LeadTime de la entrega de 3
 
-Resumen:	
-CycleTime Entrega: 	2,156944444
-LeadTime Entrega:	3,765972222
-FlowEfficiency	0,572745713
-Esfuerzo (horas)	22
+![Entrega 4](./img/metricaEntrega1.png)
 
 
 Vemos que la mayoría de las tareas que se utilizan para el indicador son de Gestión, por lo que solo sirven las mediciones de los últimos días.
@@ -1401,9 +1398,7 @@ Para la entrega 2 nos encontramos con la mejora en el registro de Clockify ya qu
 
 Mejoramos nuestras métricas:
 Resumen:	
-CycleTime Entrega: 	2,156944444
-LeadTime Entrega:	3
-FlowEfficiency	0,718981481
+![Entrega 4](./img/metricaEntrega2.png)
 
 **Entrega 3**
 
@@ -1414,16 +1409,14 @@ Las tareas restantes fueron transferidas a la entrega 4.
 Vemos que se incremnetaron las tareas sí como el esfuerzo de la misma. 
 
 Resumen:	
-CycleTime Entrega: 	12
-LeadTime Entrega:	12
-FlowEfficiency	    1
-Total esfuerzo: 	39,1
+
+![Entrega 4](./img/metricaEntrega3.png)
 
 Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega y lo completamos en esta. 
 
-En el archivo:
+En el archivo excel:
 
-![Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
+[Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
 
 
 
