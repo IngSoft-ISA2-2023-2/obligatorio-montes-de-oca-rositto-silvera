@@ -93,11 +93,13 @@
 
 6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería-2)
 
-7. [Retrospectiva](#retrospectiva-2)
+7. [Reviews](#reviews)
 
-8. [Métricas](#métricas)
+8. [Retrospectiva](#retrospectiva-2)
 
-9. [Selenium](#selenium)
+9. [Métricas](#métricas)
+
+10. [Selenium](#selenium)
 
 ## [Definición del marco de trabajo](#indice)
 
@@ -1349,6 +1351,45 @@ Para que correspondan con la realidad
 ![ModifyProd](./img/ModifyProd.jpeg)
 ---------------------------------------------------------------------------------------------------
 
+## [Review](#indice)
+
+Se incluyen en esta instancia los videos del funcionamiento de las diferentes instancias.
+
+Link de Alta y Compra de Producto:
+
+https://fi365.sharepoint.com/sites/ISA2956/Documentos%20compartidos/General/Recordings/Nueva%20reuni%C3%B3n%20de%20canal-20231028_201615-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4?web=1
+
+Link de Delete de Producto: 
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F201949%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
+
+Link de Modificar Producto:
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F233610%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
+
+
+## [Retrospectiva](#indice)
+
+Para esta instancia pudimos coincidir en los tiempos y realizarla de forma sincrónica. 
+
+Notamos que un denominador común que se mantiene es  mejorar las comunicaciones, aunque ahora desde un punto de vista de la integración de tareas. Tarbajar entre pares buscando erorres y/soluciones siempre rinde más que si trabaja uno solo, los errores se detectan de forma más rápida, aunque se duplica el esfuerzo.
+
+También algo a mejorar son los tiempos en la adquisicion de herramientas, aumenta la curva de apredizaje dentro de la propia entrega haciendo que se dilaten las fechas propuestas
+
+Link a la plataforma metroretro: 
+https://metroretro.io/BOKVNGBLN2WG
+
+Link al video de la retro:
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%252Fsites%252FISA2956%252FDocumentos%20compartidos%252FGeneral%252FRecordings%252FReuni%C3%B3n%20en%20_General_-20231029_224432-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4
+
+Resultado:
+
+![Entrega 4](./Retrospectiva/Entrega%204/retro.png)
+
+Acciones de mejora:
+
+![Entrega 4](./Retrospectiva/Entrega%204/acciones.png)
 
 ## [Métricas](#indice) 
 
@@ -1448,5 +1489,7 @@ Para la creacion de pruebas automaticas de integracion se utilizo la herramienta
 
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
 [Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
+
+
 
 
