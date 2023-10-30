@@ -1371,21 +1371,19 @@ Si bien la creación de documentación o realización de ceremonias es important
 CycleTime: Tiempo estimado, en días en que una tarea comienza para su desarrollo y se entrega. Comienza su desarrollo cuando pasa del TODO a Requirements  Definition o Análisis según la entrega. 
 Fórmula de cálculo = - Fecha de Entrega (Done)- Fecha de inicio Doing/RD/Análisis (Fecha de inicio en el Doing, Requirement Definition o Análisis según el caso)
 
-
 LeadTime: Tiempo en días en que una tarea se solicita, entra en TODO y se entrega
-Bajo el mismo criterio que el anterior, LeadTime inferior a 1 consideramos como predeterminado 1. 
 
 Fórmula de cálculo = Fecha de Entrega (Done)- Fecha de Creado en el TODO
 
-Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al mayor CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella. 
+Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al promedio del CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella u oportunidades de mejora. 
 
 Definimos como FlowEfficiency al valor de CycleTime/LeadTime
 PAra los casos en que el LeadTime puede ser 0, por ser menor a un día predefinimos un tiempo de 1 día, para que la fórmula no nos de excepción y se pueda realizar el cálculo.
 
 **Entrega 1:**
 
-Observamos  un CycleTime de la entrega de 0,875
-Observamos un LeadTime de la entrega de 3
+Observamos  un CycleTime de la entrega de 0,198
+Observamos un LeadTime de la entrega de 2,3
 
 ![Entrega 4](./img/metricaEntrega1.png)
 
@@ -1410,21 +1408,41 @@ También vimos que muchas tareas no pudieron ser completadas en fecha, por ejemp
 Las tareas restantes fueron transferidas a la entrega 4. 
 Vemos que se incremnetaron las tareas sí como el esfuerzo de la misma. 
 
-Resumen:	
-
 ![Entrega 4](./img/metricaEntrega3.png)
 
-Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega y lo completamos en esta. 
+**Entrega 4**
+
+Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega completándolo en esta entrega.
+
+![Entrega 4](./img/metricaEntrega4.png)
+
+Nuestros tiempos: 
 
 En el archivo excel:
 
 [Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
 
+Conclusiones:	
+
+**FlowEfficiency:**
+
+Entrega 1< Entrega 2< Entrega 3 < Entrega 4
+8% < 39%  < 62% < 73%
+
+Prodemos concluir que nuestro proceso fue mejorando ha medida que avanzaba, aunque las tareas que se ingresaron en el tablero como features y bugs demandaron mayor esfuerzo.
+También destacamos que el poco tiempo entre las entregas hizo que no pudiéramos testear con total dedicación al 100% algunas funcionalidades pudiendo introducirse nuevos bugs. 
+Como lo mencionamos en la retrospectiva, tuvimos algunos tiempos de espera que hicieron aumentar el LeadTime, sobre todo en la 4ta. entrega. 
+Esto se debió a que se crearon las issues con tiempo de antelación antes de que pudiéramos empezar su desarrollo, sobre todo porque no se habían completado los temas en el dictado.
+
+**Esfuerzo - en horas**
+
+20,92 < 22 < 39 y 16 en la última.
+
+Vemos que la Entrega 3 nos demandó mayor esfuerzo, debiendo integrar funcionalidades en una aplicación que desconocíamos, sin duda tuvimos una curva de aprendizaje que debimos compensar con mayor esfuerzo.
 
 ## [Selenium](#indice)
 
 Para la creacion de pruebas automaticas de integracion se utilizo la herramienta Selenium. Con esta se realizaron pruebas que testean el funcionamiento de las funcionalidades realizadas en la entrega anterior.
-
 
 ### Pruebas de Modificacion de productos:
 
