@@ -57,8 +57,8 @@ export class CreateProductComponent {
           'Product created.'
         );
       }
-    }
-    );;
+      }
+    );
   }
 }
 

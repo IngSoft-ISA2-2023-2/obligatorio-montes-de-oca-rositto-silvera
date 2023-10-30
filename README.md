@@ -95,7 +95,9 @@
 
 7. [Retrospectiva](#retrospectiva-2)
 
-8. [Métricas](#metricas)
+8. [Métricas](#métricas)
+
+9. [Selenium](#selenium)
 
 ## [Definición del marco de trabajo](#indice)
 
@@ -1419,9 +1421,14 @@ En el archivo excel:
 [Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
 
 
+## [Selenium](#indice)
+
+Para la creacion de pruebas automaticas de integracion se utilizo la herramienta Selenium. Con esta se realizaron pruebas que testean el funcionamiento de las funcionalidades realizadas en la entrega anterior.
 
 
+### Pruebas de Modificacion de productos:
 
-
+[Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
+[Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
 
 

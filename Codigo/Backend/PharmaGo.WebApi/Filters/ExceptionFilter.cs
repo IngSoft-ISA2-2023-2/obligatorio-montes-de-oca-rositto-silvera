@@ -27,6 +27,9 @@ public class ExceptionFilter : IExceptionFilter
         catch (Exception e)
         {
             context.Result = new JsonResult(new { Message = e.Message }) { StatusCode = 500 };
-        }
+        }/*
+        catch (Exception)
+        {
+        }*/
     }
 }

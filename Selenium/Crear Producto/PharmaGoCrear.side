@@ -1,0 +1,165 @@
+{
+  "id": "1bdaadb6-e241-4571-91ee-7e545b673ca6",
+  "version": "2.0",
+  "name": "PharmaGoCrear",
+  "url": "localhost:4200/employee",
+  "tests": [{
+    "id": "b9a81298-e8d2-481c-8a76-c9765f879300",
+    "name": "Crear pantene",
+    "commands": [{
+      "id": "bbc08797-5528-4e0c-bfd1-ac0ef5c1e1b3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/employee",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4060d23-3aaa-4b3f-963e-42275626fc6b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1600x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "634a2d71-08b4-46e2-99ea-22bc6706362f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-4:nth-child(4) .col-6:nth-child(3) .card-footer > .font-weight-bold",
+      "targets": [
+        ["css=.mt-4:nth-child(4) .col-6:nth-child(3) .card-footer > .font-weight-bold", "css:finder"],
+        ["xpath=//a[contains(@href, '/employee/create-products')]", "xpath:href"],
+        ["xpath=//c-container[2]/div/div[3]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29e8d20f-ac6e-4de0-bbf8-a2a9d210cef9",
+      "comment": "",
+      "command": "click",
+      "target": "id=codeInput",
+      "targets": [
+        ["id=codeInput", "id"],
+        ["css=#codeInput", "css:finder"],
+        ["xpath=//input[@id='codeInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1958e92e-e99b-4514-9adb-9bdbd18b86ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=codeInput",
+      "targets": [
+        ["id=codeInput", "id"],
+        ["css=#codeInput", "css:finder"],
+        ["xpath=//input[@id='codeInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "72322"
+    }, {
+      "id": "52c64cf3-c178-461d-8586-43eadfc49ea2",
+      "comment": "",
+      "command": "click",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c79e4cf6-8eee-407e-8b1f-e9085f103a19",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[2]/input", "xpath:position"]
+      ],
+      "value": "Pantene"
+    }, {
+      "id": "077cd3f3-02b1-48bf-8d1f-d34ef23b2144",
+      "comment": "",
+      "command": "click",
+      "target": "id=descriptionInput",
+      "targets": [
+        ["id=descriptionInput", "id"],
+        ["css=#descriptionInput", "css:finder"],
+        ["xpath=//input[@id='descriptionInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10c1fc41-2562-45e3-b9a9-ab232a9f268d",
+      "comment": "",
+      "command": "type",
+      "target": "id=descriptionInput",
+      "targets": [
+        ["id=descriptionInput", "id"],
+        ["css=#descriptionInput", "css:finder"],
+        ["xpath=//input[@id='descriptionInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[3]/input", "xpath:position"]
+      ],
+      "value": "Suave y sedoso"
+    }, {
+      "id": "7d09e64f-7e7c-41e2-8c5b-487588c8dc88",
+      "comment": "",
+      "command": "click",
+      "target": "id=priceInput",
+      "targets": [
+        ["id=priceInput", "id"],
+        ["css=#priceInput", "css:finder"],
+        ["xpath=//input[@id='priceInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9a91ce9-5a31-4201-9448-b50eb088bfa9",
+      "comment": "",
+      "command": "type",
+      "target": "id=priceInput",
+      "targets": [
+        ["id=priceInput", "id"],
+        ["css=#priceInput", "css:finder"],
+        ["xpath=//input[@id='priceInput']", "xpath:attributes"],
+        ["xpath=//c-input-group[4]/input", "xpath:position"]
+      ],
+      "value": "777.32"
+    }, {
+      "id": "2594315b-ba5f-4b69-8cdd-8c4c2391a2fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customButton",
+      "targets": [
+        ["css=.customButton", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Product')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14363e2e-cdc0-4ec3-891b-360ab1b24a39",
+      "comment": "",
+      "command": "click",
+      "target": "css=.me-2",
+      "targets": [
+        ["css=.me-2", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1f641629-59c7-43e7-bd8d-55e3552d0a8f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b9a81298-e8d2-481c-8a76-c9765f879300"]
+  }],
+  "urls": ["localhost:4200/employee"],
+  "plugins": []
+}
