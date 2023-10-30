@@ -93,11 +93,13 @@
 
 6. [Explicación del tablero y su vínculo con el proceso de ingeniería](#explicación-del-tablero-y-su-vínculo-con-el-proceso-de-ingeniería-2)
 
-7. [Retrospectiva](#retrospectiva-2)
+7. [Reviews](#reviews)
 
-8. [Métricas](#métricas)
+8. [Retrospectiva](#retrospectiva-2)
 
-9. [Selenium](#selenium)
+9. [Métricas](#métricas)
+
+10. [Selenium](#selenium)
 
 ## [Definición del marco de trabajo](#indice)
 
@@ -1437,6 +1439,45 @@ Para que correspondan con la realidad
 ![ModifyProd](./img/ModifyProd.jpeg)
 ---------------------------------------------------------------------------------------------------
 
+## [Review](#indice)
+
+Se incluyen en esta instancia los videos del funcionamiento de las diferentes instancias.
+
+Link de Alta y Compra de Producto:
+
+https://fi365.sharepoint.com/sites/ISA2956/Documentos%20compartidos/General/Recordings/Nueva%20reuni%C3%B3n%20de%20canal-20231028_201615-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4?web=1
+
+Link de Delete de Producto: 
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F201949%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
+
+Link de Modificar Producto:
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F233610%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
+
+
+## [Retrospectiva](#indice)
+
+Para esta instancia pudimos coincidir en los tiempos y realizarla de forma sincrónica. 
+
+Notamos que un denominador común que se mantiene es  mejorar las comunicaciones, aunque ahora desde un punto de vista de la integración de tareas. Tarbajar entre pares buscando erorres y/soluciones siempre rinde más que si trabaja uno solo, los errores se detectan de forma más rápida, aunque se duplica el esfuerzo.
+
+También algo a mejorar son los tiempos en la adquisicion de herramientas, aumenta la curva de apredizaje dentro de la propia entrega haciendo que se dilaten las fechas propuestas
+
+Link a la plataforma metroretro: 
+https://metroretro.io/BOKVNGBLN2WG
+
+Link al video de la retro:
+
+https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%252Fsites%252FISA2956%252FDocumentos%20compartidos%252FGeneral%252FRecordings%252FReuni%C3%B3n%20en%20_General_-20231029_224432-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4
+
+Resultado:
+
+![Entrega 4](./Retrospectiva/Entrega%204/retro.png)
+
+Acciones de mejora:
+
+![Entrega 4](./Retrospectiva/Entrega%204/acciones.png)
 
 ## [Métricas](#indice) 
 
@@ -1459,21 +1500,19 @@ Si bien la creación de documentación o realización de ceremonias es important
 CycleTime: Tiempo estimado, en días en que una tarea comienza para su desarrollo y se entrega. Comienza su desarrollo cuando pasa del TODO a Requirements  Definition o Análisis según la entrega. 
 Fórmula de cálculo = - Fecha de Entrega (Done)- Fecha de inicio Doing/RD/Análisis (Fecha de inicio en el Doing, Requirement Definition o Análisis según el caso)
 
-
 LeadTime: Tiempo en días en que una tarea se solicita, entra en TODO y se entrega
-Bajo el mismo criterio que el anterior, LeadTime inferior a 1 consideramos como predeterminado 1. 
 
 Fórmula de cálculo = Fecha de Entrega (Done)- Fecha de Creado en el TODO
 
-Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al mayor CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella. 
+Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al promedio del CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella u oportunidades de mejora. 
 
 Definimos como FlowEfficiency al valor de CycleTime/LeadTime
 PAra los casos en que el LeadTime puede ser 0, por ser menor a un día predefinimos un tiempo de 1 día, para que la fórmula no nos de excepción y se pueda realizar el cálculo.
 
 **Entrega 1:**
 
-Observamos  un CycleTime de la entrega de 0,875
-Observamos un LeadTime de la entrega de 3
+Observamos  un CycleTime de la entrega de 0,198
+Observamos un LeadTime de la entrega de 2,3
 
 ![Entrega 4](./img/metricaEntrega1.png)
 
@@ -1498,25 +1537,48 @@ También vimos que muchas tareas no pudieron ser completadas en fecha, por ejemp
 Las tareas restantes fueron transferidas a la entrega 4. 
 Vemos que se incremnetaron las tareas sí como el esfuerzo de la misma. 
 
-Resumen:	
-
 ![Entrega 4](./img/metricaEntrega3.png)
 
-Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega y lo completamos en esta. 
+**Entrega 4**
+
+Si bien vemos que según la heurísitca de referencia, mejoramos el indicadodr, fue a un costo mayor, prque no entregamos el valor esperado al final de la tercer entrega completándolo en esta entrega.
+
+![Entrega 4](./img/metricaEntrega4.png)
+
+Nuestros tiempos: 
 
 En el archivo excel:
 
 [Entrega 4](./Esfuerzo%20de%20Tareas/Entrega%204/Metricas%20del%20Proyecto.xlsx)  se encuentra el resumen de cada etapa. 
 
+Conclusiones:	
+
+**FlowEfficiency:**
+
+Entrega 1< Entrega 2< Entrega 3 < Entrega 4
+
+8% < 39%  < 62% < 73%
+
+Prodemos concluir que nuestro proceso fue mejorando ha medida que avanzaba, aunque las tareas que se ingresaron en el tablero como features y bugs demandaron mayor esfuerzo.
+También destacamos que el poco tiempo entre las entregas hizo que no pudiéramos testear con total dedicación al 100% algunas funcionalidades pudiendo introducirse nuevos bugs. 
+Como lo mencionamos en la retrospectiva, tuvimos algunos tiempos de espera que hicieron aumentar el LeadTime, sobre todo en la 4ta. entrega. 
+Esto se debió a que se crearon las issues con tiempo de antelación antes de que pudiéramos empezar su desarrollo, sobre todo porque no se habían completado los temas en el dictado.
+
+**Esfuerzo - en horas**
+
+20,92 < 22 < 39 y 16 en la última.
+
+Vemos que la Entrega 3 nos demandó mayor esfuerzo, debiendo integrar funcionalidades en una aplicación que desconocíamos, sin duda tuvimos una curva de aprendizaje que debimos compensar con mayor esfuerzo.
 
 ## [Selenium](#indice)
 
 Para la creacion de pruebas automaticas de integracion se utilizo la herramienta Selenium. Con esta se realizaron pruebas que testean el funcionamiento de las funcionalidades realizadas en la entrega anterior.
 
-
 ### Pruebas de Modificacion de productos:
 
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
 [Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
+
+
 
 
