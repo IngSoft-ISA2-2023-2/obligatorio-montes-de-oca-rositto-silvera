@@ -11,7 +11,7 @@ public class ExceptionFilter : IExceptionFilter
         try
         {
             throw context.Exception;
-        }
+        }/*
         catch (ResourceNotFoundException e)
         {
             context.Result = new JsonResult(new {Message = e.Message }) { StatusCode = 404 };
@@ -27,9 +27,9 @@ public class ExceptionFilter : IExceptionFilter
         catch (Exception e)
         {
             context.Result = new JsonResult(new { Message = e.Message }) { StatusCode = 500 };
-        }/*
+        }*/
         catch (Exception)
         {
-        }*/
+        }
     }
 }
