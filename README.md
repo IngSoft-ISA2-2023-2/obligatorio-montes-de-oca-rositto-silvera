@@ -1579,6 +1579,9 @@ Para la creacion de pruebas automaticas de integracion se utilizo la herramienta
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
 [Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
 
+[Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/BjXZPBLQLLU)
+
+
 
 
 
