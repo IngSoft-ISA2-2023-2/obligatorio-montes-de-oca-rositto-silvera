@@ -43,7 +43,7 @@
 
 7. [Retrospectiva](#retrospectiva)
 
-8. [Estimaciones de Esfuerzo y Registro de tareas](#estimaciones)
+8. [Estimaciones de Esfuerzo y Registro de tareas](#Estimaciones-de-Esfuerzo-y-Registro-de-tareas)
 
 ### [Entrega 2](#entrega-2-1)
 
