@@ -43,6 +43,8 @@
 
 7. [Retrospectiva](#retrospectiva)
 
+8. [Estimaciones de Esfuerzo y Registro de tareas](#estimaciones)
+
 ### [Entrega 2](#entrega-2-1)
 
 1. [Definición del Marco de Trabajo](#definición-del-marco-de-trabajo-1)
@@ -812,14 +814,14 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
 
   <https://fi365-my.sharepoint.com/personal/am146669_fi365_ort_edu_uy/_layouts/15/stream.aspx?id=%2Fpersonal%2Fam146669%5Ffi365%5Fort%5Fedu%5Fuy%2FDocuments%2FGrabaciones%2FLlamada%20con%20Giuliano%20y%201%20m%C3%A1s%2D20230918%5F211805%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=Teams%2ETEAMS%2DELECTRON&referrerScenario=TMRChicletOpen%2Eview%2Eview&ga=1>
 
-  **Estimaciones de esfuerzo y Registro de Tareas**
+### [Estimaciones de Esfuerzo y Registro de tareas](#indice)
+  
   Se entregan en la carpeta: Esfuerzo de Tareas
   Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. 
   Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
   La dedicación completa del equipo es de 37,92.
   Completando un total de 19 issues que fueron informadas y listadas en el ReadMe 
   Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time.
-
 
   
 ------------------------------------
