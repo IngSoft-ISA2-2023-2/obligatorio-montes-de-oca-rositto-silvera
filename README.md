@@ -170,7 +170,7 @@ Esta sección la comenzamos a experimentar con los commits de trunk-based. No co
 Seguro encontraremos otras instancias para este apredizaje experimental. 
 
 
-[Tablero Kanban](#indice)
+### [Tablero Kanban](#indice)
  
 ![pngegg](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/62801065/83b9c5ec-6110-41e6-a8a2-ebe84cb1f28e)
 
