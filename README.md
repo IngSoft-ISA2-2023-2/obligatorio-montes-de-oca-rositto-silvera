@@ -34,16 +34,18 @@
     a. [Definición de Ready](#definición-de-ready)
 
     b. [Definición de Done](#definición-de-done)
+   
+6.  [Tablero Kanbam](#tablero-kanban) 
 
-5. [Control de versiones](#control-de-versiones)
+7. [Control de versiones](#control-de-versiones)
     
     a. [Nombre de ramas, commits y PRs](#nombre-de-ramas-commits-y-prs)
 
-6. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
+8. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
 
-7. [Retrospectiva](#retrospectiva)
+9. [Retrospectiva](#retrospectiva)
 
-8. [Estimaciones de Esfuerzo y Registro de tareas](#Estimaciones-de-Esfuerzo-y-Registro-de-tareas)
+10. [Estimaciones de Esfuerzo y Registro de tareas](#Estimaciones-de-Esfuerzo-y-Registro-de-tareas)
 
 ### [Entrega 2](#entrega-2-1)
 
@@ -168,12 +170,13 @@ Esta sección la comenzamos a experimentar con los commits de trunk-based. No co
 Seguro encontraremos otras instancias para este apredizaje experimental. 
 
 
-Tablero Kanban
+ [Tablero Kanbam](#indice)
+ 
 ![pngegg](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/62801065/83b9c5ec-6110-41e6-a8a2-ebe84cb1f28e)
 
 Respecto al tablero:
 
-Para esta iteracion se promueve la utilizacion de un
+Para esta iteración se promueve la utilizacion de un
 Tablero Kanban Ágile Simple:
 
 Optamos por esta ocpión de Tablero y no la sustentable, ya que entendemos que las tareas tienen diferentes niveles de desarrollo, algunas pasan por análisis y desarrollo, otras simplemente por ser realizadas como calcular el esfuerzo o las métricas o un informe que requiere lectura previa y reflexiones.
