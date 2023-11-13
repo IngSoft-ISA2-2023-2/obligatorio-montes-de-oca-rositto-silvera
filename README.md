@@ -1460,7 +1460,7 @@ Link de Modificar Producto:
 
 https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F233610%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
 
-# [Entrega 3](#indice)
+# [Entrega 4](#indice)
 
 ## [Definición del Marco de trabajo](#indice)
 
@@ -1468,14 +1468,31 @@ Continuamos con la misma definición del marco de trabajo. La gran diferencia es
 
 ## [Cambios Tablero Kanban](#indice)
 
-Como en las entregas anteriores podemos visualizar nuestro nuevo tablero, ahora integrando todas las etapas anteriores. Pudimos realizar el circuito de todas nuestras issues y bugs así como establecimos issues nuevas para experimentar el flujo. 
+Como en las entregas anteriores podemos visualizar nuestro nuevo tablero, ahora integrando todas las etapas anteriores. Pudimos realizar el circuito de todas nuestras issues y bugs así como establecimos issues nuevas para experimentar el flujo completo y revisión.
+Pudimos refrezcar y madurar el flujo del proceso en el tablero, el recorrido de las diferentes issues, así como sacar conclusiones de algunas métricas en las que vimos impacto como el LeadTime.
+
 En el siguiente link tenemos el acceso al Tablero: https://github.com/orgs/IngSoft-ISA2-2023-2/projects/58/views/1
 
 ![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/360f6f4f-cfd5-4620-bfc5-9ed4b732b468)
 
 ## [Cambios en el control de versiones](#indice)
 
+No sufrió cambios, seguimos afianzando nuestro proceso y confianza en el 'merge' más fluidos a main.
 
+## [Pipeline](#indice)
+
+Tampoco sufrió cambios esta parte del proceso. 
+
+## [Correcciones de issues](#indice)
+
+En esta etapa, estuvimos realizando verificaciones y testing de algunas issues pendientes de la entrega anterior. Notamos, como se documenta en la retrospectiva que nos llevó más tiempo del esperado el desarrollo e implementación de algunas issues.
+
+
+## [Explicación del tablero y su vínculo con el proceso de Ingeniería](#indice)
+
+En esta entrega no se agregaron o modificaron columnas a nuestro tablero, simplemente se integraron en uno solo los anteriores, con el fin de ejercitar todo el flujo nuevamente.
+Se crean bugs 'falsos y feature 'falsas' para poder contemplar este punto.
+La concepción de cada columna del tablero y su relación con el proceso de ingeniería no cambio. 
 
 ## [Retrospectiva](#indice)
 
