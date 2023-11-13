@@ -1494,7 +1494,7 @@ En esta entrega no se agregaron o modificaron columnas a nuestro tablero, simple
 Se crean bugs 'falsos y feature 'falsas' para poder contemplar este punto.
 La concepción de cada columna del tablero y su relación con el proceso de ingeniería no cambio. 
 
-## [Review](#indice)
+## [Reviews](#indice)
 
 Para optimizar los tiempos hicimos las reviews y documentamos en la sección de Selenium. Aprovechamos el momento de muestra junto con la demo de la herramienta. 
 
