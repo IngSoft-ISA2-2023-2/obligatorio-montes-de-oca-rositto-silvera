@@ -1479,7 +1479,7 @@ En el siguiente link tenemos el acceso al Tablero: https://github.com/orgs/IngSo
 
 No sufrió cambios, seguimos afianzando nuestro proceso y confianza en el 'merge' más fluidos a main.
 
-## [Pipeline](#indice)
+## [Pipeline y automatización](#indice)
 
 Tampoco sufrió cambios esta parte del proceso. 
 
@@ -1493,6 +1493,10 @@ En esta etapa, estuvimos realizando verificaciones y testing de algunas issues p
 En esta entrega no se agregaron o modificaron columnas a nuestro tablero, simplemente se integraron en uno solo los anteriores, con el fin de ejercitar todo el flujo nuevamente.
 Se crean bugs 'falsos y feature 'falsas' para poder contemplar este punto.
 La concepción de cada columna del tablero y su relación con el proceso de ingeniería no cambio. 
+
+## [Review](#indice)
+
+Para optimizar los tiempos hicimos las reviews y documentamos en la sección de Selenium. Aprovechamos el momento de muestra junto con la demo de la herramienta. 
 
 ## [Retrospectiva](#indice)
 
@@ -1535,6 +1539,7 @@ Solo se toman en cuenta aquellas referidas al proceso de Ingeniería de cada eta
 Si bien la creación de documentación o realización de ceremonias es importante para mejorar nuestro preceso ágil, no las tomamos en cuenta en esta etapa, sobre todo porque es de aprendizaje y le interesa al equipo solamente. Por lo anterior, de cada archivo de tiempos, solo nos quedamos con las tareas seleccionadas y correspondientes a la elaboración del producto que cumple las necesidades del cliente.
 
 ## Definimos los criterios generales:
+
 CycleTime: Tiempo estimado, en días en que una tarea comienza para su desarrollo y se entrega. Comienza su desarrollo cuando pasa del TODO a Requirements  Definition o Análisis según la entrega. 
 Fórmula de cálculo = - Fecha de Entrega (Done)- Fecha de inicio Doing/RD/Análisis (Fecha de inicio en el Doing, Requirement Definition o Análisis según el caso)
 
@@ -1612,9 +1617,10 @@ Vemos que la Entrega 3 nos demandó mayor esfuerzo, debiendo integrar funcionali
 
 Para la creacion de pruebas automaticas de integracion se utilizo la herramienta Selenium. Con esta se realizaron pruebas que testean el funcionamiento de las funcionalidades realizadas en la entrega anterior.
 
-### Pruebas de Modificacion de productos:
+### Pruebas de Modificación de productos:
 
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
+
 [Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
 
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/BjXZPBLQLLU)
