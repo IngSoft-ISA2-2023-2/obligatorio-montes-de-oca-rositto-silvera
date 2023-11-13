@@ -99,7 +99,7 @@
 
 7. [Reviews](#reviews)
 
-8. [Retrospectiva](#retrospectiva-2)
+8. [Retrospectiva](#retrospectiva-3)
 
 9. [Métricas](#métricas)
 
@@ -1496,7 +1496,7 @@ La concepción de cada columna del tablero y su relación con el proceso de inge
 
 ## [Reviews](#indice)
 
-Para optimizar los tiempos hicimos las reviews y documentamos en la sección de Selenium. Aprovechamos el momento de muestra junto con la demo de la herramienta. 
+En esta entrega no tuvimos que implementar feature nuevas por lo que no hubo necesidad de review con el PO. 
 
 ## [Retrospectiva](#indice)
 
@@ -1550,7 +1550,7 @@ Fórmula de cálculo = Fecha de Entrega (Done)- Fecha de Creado en el TODO
 Dado que en cada entrega trabajamos varios desarrolladores, definimos como CycleTime de la entrega al promedio del CycleTime de todas las tareas. Igualmente se calculan para cada una, para poder sacar conclusiones y mejorar el proceso observando cuellos de botella u oportunidades de mejora. 
 
 Definimos como FlowEfficiency al valor de CycleTime/LeadTime
-PAra los casos en que el LeadTime puede ser 0, por ser menor a un día predefinimos un tiempo de 1 día, para que la fórmula no nos de excepción y se pueda realizar el cálculo.
+Para los casos en que el LeadTime puede ser 0, por ser menor a un día predefinimos un tiempo de 1 día, para que la fórmula no nos de excepción y se pueda realizar el cálculo.
 
 **Entrega 1:**
 
