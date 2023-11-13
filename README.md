@@ -1460,6 +1460,22 @@ Link de Modificar Producto:
 
 https://fi365.sharepoint.com/sites/ISA2956/_layouts/15/stream.aspx?id=%2Fsites%2FISA2956%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FNueva%20reuni%C3%B3n%20de%20canal%2D20231028%5F233610%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
 
+# [Entrega 3](#indice)
+
+## [Definición del Marco de trabajo](#indice)
+
+Continuamos con la misma definición del marco de trabajo. La gran diferencia es la definición del Tablero que se mostrará a continuación, agrupando las diferentes etapas y procesos por los que pasaron nuestras issues.
+
+## [Cambios Tablero Kanban](#indice)
+
+Como en las entregas anteriores podemos visualizar nuestro nuevo tablero, ahora integrando todas las etapas anteriores. Pudimos realizar el circuito de todas nuestras issues y bugs así como establecimos issues nuevas para experimentar el flujo. 
+En el siguiente link tenemos el acceso al Tablero: https://github.com/orgs/IngSoft-ISA2-2023-2/projects/58/views/1
+
+![image](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/81390420/360f6f4f-cfd5-4620-bfc5-9ed4b732b468)
+
+## [Cambios en el control de versiones](#indice)
+
+
 
 ## [Retrospectiva](#indice)
 
