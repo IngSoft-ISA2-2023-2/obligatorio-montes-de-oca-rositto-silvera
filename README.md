@@ -34,14 +34,18 @@
     a. [Definición de Ready](#definición-de-ready)
 
     b. [Definición de Done](#definición-de-done)
+   
+6. [Tablero Kanban](#tablero-kanban) 
 
-5. [Control de versiones](#control-de-versiones)
+7. [Control de versiones](#control-de-versiones)
     
     a. [Nombre de ramas, commits y PRs](#nombre-de-ramas-commits-y-prs)
 
-6. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
+8. [ISSUES - ANÁLISIS DE DEUDA TÉCNICA](#issues---análisis-de-deuda-técnica)
 
-7. [Retrospectiva](#retrospectiva)
+9. [Retrospectiva](#retrospectiva)
+
+10. [Estimaciones de Esfuerzo y Registro de tareas](#Estimaciones-de-Esfuerzo-y-Registro-de-tareas)
 
 ### [Entrega 2](#entrega-2-1)
 
@@ -166,12 +170,13 @@ Esta sección la comenzamos a experimentar con los commits de trunk-based. No co
 Seguro encontraremos otras instancias para este apredizaje experimental. 
 
 
-Tablero Kanban
+### [Tablero Kanban](#indice)
+ 
 ![pngegg](https://github.com/IngSoft-ISA2-2023-2/obligatorio-montes-de-oca-rositto-silvera/assets/62801065/83b9c5ec-6110-41e6-a8a2-ebe84cb1f28e)
 
 Respecto al tablero:
 
-Para esta iteracion se promueve la utilizacion de un
+Para esta iteración se promueve la utilizacion de un
 Tablero Kanban Ágile Simple:
 
 Optamos por esta ocpión de Tablero y no la sustentable, ya que entendemos que las tareas tienen diferentes niveles de desarrollo, algunas pasan por análisis y desarrollo, otras simplemente por ser realizadas como calcular el esfuerzo o las métricas o un informe que requiere lectura previa y reflexiones.
@@ -812,14 +817,14 @@ Ambas están documentadas y en el espacio de trabajo de Metro Retro, que es la h
 
   <https://fi365-my.sharepoint.com/personal/am146669_fi365_ort_edu_uy/_layouts/15/stream.aspx?id=%2Fpersonal%2Fam146669%5Ffi365%5Fort%5Fedu%5Fuy%2FDocuments%2FGrabaciones%2FLlamada%20con%20Giuliano%20y%201%20m%C3%A1s%2D20230918%5F211805%2DGrabaci%C3%B3n%20de%20la%20reuni%C3%B3n%2Emp4&referrer=Teams%2ETEAMS%2DELECTRON&referrerScenario=TMRChicletOpen%2Eview%2Eview&ga=1>
 
-  **Estimaciones de esfuerzo y Registro de Tareas**
+### [Estimaciones de Esfuerzo y Registro de tareas](#indice)
+  
   Se entregan en la carpeta: Esfuerzo de Tareas
   Allí podemos encontrar archivos excel y pdf que nos muestran el resumen de tareas desglosado por integrante y por equipo. 
   Los resúmenes fueron emitidos por la herramienta Clockify que fuimos utilizando. 
   La dedicación completa del equipo es de 37,92.
   Completando un total de 19 issues que fueron informadas y listadas en el ReadMe 
   Los archivos de tiempo detallado también nos muestran las métricas: Cicle Time y Lead Time.
-
 
   
 ------------------------------------
@@ -1578,6 +1583,9 @@ Para la creacion de pruebas automaticas de integracion se utilizo la herramienta
 
 [Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/DxUvK0cCk64)
 [Archivo de pruebas de Selenium](./Selenium/Modificar%20Producto/PharmaGo.side)
+
+[Video de pruebas del cambio de la Descripcion de un producto](https://youtu.be/BjXZPBLQLLU)
+
 
 
 
