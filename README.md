@@ -1602,7 +1602,7 @@ Entrega 1< Entrega 2< Entrega 3 < Entrega 4
 
 8% < 39%  < 62% < 73%
 
-Podemos concluir que nuestro proceso fue mejorando ha medida que avanzaba, aunque las tareas que se ingresaron en el tablero como features y bugs demandaron mayor esfuerzo.
+Podemos concluir que nuestro proceso fue mejorando a medida que avanzaba, aunque las tareas que se ingresaron en el tablero como features y bugs demandaron mayor esfuerzo.
 También destacamos que el poco tiempo entre las entregas hizo que no pudiéramos testear con total dedicación al 100% algunas funcionalidades pudiendo introducirse nuevos bugs. 
 Como lo mencionamos en la retrospectiva, tuvimos algunos tiempos de espera que hicieron aumentar el LeadTime, sobre todo en la 4ta. entrega. 
 Esto se debió a que se crearon las issues con tiempo de antelación antes de que pudiéramos empezar su desarrollo, sobre todo porque no se habían completado los temas en el dictado.
